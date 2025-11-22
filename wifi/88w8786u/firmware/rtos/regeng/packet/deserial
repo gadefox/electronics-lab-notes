@@ -16,7 +16,7 @@ while remaining > 1 && record_count > 1:
     
     ~ priority_old != 12h && 
       (priority_new == 12h || priority_old != priority_new):
-      jump_r1(priority_old, arg)  # callback/handler
+      callback(priority_old)
     
     # FIXME: index should be < 8!?
     for field in 0..8:
