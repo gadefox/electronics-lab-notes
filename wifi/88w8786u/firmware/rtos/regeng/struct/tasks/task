@@ -2,6 +2,6 @@
 +01 byte   priority         < 12h=executable
 +02 byte   handler index    jump table index
 +03 byte
-+04 ptr[8] data
++04 ptr[8] fields
 ----
  24h sizeof

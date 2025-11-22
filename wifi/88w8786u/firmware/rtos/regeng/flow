@@ -1,0 +1,13 @@
+serial Interface (SPI/UART/I2C)
+    ↓
+receiving packet buffer
+    ↓
+reg_engine_packet_handler
+    ├─ Type 108h → reg_engine_deserialize_tasks
+    └─ Type 109h → reg_engine_update_task_field
+    ↓
+tasks updated in memory
+    ↓
+reg_engine_dispatch_task(engine_id)
+    ↓
+execute ready task via jump table
