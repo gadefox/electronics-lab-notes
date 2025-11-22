@@ -1,1 +1,4 @@
+0000ED24 reg_engine_serialize_tasks(byte[] output, task[3] tasks)
+00014370 reg_engine_getC0001508
 00017C80 reg_engine_dispatch_task(uint engine_id)
+0001D214 reg_engine_deserialize_tasks(ptr packet, short size, task[] tasks)

@@ -1,0 +1,34 @@
+# header
+output[0] = 8;    // type/command?
+output[1] = 1;    // flags?
+output[2] = 6;    // count/size?
+output[3] = 0;    // align
+
+byte[] ptr = output + 4
+
+# loop 1: basic info about each task
+for i in 0..2:
+  task task = tasks[i]
+  *ptr++ = i + 1  # task ID? (1, 2, 3)
+  *ptr++ = task->priority
+  # +2 bytes
+# +6 bytes
+
+# loop 2: detail info about each task
+for i in 0..2:
+  task task = tasks[i]
+
+  # FIXME: index should be < 8!?
+  for field in 0..8:
+    *ptr++ = 9              # entry type?
+    *ptr++ = 1              # flags?
+    *ptr++ = 4              # payload
+    *ptr++ = 0              # align
+    *ptr++ = field          # field index
+    *ptr++ = task_i + 1     # task ID (1, 2, 3)
+    *ptr++ = task->data[2]
+    *ptr++ = task->data[3]
+    # +8 bytes
+  # +72 bytes
+# +216 bytes
+# total: 212 bytes
