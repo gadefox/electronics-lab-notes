@@ -1,4 +1,4 @@
-serial Interface (SPI/UART/I2C)
+serial interface (e.g. SPI/UART/I²C)
     ↓
 receiving packet buffer
     ↓

@@ -1,0 +1,3 @@
++00 word   packet type    0=request/get status, 1=command/update tasks
++02 word   packet length
++04 byte[] payload
