@@ -1,0 +1,4 @@
+binwalk [-e] flash.bin
+ent flash.bin  # crypto ~ 7.8–8.0
+find . -type f -exec file {} \;
+xortool

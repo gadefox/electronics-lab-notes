@@ -1,0 +1,9 @@
++00 byte USB endpoint index                 0..F
++01 byte direction                          0=out; 1=in
++02 byte DMA mode                           0=control-EP DMA mode; 1=DMA mode A; 2=DMA mode B
++03
++10 word max packet size                    0x40=FullSpeed; 0x200=HighSpeed
++12 uint endpoint class                     0=control EP; 1=non-control EP (class A/B)
++16 ptr  next node_descr in linked list     04002A10+i*0C
+----
+ 1A sizeof

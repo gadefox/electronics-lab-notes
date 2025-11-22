@@ -1,0 +1,3 @@
+0000A564 initializes 4 GPIO pins
+0001B64C initializes the GPIO4 input pin, CFG1 and CFG3 registers
+00027528 clears bit 0 of the GPIO9 CFG2 register

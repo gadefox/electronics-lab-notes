@@ -1,0 +1,8 @@
+00018AD4 jump wrapper
+
+00003ED8 call *C000115C event function 20h
+00004010 call *C000115C event function 20h
+00004190 call *C000115C event function 20h
+000099D0 call *C000115C event function 20h; called from event function 24h
+000099EC call *C0001158 event function 20h; called from event function 24h
+0000A138 call *C000115C event function 20h

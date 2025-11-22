@@ -1,0 +1,11 @@
+RGND: code value/measure
+30A 0.200/0.2005kΩ
+04C 10.7/10.695kΩ
+   +10.9/10.8955kΩ
+
+ROUT: code value/measure
+01A 100/100.12Ω
+23C 16.9/16.946kΩ
+   +17/17.04612kΩ
+
+VOUT=3.34V

@@ -1,0 +1,16 @@
++04 word
++06
++08 uint
++0C uint
++10 uint
++14 ptr  DMA pool                       04001FB0
++18 ptr  endpoint DMA rings             *80000158; 64-byte blocks; indexed by EP*2+dir
++1C ptr  callback function
++20 uint node count                     3FF
++24 byte
++25 byte jump table index               00021D4C
++26 byte                                related to pool[9C]
++27
++28 word
++2A word
++2C

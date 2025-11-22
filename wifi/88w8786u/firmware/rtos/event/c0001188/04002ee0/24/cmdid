@@ -1,0 +1,7 @@
+08: pool_count_by_key
+0D: 7 bytes payload
+0E: return 0
+0F: return 1
+14: pool_alloc_slot
+1B: pool_count_by_key
+>1B: switch

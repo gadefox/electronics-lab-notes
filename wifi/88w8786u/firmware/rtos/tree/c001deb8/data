@@ -1,0 +1,10 @@
+0              +04 ← root
+               /  \
+1 C001DEB8-- +10  +1C
+
++00 C001DEB8: C001DEC8
++04 C001DEBC: 0 null     00001E91
++10 C001DEC8: 1 C001DEBC 00001E31
++1C C001DED4: 1 C001DEBC 0000CCD1
+----
++28 eod

@@ -1,0 +1,3 @@
++07 byte EP0 packet size
++08 uint                            serial BUS data[30h]
++0C

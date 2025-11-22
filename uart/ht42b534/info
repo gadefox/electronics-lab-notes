@@ -1,0 +1,3 @@
+UART bridge
+CDC class (no driver necessary)
+internal LDO 3.3V

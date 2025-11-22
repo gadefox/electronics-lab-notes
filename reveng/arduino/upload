@@ -1,0 +1,4 @@
+#!/bin/rc
+
+~ $1 () && port = 0 || port = $1
+arduino-cli upload -p /dev/ttyUSB$port --fqbn esp8266:esp8266:nodemcuv2

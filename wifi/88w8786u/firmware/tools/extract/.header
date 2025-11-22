@@ -1,0 +1,4 @@
++00 uint see `../upload/.cmd`
++04 uint destination address
++08 uint payload length including final CRC; normally 512 bytes
++0C uint CRC

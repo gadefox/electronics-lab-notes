@@ -1,0 +1,3 @@
+Use when threads only need to know 'something happened' e.g. state changes, triggers.
+32 bits, each bit = one event type.
+No data payload - just notifications ("doorbell").

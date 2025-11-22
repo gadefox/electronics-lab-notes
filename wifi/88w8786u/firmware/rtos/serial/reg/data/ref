@@ -1,0 +1,9 @@
+0001B770 serial_detect_mode
+0001CBD0 serial_block_erase64
+0001CC40 serial_read
+0001CCC0 serial_write
+0001CD08 serial_get_status
+0001CD34 serial_write_disable
+0001CD60 serial_write_enable
+00009338 serial_get
+000093E8 serial_set

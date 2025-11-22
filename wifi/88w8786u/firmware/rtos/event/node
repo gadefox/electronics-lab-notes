@@ -1,0 +1,12 @@
++04 ptr    next event node in linked list
++08 byte[] event identifier
++0C
++10 ptr    event function
++14 ptr    event function?
++18 ptr    event function?
++1C ptr    event function
++20 ptr    event function
++24 ptr    event function
++28 ptr    event function
+----
+ 2C sizeof

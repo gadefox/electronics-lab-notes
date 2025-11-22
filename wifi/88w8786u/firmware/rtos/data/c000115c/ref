@@ -1,0 +1,8 @@
+0001AA04 wrapper; call function(C000115C, (param1 & FFFFFF00) + 4, 18h, 4)
+
+00006808 call *C00011E4 function(*C000115C, 04000140, 0, 5)
+000099E8 call event function 20h
+0000EEC0 call *C00011E4 function(*C000115C, ?, 0, 3, C0002674)
+00012160 call *C00011E4 function(*C000115C, ?, ?, 5)
+00016B60 call *C00011E4 function(*C000115C, param1, 0, 2)
+000279E8 call *C00011E4 function(*C000115C, param1, ?, 5)

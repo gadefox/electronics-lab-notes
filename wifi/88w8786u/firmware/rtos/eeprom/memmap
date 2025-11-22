@@ -1,0 +1,3 @@
+0000 - 027F  640B  data
+0280 - 033F  192B  data; all 1 bits on older hardware
+0340 - 03FF  192B  all 1 bits

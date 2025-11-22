@@ -1,0 +1,12 @@
++00
++01 byte
++02 word mempool-slot size
++10 uint count
++14 uint count
++18 uint
++1C ptr
++20 ptr
++28 ptr
++2C ptr
++30 ptr  mempool-slot+1C
++34

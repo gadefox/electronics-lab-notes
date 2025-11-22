@@ -1,0 +1,2 @@
+min(IOUT)=30mA
+max(IOUT): ~ cooler && 1.5A || 0.7A

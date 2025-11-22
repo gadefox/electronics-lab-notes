@@ -1,0 +1,4 @@
+0000C394 usb_dma_init
+000261C4 usb_dma_append_descriptor(ptr node)
+00026228 usb_dma_append_ring(ptr node)
+00026280 usb_dma_init_endpoint(uint ep, uint size, uint inout, uint mode, uint class)

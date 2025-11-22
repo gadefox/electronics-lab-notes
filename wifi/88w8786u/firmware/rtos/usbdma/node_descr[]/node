@@ -1,0 +1,5 @@
++00 ptr next DMA descriptor in linked list
++04 ptr append_dma_descr function           000261C5
++08
+----
+ 0C sizeof

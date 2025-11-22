@@ -1,0 +1,8 @@
++00 TX_HEADER
++14 byte  countof(configs)
++15 byte
++16 word  countof(slots)
++18 ptr[] slots
++1C ptr[] configs
+----
+ 20 sizeof

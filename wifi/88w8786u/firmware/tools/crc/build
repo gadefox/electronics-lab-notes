@@ -1,0 +1,16 @@
+#!/bin/rc
+
+. /usr/local/libexec/rc/util
+dir = `(dirname $0)
+out = `(newdir out $dir)
+ln -fs ../../upload/packet/1 $out/1
+
+fn c2o {
+  gcc -c $dir/$1.c -o $out/$1.o
+}
+
+src = (crc main)
+for (n in $src) 
+  c2o $n
+
+gcc $out/$src.o -o $out/test

@@ -1,0 +1,4 @@
+CH32V003F4P6 → RP2040:
+ SWDIO 18 → ??  GPIO??
+ GND   7  → 38  GND
+ VCC   9  → 36  VOUT

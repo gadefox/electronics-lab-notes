@@ -1,0 +1,6 @@
+00000C30 jump_r0()
+00000C32 jump_r1(r0)
+00000C34 jump_r2(r0, r1)
+00000C36 jump_r3(r0, r1, r2)
+00000C38 jump_r4(r0, r1, r2, r3)
+00000C3A jump_r5(r0, r1, r2, r3, r4)

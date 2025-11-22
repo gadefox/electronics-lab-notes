@@ -1,0 +1,6 @@
+01 WRSR   write status register
+02 WRITE  write data (page program)
+03 READ   read data
+04 WRDI   write disable
+05 RDSR   read status register
+06 WREN   write enable

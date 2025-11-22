@@ -1,0 +1,9 @@
+addr: LSB == 1
+b'\xd1\xce\x01\x00' -> Address: 0x0001ced1 <- thumb bit set!
+
+b'\x78\x47'  bx r15 = bx pc
+b'\x70\x47'  bx lr
+b'\x00\xb5'  push {lr}
+b'\x00\xbd'  pop {pc}
+b'\x00\x20'  mov r0, #0
+b'\xc0\x46'  mov r8, r8 = nop

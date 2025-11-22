@@ -1,0 +1,11 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+xxd -r -p $dir/blob.hex $dir/blob.bin
+
+offset = `(python3 $dir/find.py)
+~ offset () && exit 1
+
+dd if=$dir/blob.bin of=$dir/segm.bin bs=1 skip=$offset
+echo
+python3 $dir/check.py $dir/segm.bin

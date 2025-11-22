@@ -1,0 +1,11 @@
+host API
+    ↓
+commands e.g. connect; scan
+    ↓
+MACMgmtSME
+    ↓
+SME task
+    ↓
+CBProcSME ← SME response/events e.g. connected; scan done
+    ↓
+callback task

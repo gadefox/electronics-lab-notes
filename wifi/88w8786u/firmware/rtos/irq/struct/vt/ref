@@ -1,0 +1,4 @@
+00003188 irq_dispatch
+0001CDDC irq_set
+0001CDEC irq_clear
+0001CE20 ivt ← 0

@@ -1,0 +1,3 @@
++00 ptr[32] interrupt vector table
+----
+ 80h sizeof

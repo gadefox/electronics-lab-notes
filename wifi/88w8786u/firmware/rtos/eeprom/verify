@@ -1,0 +1,7 @@
+~ serial_read(0) != $magic && exit(failed)
+
+addr = serial_read(4C)
+~ eeprom_check_sum(addr) != 0 && exit(failed)
+
+val = serial_read(addr)
+~ (val & FF) == 0C && exist(ok) || exit(failed)

@@ -1,0 +1,6 @@
+00000000 - 0002FFFF  192KiB  SRAM (code)
+04000000 - 04005FFF  24KiB   stack
+80000000 - 8000FFFF  64KiB   IO memory; including USB
+90000000 - 9000BFFF  48KiB   IO memory
+C0000000 - C00010FF  ~4KiB   boot loader
+C0001100 - C0027FFF  160KiB  SRAM (code, data, bss, heap)

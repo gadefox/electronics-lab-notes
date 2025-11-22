@@ -1,0 +1,3 @@
+Handles transmission completion events.
+Triggered when the MAC/firmware signals that a packet has been sent.
+Releases or recycles Tx buffers and notifies the upper stack (TCP/IP or driver logic) that the transmission is done.

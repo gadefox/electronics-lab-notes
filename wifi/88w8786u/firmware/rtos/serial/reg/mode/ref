@@ -1,0 +1,3 @@
+0000CB60 serial_get_config
+0000CB88 serial_set_config
+00025378 serial_set_mode

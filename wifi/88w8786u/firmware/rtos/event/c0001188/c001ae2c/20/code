@@ -1,0 +1,6 @@
+serial_write_enable
+while size > 0:
+  serial_write(data, 4)
+  data += 4 
+  size -= 4
+serial_write_disable

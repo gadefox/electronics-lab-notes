@@ -1,0 +1,17 @@
+byte    uint8_t
+countof sizeof(array) / sizeof(array[0])
+eod     end of data
+le      little endian
+ptr     pointer
+uint    uint32_t
+undef   undefined; pointer/value
+word    uint16_t
+
+EP      endpoint
+ISR     interrupt service routine
+MAC     media access control
+PHY     physical layer
+RTOS    real time OS
+RX      host → device; out-EP
+TX      device → host; in-EP
+SME     state machine engine

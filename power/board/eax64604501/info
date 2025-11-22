@@ -1,0 +1,7 @@
+LGP32-12P EAX64604501 (1.5)
+ primary MOSFET: 10NM60N; 10A; 600V
+ BL_ON / IN-ON (3V)
+EAX64910001 (1.0): motherboard
+LC320WXN 6632L-0837A: inverter
+6870C-0313C: timing controler
+LM35-55 (3.2): key/IR; MENU/OK, CH+, CH–, VOL+, VOL–, INPUT, POWER

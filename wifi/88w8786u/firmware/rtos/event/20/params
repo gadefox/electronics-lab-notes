@@ -1,0 +1,6 @@
+r0 ptr   event node
+r1 undef event data1
+r2 undef event data2
+r3 undef event data3
+----
+ 4 params

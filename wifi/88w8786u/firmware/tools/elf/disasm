@@ -1,0 +1,20 @@
+#!/bin/rc
+
+. /usr/local/libexec/rc/util
+dir = `(dirname $0)
+bin = $dir/../extract/bin
+
+echo 'Note that `objdump` is completely unsuitable for disassembling this code.'
+echo 'You need an interactive disassembler and/or one that traces code flow.'
+echo 'Something like `objdump` will be unaware of the transitions between plain'
+echo 'ARM code, thumb code, and data.'
+echo
+echo 'It is normal for functions to be followed by constants; a good disassembler'
+echo 'will match these up with the code instead of stupidly disassembling them.'
+echo
+echo 'See also: `adiss` `ghidra`'
+exit 1
+
+asm = `(newdir asm $dir)
+arm-none-eabi-objdump -D -b binary -m arm --adjust-vma=0x00000000 $bin/1002 > $asm/1002
+exit 0

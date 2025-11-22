@@ -1,0 +1,11 @@
+addr     struct                 sizeof  note
+04001B10 DMA ring node[96]      480     0C*60h
+04001F90 ptr[8]                 020
+04001FB0 pool                   0A0
+04002050 DMA descr[96]          9C0     1A*60h
+04002A10 DMA descr node[96]     480     0C*60h
+04002E90 DMA descriptor         01A
+04002EAA eod
+
+C0027400 DMA ring[96]           C00     20*60h
+C0028000 eod

@@ -1,0 +1,3 @@
+00011968                call(4, 0, null)
+00021C7C                ~ ep != 0 && call(~ direction == 0 && 512 || 256, EP | (param_4 << 16), buffer)
+00021CD8                ~ ep != 0 && call(128, [0400008C], null)

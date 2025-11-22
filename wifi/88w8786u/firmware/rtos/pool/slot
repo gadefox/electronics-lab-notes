@@ -1,0 +1,11 @@
++00 uint
++04 word allocated size
++06 word
++08 word data offset
++0A word
++0C word
++0E word
++10 ptr  owning pool
++14 uint
+----
+ 18 sizeof(header)

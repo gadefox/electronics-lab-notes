@@ -1,0 +1,10 @@
+r0 uint
+r1 uint
+r2 ptr
+----
+ 3 params
+
+param1==200 && param2>65535:
+ ~ param3==F00DFACE:
+  &&   call function *040000F4(04002EE0, r2 & FFFFFF00, 0, 1)
+  || { call function *040000F4(04002EE0, r2 & FFFFFF00, 0, 4); lock() }

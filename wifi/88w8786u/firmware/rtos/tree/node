@@ -1,0 +1,5 @@
++00 uint <=5 node depth
++04 ptr      parent node
++08 ptr      callback function
+----
+ 0C sizeof

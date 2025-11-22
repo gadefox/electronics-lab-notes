@@ -1,0 +1,8 @@
+0000EB4C pool_alloc_slot(ptr pool, uint size, uint flags)
+0000EBDA pool_free_slot(ptr slot)
+0000EC22 pool_count_used_slots(ptr pool)
+0000EC50 pool_count_total_blocks(ptr pool)
+0000EC78 pool_count_by_key(ptr pool, uint key)
+0000ECAE pool_init_slots(ptr pool)
+000170D0 pool_init_from_config(ptr pool, ptr[] config, ptr[] registry, ptr[] descriptors)
+000279F4 pool_init_all

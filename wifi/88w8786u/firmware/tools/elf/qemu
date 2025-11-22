@@ -1,0 +1,5 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+qemu-system-arm -M versatilepb -m 128M -nographic -kernel $dir/out/fw -S -gdb tcp::1234
+exit 0

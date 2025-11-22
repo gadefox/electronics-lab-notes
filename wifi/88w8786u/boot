@@ -1,0 +1,18 @@
+              power-on
+                 ↓
+ROM on-chip → minimum boot loader
+                 ↓
+              enumerate as USB device → VID:PID
+                 ↓
+host → USB bulk transfer → packets:
+                              ↓
+                           check header: 12 bytes + CRC: 4 bytes
+                              ↓
+                           check payload: 508 bytes* + CRC: 4 bytes
+                              ↓
+                           write payload → RAM on chip
+                 ↓
+              execute firmware
+
+----
+*may be smaller for the last packet or zero for no payload

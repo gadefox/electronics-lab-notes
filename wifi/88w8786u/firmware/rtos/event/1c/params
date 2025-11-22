@@ -1,0 +1,6 @@
+r0 ptr        event node
+r1 byte[size] buffer
+r2 uint       buffer size in bytes
+r3 uint       serial BUS address
+----
+ 4 params

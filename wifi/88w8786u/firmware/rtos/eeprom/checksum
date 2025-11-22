@@ -1,0 +1,13 @@
+while true:
+  ~ addr == -1 && exit(ok)
+
+  len = serial_read(addr) >> 16
+  ~ len == FFFF && exit(failed)
+
+  sum = 0
+  for i in 0..len / 4:
+    val = serial_read(addr + i * 4)
+    sum += ((val >> 24) & FF) + ((val >> 16) & FF) + ((val >> 8) & FF) + (val & FF)
+
+  ~ sum != 1 && exit(failed)
+  addr = serial_read(addr + 4)

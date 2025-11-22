@@ -1,0 +1,6 @@
+1 BootStrap*    8 Soft-Start
+2 VIN           7 ENable
+3 SW            6 COMParator
+4 GND           5 FeedBack
+
+*upper MOSFET supply

@@ -1,0 +1,5 @@
+ARM code can be spotted in hex dumps because most instructions will start with
+the hex digit "e" (4th byte in little-endian).
+
+b'\x00\x00\xa0\xe1'  mov r0, r0
+b'\x1e\xff\x2f\x12'  bx lr

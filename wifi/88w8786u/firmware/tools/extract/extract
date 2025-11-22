@@ -1,0 +1,97 @@
+#!/bin/rc
+
+. /usr/local/libexec/rc/read
+. /usr/local/libexec/rc/util
+dir = `(dirname $0)
+aes = `(newdir aes $dir)
+bin = `(newdir bin $dir)
+block = `(newdir block $dir)
+hex = `(newdir hex $dir)
+
+fn ddbin {
+  echo -n 'extracting bootloader data: '$block/$1' ('$3' bytes)  '
+  dd if=$file of=$block/$1 bs=1 skip=$2 count=$3 >[2] /dev/null
+  echoc 32 OK$nl
+
+  echo -n 'extracting firmware binary: '$bin/$1'  '
+  python3 $dir/extract.py $block/$1 $bin/$1
+  echoc 32 OK$nl
+
+  echo -n 'converting to hex: '$hex/$1'           '
+  xxd -p $bin/$1 | tr -d '\n' > $hex/$1
+  echoc 32 OK$nl
+}
+
+fn ddaes {
+  echo -n 'extracting AES: '$1' ('$3' bytes)  '
+  dd if=$bin/1000 of=$aes/$1 bs=1 skip=$2 count=$3 >[2] /dev/null
+  echoc 32 OK$nl
+}
+
+fn tsbox {
+  data = (637C777BF26B6FC53001672BFED7AB76CA82C97DFA5947F0ADD4A2AF9CA472C0
+          B7FD9326363FF7CC34A5E5F171D8311504C723C31896059A071280E2EB27B275
+          09832C1A1B6E5AA0523BD6B329E32F8453D100ED20FCB15B6ACBBE394A4C58CF
+          D0EFAAFB434D338545F9027F503C9FA851A3408F929D38F5BCB6DA2110FFF3D2
+          CD0C13EC5F974417C4A77E3D645D197360814FDC222A908846EEB814DE5E0BDB
+          E0323A0A4906245CC2D3AC629195E479E7C8376D8DD54EA96C56F4EA657AAE08
+          BA78252E1CA6B4C6E8DD741F4BBD8B8A703EB5664803F60E613557B986C11D9E
+          E1F8981169D98E949B1E87E9CE5528DF8CA1890DBFE6426841992D0FB054BB16)
+  echo
+  echo checking S-Box:
+  offset = 0
+
+  for (i in `(seq 1 $#data)) {
+    echo -n ' offset +'$offset'  '
+    ~ $data($i) `{ dd if=$aes/s-box bs=1 skip=$offset count=32 >[2] /dev/null | xxd -p }
+      && echoc 32 OK || echoc 31 FAILED
+
+    offset = `{ bc <<< $offset+32$nl }
+    echo
+  }
+}
+
+fn trcon {
+  data = (0000000100000002000000040000000800000010
+          0000002000000040000000800000001B00000036)
+  echo
+  echo checking Rcon:
+  offset = 0
+
+  for (i in `(seq 1 $#data)) {
+    echo -n ' offset +'$offset'  '
+    ~ $data($i) `{ dd if=$aes/rcon bs=1 skip=$offset count=20 >[2] /dev/null | xxd -p }
+      && echoc 32 OK || echoc 31 FAILED
+
+    offset = `{ bc <<< $offset+20$nl }
+    echo
+  }
+}
+
+fn ddp45 {
+  file = $dir/../../p45/fw
+  ddbin 1000 4008 183660
+  ddbin 1001 0 864
+  ddbin 1002 864 3144
+}
+
+fn ddp48 {
+  file = $dir/../../p48/fw
+  ddbin 1000 0 183740
+  ddbin 1001 183740 860
+  ddbin 1002 184600 3148
+}
+
+ddp45
+
+echo
+ddaes s-box 171924 256
+ddaes t0 172180 1024
+ddaes t1 173204 1024
+ddaes t2 174228 1024
+ddaes t3 175252 1024
+ddaes rcon 176532 40
+
+tsbox
+trcon
+exit 0

@@ -1,0 +1,4 @@
+0000CB60 serial_get_config
+0000CB88 serial_set_config
+0001B770 sets 82h
+000253A4 sets 58h

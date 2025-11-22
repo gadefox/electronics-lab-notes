@@ -1,0 +1,3 @@
+Used when threads need to exchange information (e.g. commands, parameters, structures).
+FIFO buffer with fixed-size messages (1-16 ULONGs each).
+Carries actual data/payloads ("mailbox").

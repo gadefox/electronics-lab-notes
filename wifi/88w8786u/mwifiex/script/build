@@ -1,0 +1,25 @@
+#!/bin/rc
+
+echo --build--
+dir = /home/fox/.build/linux/drivers/net/wireless/marvell/mwifiex
+echo src=$dir
+
+echo
+echo delete mwifiex* files:
+rm $dir/mwifiex.ko
+rm $dir/mwifiex_pcie.ko
+rm $dir/mwifiex_sdio.ko
+rm $dir/mwifiex_usb.ko
+
+echo
+kernel = `(uname -r)
+echo kernel=$kernel
+
+make -C /lib/modules/$kernel/build M=$dir modules
+
+echo
+echo strip debug info..
+objcopy --strip-debug $dir/mwifiex.ko
+objcopy --strip-debug $dir/mwifiex_pcie.ko
+objcopy --strip-debug $dir/mwifiex_sdio.ko
+objcopy --strip-debug $dir/mwifiex_usb.ko

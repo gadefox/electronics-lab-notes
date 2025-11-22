@@ -1,0 +1,8 @@
+VIn<BS<VIN+5V
+SW+4V<BS<SW+6V
+
+SW~300kHz
+FB~0.9V
+EN>1.5V
+
+~ feedback=active && 1V<COMP<2V

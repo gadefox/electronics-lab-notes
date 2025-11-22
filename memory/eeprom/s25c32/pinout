@@ -1,0 +1,4 @@
+1 CS        8 VCC
+2 DO        7 HOLD
+3 WP        6 CLK
+4 GND       5 DI

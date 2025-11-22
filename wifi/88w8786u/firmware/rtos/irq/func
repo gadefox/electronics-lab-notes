@@ -1,0 +1,3 @@
+00011CC8 irq_init_req; initializes vector table and {irq=17h, handler=00014081}
+00027554 irq_init
+0002758C irq_empty

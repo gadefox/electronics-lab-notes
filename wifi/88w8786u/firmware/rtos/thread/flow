@@ -1,0 +1,7 @@
+MACMgmt ← handles management frames
+   ↓
+CBProc ← dispatches event callbacks
+   ↓
+MACTx → sends packets
+   ↓
+MACTxNotify → confirms Tx completion

@@ -1,0 +1,3 @@
+Responsible for transmitting data frames.
+It takes outgoing packets from upper layers or queues, builds Tx descriptors,
+handles fragmentation, and sends them to the firmware or hardware (SDIO/SPI/USB).

@@ -1,0 +1,4 @@
+01:
+ serial_write_enable
+ serial_block_erase64(param_3)
+ serial_write_disable
