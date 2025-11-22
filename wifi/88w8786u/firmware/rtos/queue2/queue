@@ -4,4 +4,4 @@
 +0C
 +10 uint max count                          ~ max > num && max=num
 ----
- 14 sizeof
+ 14h sizeof

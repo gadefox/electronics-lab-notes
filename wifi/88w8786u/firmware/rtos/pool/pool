@@ -5,4 +5,4 @@
 +18 ptr[] slots
 +1C ptr[] configs
 ----
- 20 sizeof
+ 20h sizeof

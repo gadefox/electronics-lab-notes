@@ -8,4 +8,4 @@
 +10 ptr  owning pool
 +14 uint
 ----
- 18 sizeof(header)
+ 18h sizeof(header)

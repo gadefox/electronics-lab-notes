@@ -8,8 +8,10 @@ undef   undefined; pointer/value
 word    uint16_t
 
 EP      endpoint
+HW      hardware
 ISR     interrupt service routine
 MAC     media access control
+NPU     network processor unit
 PHY     physical layer
 RTOS    real time OS
 RX      host → device; out-EP

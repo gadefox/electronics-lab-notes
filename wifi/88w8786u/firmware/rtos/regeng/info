@@ -1,0 +1,9 @@
+HW blocks e.g.
+ DMA engine
+ Packet parser
+ Crypto engine (AES/SHA)
+ Network processor unit
+ QoS/traffic shaper
+ Checksum offload
+ USB controller
+ ..
