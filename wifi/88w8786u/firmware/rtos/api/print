@@ -6,3 +6,4 @@
 00000E64 vprintf
 0000114C vprintf jump loop
 0000116C vprintf helper
+00026b90 snprintf
