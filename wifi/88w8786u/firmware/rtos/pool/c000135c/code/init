@@ -18,5 +18,5 @@ else:
     hash_table_insert(C001D1FC, desc, desc[68])
 
 *C0001354 = 00009F85  # func
-***
+func_00027B40(C0001354)
 exit(0)
