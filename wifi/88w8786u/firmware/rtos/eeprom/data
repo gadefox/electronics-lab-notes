@@ -1,0 +1,25 @@
++00 uint $magic
++04
++0C uint MAC address; if -1, then 02435000 is used instead
++10 uint MAC address; if -1, then 01FE is used instead
++14 word
++16 word
++18 uint
++30 uint DMA-related; usb_dma_init
++1C
++48 word block size in bytes
++4A word
++4C uint block address
++50
++7C word
++7E word
++80
+
+block address:
++00 word       next block size in bytes
++02 byte
++03 byte       0C=first block
++04 uint       next block address or -1 for the last block
++08 byte[size] block data
+----
+size+8 sizeof

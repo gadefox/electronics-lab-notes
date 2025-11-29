@@ -1,0 +1,10 @@
+#!/bin/rc
+
+echo --modprobe--
+echo remove mwifiex* modules
+rmmod mwifiex_usb
+rmmod mwifiex
+
+echo
+echo insert mwifiex_usb module
+modprobe mwifiex_usb

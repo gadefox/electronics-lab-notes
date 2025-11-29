@@ -1,0 +1,13 @@
+00003018 irq_matrix_release_slot
+00003D38 irq_matrix_release_all_slots
+00004428 irq_matrix_find_free_slot1
+00004448 irq_matrix_find_free_slot2
+0000CC3C irq_matrix_write_sync
+0001AB2C irq_matrix_alloc_and_init_slot
+0001AC14
+0001AE68 irq_matrix_slot_clear_flag
+0001AF2C
+0001AFA0 irq_matrix_route_unmap
+0001B050 irq_matrix_route_map
+0001B1A8 irq_slot_stat_reg_get_mask(3)
+0001C9A0 irq_matrix_init_and_enable

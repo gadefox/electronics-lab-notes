@@ -1,0 +1,14 @@
+~ key == null && exit(0)
+~ table == null && exit(0)
+~ table->hash_fn == null && exit(0)
+~ table->compare_fn == null && exit(0)
+
+hash_index = table->hash_fn(key)
+~ hash_index >= table->num && exit(0)
+
+entry = table->buckets[hash_index]
+while entry != null:
+  ~ table->compare_fn(entry->value, key) == 0 && exit(entry->value)
+  entry = entry->next
+
+exit(0)

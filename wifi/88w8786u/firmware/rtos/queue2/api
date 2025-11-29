@@ -1,0 +1,7 @@
+00007B40 queue_create_from_pool
+00008040 queue_create
+00014018 queue_merge
+000147FC queue_remove_head
+00018650 queue_create_all
+0001D762 queue_get_head
+0001FCDA queue_append

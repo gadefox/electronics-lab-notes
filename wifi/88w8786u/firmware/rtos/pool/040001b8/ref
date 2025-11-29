@@ -1,0 +1,26 @@
+00002010 calls pool_alloc_slot(_, 300)
+00002D8C usb_pool_ep2_rx_init: calls pool_allocated_slots_count
+00004000
+00004180 calls pool_alloc_slot(_, 400)
+000042D0 calls pool_alloc_slot(_, 400)
+0000A318 calls pool_alloc_slot(_, 400)
+0000A3EC calls pool_alloc_slot(_, 300)
+0000A4D0 calls pool_alloc_slot(_, 300)
+0000BBA4 calls pool_4x1b8_alloc(200) in loop and pool_4x1b8_descr_init2
+0000BD30 usb_pool_ep2_rx_check_integrity1: calls pool_allocated_slots_count
+0000BDDC calls pool_allocated_slots_count
+0000D2F8 usb_pool_ep2_rx_check_integrity2: calls pool_allocated_slots_count
+0000D6D0 calls pool_4x1b8_alloc(1000) and pool_4x1b8_descr_init1
+0000D780 calls pool_4x1b8_alloc(1000) and pool_4x1b8_descr_init1
+0000DC50 calls pool_4x1b8_alloc(348) and pool_4x1b8_descr_init1
+0000DCF4 calls pool_4x1b8_alloc(348) and pool_4x1b8_descr_init1
+0000DDC4 calls pool_4x1b8_alloc(348) and pool_4x1b8_descr_init1
+0000E050 calls pool_4x1b8_alloc(348) and pool_4x1b8_descr_init1
+00019AC0 pool_4x1b8_alloc
+0001A564 calls pool_4x1b8_alloc(1000) and pool_4x1b8_descr_init1
+0001E1C4 usb_pool_ep2_rx_check_integrity3: calls pool_allocated_slots_count
+0001E260 usb_pool_ep2_rx_check_integrity4: calls pool_allocated_slots_count
+000217E4 calls pool_4x1b8_alloc(300) and pool_4x1b8_descr_init1
+0002240C calls pool_4x1b8_alloc(300) and pool_4x1b8_descr_init1
+00022438 calls pool_4x1b8_alloc(300) and pool_4x1b8_descr_init1
+00027AE8 init

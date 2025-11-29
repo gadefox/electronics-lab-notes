@@ -1,0 +1,9 @@
+addr     struct sizeof
+C0001500 uint   04
+C0001504 uint   04
+C0001508 uint   04
+C000150C block  24h
+C0001530 block  24h
+C0001554 block  24h
+----
+C0001578 eod

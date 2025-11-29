@@ -1,0 +1,13 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+
+$dir/build
+echo
+$dir/install
+echo
+$dir/modprobe
+echo
+$dir/usbnewid
+
+dmesg -w

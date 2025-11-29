@@ -1,0 +1,5 @@
+r0 uint event
+r1 uint arg1
+r2 ptr  arg2
+----
+ 3 params

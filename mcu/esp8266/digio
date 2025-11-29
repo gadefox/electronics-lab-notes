@@ -1,0 +1,23 @@
+The most suitable pins for digital I/O are D1(GPIO5) and D2(GPIO4).
+
+D5(GPIO14), D4(GPIO12), and D7(GPIO13) pins can be used as digital I/O. The reason is that these pins are for SPI
+communications, and if we use them as digital I/O, we won’t need to to use the NodeMCU Board’s SPI Protocol (which
+is used for setup and communication by many devices, including some monitors). The SPI limitation won’t be an issue
+if the circuit doesn’t have such a component, of course.
+
+D3(GPIO0) and D4(GPIO2) can also function as digital outputs. Remember that the boot process uses these two pins. In
+other words, the board won’t boot if these pins are pulled HIGH or LOW by external components such as a relay,
+optocoupler, transistor, or any driver model. Setting these pins to LOW will result in the circuit being unable to
+boot. These two pins are pulled UP internally. And D3(GPIO0) is connected to the board’s FLASH Button.
+
+We can set TX(GPIO1) as an output, although it is not recommended. This pin serves as the data transmission line
+through the serial port, which is also used to communicate with the computer. Plus, it is HIGH during boot, and
+changing it to LOW will stop the boot process.
+
+We can use RX(GPIO3) as an input. This pin is the data receiving line through the serial port, which is also used to
+communicate with the computer. And it’s also HIGH at boot time.
+
+D0(GPIO16) has no interrupt as a routine input and does not support PWM or I2C as an output. Likewise, it is HIGH at
+boot.
+
+We can set D8(GPIO15) as an output. The board won’t be able to boot if it becomes HIGH during boot.

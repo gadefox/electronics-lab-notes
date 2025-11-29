@@ -1,0 +1,49 @@
+~ action != ACT_GET && exit
+
+fn copy(addr, size, base):
+  for i = 0; i < size; i += 4: 
+    val = serial_read(addr + i)
+    val = eeprom_swap(val)
+    eeprom_cache[base + i] = val
+
+size = 0
+~ get_C00026B4 != 0 && *C000159C != 0:
+  serial_push
+  if serial_read(0) != 38333058:
+    set_C00026B4(0)
+    *C000159C = 0
+  else:
+    size = serial_read(48h)
+    ~ size > 700 && exit
+
+    addr = serial_read(4C)
+    copy(addr, size, 0)
+
+    while true:
+      addr = serial_read(addr + 4)
+      ~ addr == -1 && break
+
+      size2 = HIWORD(serial_read(addr))
+      ~ size + size2 > 700 && break
+
+      copy(addr, size2, size)
+      size += size2
+
+    set_C00026B4(size)
+    *C000159C = 1
+
+switch *C0001596:
+  case 0:
+    size = get_C00026B4
+    memcpy(buf, eeprom_cache, size)
+  case 1:
+    *C00015B0 = 0
+    *C00015B2 = eeprom_cache[3]
+    *C00015B4 = size
+  case 2:
+    size = *C00015B4
+  default:
+    *C00015B0 = *C00015B2 = *C00015B4 = 0
+
+memcpy(buf, C00015B0, 6)
+memcpy(buf + 6, eeprom_cache, size)

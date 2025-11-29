@@ -1,0 +1,9 @@
+addr     struct       sizeof
+00029F94 byte[] S-Box 256
+0002A094 byte[] T0    1024
+0002A494 byte[] T1    1024
+0002A894 byte[] T2    1024
+0002AC94 byte[] T3    1024
+0002B094 byte[] Rcon  40
+----
+0002B0BC eod          4392

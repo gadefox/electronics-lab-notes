@@ -1,0 +1,6 @@
++00 byte       task
++01 byte       action
++02 word       size
++04 byte[size] payload
+----
+size+4 sizeof

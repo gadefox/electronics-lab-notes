@@ -1,0 +1,7 @@
+VCC<=6.5V
+VIN<=6.5V
+
+recommended:
+ 1.65V<=VCC<=3.6V
+ VIN<=5.5V
+ VOUT=VCC

@@ -1,0 +1,5 @@
+usb_dma_init(2)
+usb_dma_context_set_callback(0000CA04, 000003FF)
+
+usb_alloc_and_submit_rx_transfer(1)
+while usb_alloc_and_submit_rx_transfer(2) != null

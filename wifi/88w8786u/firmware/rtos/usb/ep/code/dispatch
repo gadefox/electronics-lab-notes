@@ -1,0 +1,7 @@
+***
+if ep == 0:
+  usb_setup_handler(0, rx/tx, buffer, length)
+else:
+  ctx = 04000068
+  ctx->handler(100h, (size << 16) | ep, buffer)
+***

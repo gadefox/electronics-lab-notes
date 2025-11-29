@@ -1,0 +1,12 @@
+VOUT=3V
+
+F2(VIN)        M52(VOUT)
+F1(EN)   GND   N/C
+
+VIN──────┬────EN
+         │pull-up
+GND──┤├──┘
+
+      ┌──┤├──┐
+VOUT──┤      ├──GND
+      └──┤├──┘

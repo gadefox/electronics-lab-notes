@@ -1,0 +1,7 @@
+0000EDCC eeprom_verify(uint addr);    see `verify`
+0000EE00 eeprom_check_sum(uint addr); see `checksum`
+000161C8 eeprom_read_blocks;          see `data`
+00019504 eeprom_read_block(byte[] buf, uint size, bool cache, uint addr)
+0001CF20 eeprom_read_config
+00023AC8 eeprom_read(bool cache, uint addr)
+00024098 eeprom_swap

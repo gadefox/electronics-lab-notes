@@ -1,0 +1,3 @@
+00016766 hash_table_insert(hash table, undef key, node)     see `insert`
+0001684C hash_table_lookup(hash table, undef key)           see `lookup`
+000168A0 hash_table_init(hash table, ptr[] buckets, uint num, ptr hash_fn, ptr compare_fn)

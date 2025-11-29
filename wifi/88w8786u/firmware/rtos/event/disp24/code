@@ -1,0 +1,5 @@
+# event_dispatch
+
+~ event == null && exit(1)
+~ event->dispatch == null && exit(1)
+return event->dispatch(event, cmdid, arg)

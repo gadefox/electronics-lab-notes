@@ -1,0 +1,9 @@
+serial_write_enable
+while size > 0:
+  memcpy(&val, buffer, 4)
+  buffer += 4
+  size -= 4
+
+  serial_write(addr, val)
+  addr += 4 
+serial_write_disable

@@ -1,0 +1,3 @@
+00003148 irq_dispatch
+0001CDCA irq_set(byte irq, ptr handler); ~ irq < 32 && ivt[irq]=handler || assert
+0001CDE0 irq_clear(byte irq); ivt[irq]=null

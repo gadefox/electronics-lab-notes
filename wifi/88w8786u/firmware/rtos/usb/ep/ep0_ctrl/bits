@@ -1,0 +1,7 @@
+OUT direction (host → device):
+ 0: stall
+ 3: 1=non-control endpoint enabled?
+ 6: 1=bulk type; 0=interrupt transfer?
+ 7: 1=active?
+IN direction (device → host):
+ see bits 0-16

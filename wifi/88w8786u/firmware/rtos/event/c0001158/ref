@@ -1,0 +1,27 @@
+00002D94 call event function 24h
+00009A40 call event function 20h
+0000BB04 call event function 24h
+0000BD2C call event function 24h
+0000BDD8 call event function 24h
+0000BE4C call event function 24h
+0000D2EC call event function 24h
+0000F36C call event function 24h
+0000FAB8 call event function 24h
+00010CFC call event function 24h
+0001112C call event function 24h
+0001160C call event function 24h
+00011670 call event function 24h
+00013964 call event function 24h
+00016710 call event function 24h
+00016C40 call event function 24h
+00016F64 call event function 24h
+0001746C
+0001A9E4 call event function 24h
+0001AA28 call C0002AA4[] functions
+0001AA5C findEventByKey("wlan"); call event function 24h
+0001AAA4 findEventByKey("usb"); call main event function
+0001E388 call event function 24h
+0001F300
+00027150 call event function 24h
+0002B204 data?
+0002B218 data?

@@ -1,0 +1,7 @@
+while size > 0:
+  val = serial_read(addr)
+  addr += 4 
+
+  memcpy(buf, &val, size > 4 ? 4 : size)
+  buf += 4
+  size -= 4

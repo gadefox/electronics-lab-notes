@@ -1,0 +1,41 @@
+ctx = 040000EC
+
+switch cmdid:
+case 8:
+  ~ pool_count_by_key(04000104, 4) != 0 exit(1)
+  ~ pool_count_by_key(04000104, 2) != 0 exit(1)
+  exit(0)
+case 0E:
+  if ?? == 1:
+    ~ usb_alloc_and_submit_rx_transfer(1) == 0 && assert
+  elif ?? == 4:
+    ~ usb_alloc_and_submit_rx_transfer(2) == 0 && assert
+  exit(0)
+case 0F:
+  exit(1)
+case 1B:
+  return pool_count_by_key(040002C4, 2)
+case 32:  # 00026926
+  ctx->cmdid = cmdid
+case 35:  # 0002692A
+  usb_endpoint_complete(2, 0)  # 2=end point
+  ctx->ep2count = 0
+case 36:  # 00026932
+  usb_alloc_and_submit_rx_transfer(2)
+case 37:  # 0002693E
+  addr = *0400007C
+  high = *(addr + 8D)  # byte
+  low = *(addr + 8C)   # byte
+  return (high << 8) | low
+case 38:  # 00026948
+  if *04000078 != 0:
+    delay_calibrated  # 3 conditions
+    ~ cxt->field14 != 0 && set_some_registers
+case 0D:  # 7 bytes payload
+  *040000100 = 0
+  serial_config
+  if serial_read(0) == 38333058:
+    val1 = HIWORD(serial_read(14h))
+    val2 = HIWORD(serial_read(7C))
+    ~ val1 != FFFF && val2 != FFFF && (val1 & 1) != 0 && *040000100 = 1
+  init_msg_buffer

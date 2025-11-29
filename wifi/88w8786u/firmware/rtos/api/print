@@ -1,0 +1,9 @@
+000004FC print_formatted_num
+00000570 vprintf3
+00000CB4 emit_formatted_num
+00000D5C vprintf2
+00000D91 vprintf3 helper
+00000E64 vprintf
+0000114C vprintf jump loop
+0000116C vprintf helper
+00026b90 snprintf

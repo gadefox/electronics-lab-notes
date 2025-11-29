@@ -1,0 +1,8 @@
++00 ptr[] buckets
++04 uint  count
++08 ptr   hash_fn
++0C ptr   compare_fn
++10 uint
++14 uint
+----
+ 18h sizeof

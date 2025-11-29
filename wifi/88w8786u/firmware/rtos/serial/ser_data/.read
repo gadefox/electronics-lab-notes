@@ -1,0 +1,9 @@
+*reg = (addr >> 16) & FF
+*reg = (addr >> 8) & FF
+*reg = addr & FF
+serial_wait_ready
+
+value = 0
+for i in 0..3:
+  value <<= 8
+  value |= *reg

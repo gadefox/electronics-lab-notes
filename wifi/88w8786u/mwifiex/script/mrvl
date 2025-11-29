@@ -1,0 +1,21 @@
+fn mrvl_usb {
+  usb = `{ lsusb | grep Marvell }
+  ~ $usb () && return
+
+  bus = `{ echo -n $usb(2) | sed 's/0//g' }
+  echo -n $bus' '
+  
+  dev = ``(:) { echo -n $usb(4) | sed 's/0//g' }
+  echo -n $dev(1)''
+
+  id = ``(:) (echo -n $usb(6))
+  echo -n $id(1)$id(2)$bus'u'
+}
+
+fn mrvl_print {
+  echo bus=$1 > /dev/tty
+  echo device=$2 > /dev/tty
+  echo vendor=$3 > /dev/tty
+  echo product=$4 > /dev/tty
+  echo usbmon=$5 > /dev/tty
+}

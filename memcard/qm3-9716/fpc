@@ -1,0 +1,14 @@
+  _________________
+ ╱ 2   4   6   8  |
+╱1   3   5   7   9|
+▶        
+
+1 ??           O
+2 Status       O  HIGH=ready
+3 GND
+4 Card Detect  O  LOW=no card/busy
+5 GND
+6 UD-
+7 UD+
+8 VBUS
+9 VBUS

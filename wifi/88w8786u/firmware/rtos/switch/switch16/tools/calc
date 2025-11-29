@@ -1,0 +1,29 @@
+#!/bin/gawk -f
+
+BEGIN {
+  ARGC = 2
+  ARGV[1] = "in"
+}
+
+NR == 1 {
+  base = strtonum("0x" $1)
+}
+
+NR % 2 {
+  i = (NR + 1) / 2
+  addr[i] = strtonum("0x" $2)
+}
+
+NR % 2 == 0 {
+  i = NR / 2
+  high = strtonum("0x" $2)
+  high = lshift(high, 8)
+  addr[i] = base + or(addr[i], high) * 2 + 2
+}
+
+END {
+  for (i in addr) {
+    hex = sprintf("%08x", addr[i])
+    printf "%d %s\n", i - 1, toupper(hex) > "case"
+  }
+}

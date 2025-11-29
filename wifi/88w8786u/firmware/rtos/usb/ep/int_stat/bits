@@ -1,0 +1,6 @@
+0 DMA transfter completion
+1 start of frame
+2 BUS reset
+6 disconnect/error
+7 resume
+8 suspend

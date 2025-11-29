@@ -1,0 +1,4 @@
+addr = *04003304
+gpio_init_pins(0, addr[23E])
+gpio_init_pins(1, addr[23F])
+*C00028E5 = 2

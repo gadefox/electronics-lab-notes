@@ -1,0 +1,13 @@
+#!/bin/rc
+
+. /usr/local/libexec/rc/util
+dir = `(dirname $0)
+bin = $dir/../extract/bin
+out = `(newdir out $dir)
+
+arm-none-eabi-objcopy -I binary -O elf32-littlearm -B arm $bin/1000 $out/1000 --rename-section .data=.firmware
+arm-none-eabi-objcopy -I binary -O elf32-littlearm -B arm $bin/1001 $out/1001 --rename-section .data=.data
+arm-none-eabi-objcopy -I binary -O elf32-littlearm -B arm $bin/1002 $out/1002 --rename-section .data=.small
+
+arm-none-eabi-ld -T $dir/link.ld -o $out/fw $out/1000 $out/1001 $out/1002
+exit 0

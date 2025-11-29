@@ -1,0 +1,5 @@
++00 uint
++04 byte gpio       GPIO pin or FF
++05 byte
+----
+ 06h sizeof

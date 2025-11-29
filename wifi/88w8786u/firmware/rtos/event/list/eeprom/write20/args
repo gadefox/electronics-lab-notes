@@ -1,0 +1,6 @@
+r0 event  node
+r1 byte[] buffer
+r2 uint   size      buffer size in bytes
+r3 uint   addr      EEPROM address
+----
+ 4 params

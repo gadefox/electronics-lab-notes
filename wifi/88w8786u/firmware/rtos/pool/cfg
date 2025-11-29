@@ -1,0 +1,6 @@
++14 uint
++18 word max block size
++1A byte blocks count
++1B byte
+----
+ 1C sizeof

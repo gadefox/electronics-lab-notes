@@ -1,0 +1,4 @@
++00 byte      num      total number of case entries, including the default case
++01 byte[num] offsets  per-case offsets added to the table’s base address
+----
+num+1 sizeof

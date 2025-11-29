@@ -1,0 +1,3 @@
+00026394 usb_bus_reset_and_speed_detection
+00026580 usb_submit_rx_transfer(byte ep, byte[] buffer, uint size)
+00026604 usb_submit_tx_transfer(byte ep, byte[] buffer, uint size)

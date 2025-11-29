@@ -1,0 +1,19 @@
+~ node == null & exit(0)
+
+value = hash_table_lookup(table, key)
+~ value != 0 && exit(value)
+
+hash_index = table->hash_fn(key)
+~ hash_index >= table->num && exit(0)
+
+node->value = key
+
+head = table->buckets[hash_index]
+if head != null:
+  node->next = head->next
+  head->next = node
+else:
+  table->buckets[hash_index] = node
+  node->next = null
+
+exit(key)

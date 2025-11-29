@@ -1,0 +1,7 @@
++00 byte bmRequestType  see `reqtype`
++01 byte bRequest       switch table index in 0..A
++02 word wValue
++04 word wIndex
++06 word wLength
+----
+ 08 sizeof

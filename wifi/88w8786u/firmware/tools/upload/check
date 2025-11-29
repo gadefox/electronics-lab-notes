@@ -1,0 +1,17 @@
+#!/bin/rc
+
+. /usr/local/libexec/rc/read
+dir = `(dirname $0)
+packet = $dir/packet
+
+fn check {
+  python3 $dir/check.py $packet/$1
+  echo 'Press ENTER to continue or ESC to stop...'
+  key = `read
+  ~ $key () && exit
+}
+
+for (f in `(ls $packet))
+  check $f
+
+exit 0

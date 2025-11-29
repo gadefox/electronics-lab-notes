@@ -1,0 +1,40 @@
+# first packet
+packet = (packet)buf
+packet->task = 8
+packet->action = ACT_SET
+packet->size = 6
+buf += 4
+# +4 bytes
+
+for block_i in 0..2:
+  gpio = blocks[block_i]
+  packet->payload[block_i * 2] = block_i + 1
+  packet->payload[block_i * 2 + 1] = gpio->pin
+  buf += 2
+# +6 bytes
+
+for block_i in 0..2:
+  block = blocks[block_i]
+  for gpio_i in 0..8:
+    gpio = block[gpio_i]
+
+    # next packet
+    packet = (packet)buf
+    packet->task = 9
+    packet->action = ACT_SET
+    packet->size = 4
+    packet->payload[0] = gpio_i
+    packet->payload[1] = block_i + 1
+    packet->payload[2] = gpio->case
+    packet->payload[3] = gpio->cfg
+    buf += 8
+  # +72 bytes
+# +216 bytes
+
+packet = (packet)buf
+packet->task = FF
+packet->action = ACT_EOF
+packet->size = 0
+# +4 bytes
+
+# total: 230 bytes

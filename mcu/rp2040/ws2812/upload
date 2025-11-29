@@ -1,0 +1,3 @@
+#!/bin/rc
+
+picotool load -x out/pio_ws2812.uf2

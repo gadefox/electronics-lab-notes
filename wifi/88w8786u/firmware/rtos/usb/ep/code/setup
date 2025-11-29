@@ -1,0 +1,32 @@
+ctx = 04000068
+spkt = 0400008C
+
+if ep != 0:
+  ***
+  memcpy(spkt, ctx->rings + 28h, 8)
+  usb_endpoint_disable(0, true)
+  usb_endpoint_disable(0, false)
+  ~ ctx->handler(80h, spkt, null) == E0000001 && exit
+
+# only standard requests are supported!
+~ spkt->bmRequestType & 60h && usb_endpoint_set_stall(0,0); exit
+
+req = ctx->bRequest
+~ req > 10 && req = 10
+switch req:
+  case 0:  # 00021D58
+    usb_get_status_handler
+  case 1:  # 00021D62
+    usb_clear_feature_handler
+  case 3:  # 00021D6A
+    usb_set_feature_handler
+  case 5:  # 00021D72
+    usb_set_address_handler
+  case 6:  # 00021D7A
+    usb_get_descr_handler
+  case 8:  # 00021D82
+    usb_get_config_handler
+  case 9:  # 00021D8A
+    usb_set_config_handler
+  case 10: # 00021D92
+    usb_endpoint_set_stall

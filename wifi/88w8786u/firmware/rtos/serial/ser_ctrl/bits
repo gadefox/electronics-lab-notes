@@ -1,0 +1,4 @@
+0     1=write
+1     1=read
+6..8  address mode; (mode + 3) << 6
+10    0=ready; 1=operation in progress

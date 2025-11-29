@@ -1,0 +1,6 @@
+~ serial_read(0) != $magic && exit(failed)
+~ (serial_read(7C) >> 16) == FFFF && exit(failed)
+
+val = serial_read(7C) >> 16
+~ val == FFFF && exit(failed)
+~ val & 1 && exit(ok) || exit(failed)

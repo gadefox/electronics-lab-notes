@@ -1,0 +1,26 @@
+# is packet empty?
+packet_size = packet->size
+~ packet_size == 0 && exit
+
+buf_size -= 4
+payload_i = 0
+
+while buf_size > 1 && packet_size > 1:
+  block_i = packet->payload[payload_i] - 1
+  ~ block_i < 3:
+    block = blocks[block_i]
+    gpio = block[0]
+
+    old_pin = gpio->pin
+    new_pin = packet->payload[payload_i + 1]
+
+    ~ (new_pin == 12h || new_pin != old_pin) && old_pin != 12h:
+      callback(old_pin)  # see `setinput`
+    
+    for gpio_i in 0..8:
+      gpio = block[gpio_i]
+      gpio->pin = new_pin
+  
+  buf_size -= 2
+  packet_size -= 2
+  payload_i += 2

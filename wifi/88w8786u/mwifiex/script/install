@@ -1,0 +1,46 @@
+#!/bin/rc
+
+echo --install--
+
+dst = /lib/firmware/mrvl
+echo dest=$dst
+
+echo copy usb8786_uapsta.bin
+mkdir -p $dst
+cp ../usb8786_uapsta.bin $dst
+echo
+
+src = /home/fox/.build/linux/drivers/net/wireless/marvell/mwifiex
+echo src=$src
+
+kernel = `(uname -r)
+dst = /usr/lib/modules/$kernel/kernel/drivers/net/wireless/marvell/mwifiex
+echo install=$dst
+
+mkdir -p $dst
+
+echo copy mwifiex.ko
+cp $src/mwifiex.ko $dst
+
+echo compress mwifiex.ko
+xz -f9 --check=crc32 $dst/mwifiex.ko
+
+echo copy mwifiex_pcie.ko
+cp $src/mwifiex_pcie.ko $dst
+
+echo compress mwifiex_pcie.ko
+xz -f9 --check=crc32 $dst/mwifiex_pcie.ko
+
+echo copy mwifiex_sdio.ko
+cp $src/mwifiex_sdio.ko $dst
+
+echo compress mwifiex_sdio.ko
+xz -f9 --check=crc32 $dst/mwifiex_sdio.ko
+
+echo copy mwifiex_usb.ko
+cp $src/mwifiex_usb.ko $dst
+
+echo compress mwifiex_usb.ko
+xz -f9 --check=crc32 $dst/mwifiex_usb.ko
+
+#depmod -a

@@ -1,0 +1,6 @@
+00003680 calls pool_alloc_slot(_, 62C)
+00003824 calls pool_alloc_slot(_, 2000)
+00006800 calls pool_alloc_slot(_, 2000)
+000238AC calls pool_alloc_slot(_, 2000)
+000276E0 calls pool_alloc_slot(_, 2000)
+00027AB8 init

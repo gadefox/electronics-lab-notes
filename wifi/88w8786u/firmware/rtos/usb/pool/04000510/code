@@ -1,0 +1,9 @@
+total = pool_get_total_capacity(04000104)
+total = total / 2 * 1664
+
+table = 04000510
+for i in 0..17:
+  tmp = table[i] * 1504 / 1000
+  tmp /= 8
+  ~ tmp > total && tmp = total
+  table[i + 17] = tmp

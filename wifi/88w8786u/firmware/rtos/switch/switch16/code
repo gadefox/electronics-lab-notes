@@ -1,0 +1,2 @@
+addr = offsets + offsets[index] * 2 + 3  # addr & 1 != 0, meaning it's a thumb code
+jump addr & ~1

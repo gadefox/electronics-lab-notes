@@ -1,0 +1,4 @@
+0000A564 gpio_init_pins; see `initpins`
+0001B64C gpio_init_pin4_input; see `initpin4in`
+0002139C gpio_init_pins01; see `initpins01`
+00027528 gpio_update_80002808_90000220; see `updateregs`

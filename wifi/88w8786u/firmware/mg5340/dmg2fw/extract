@@ -1,0 +1,62 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+
+fn find {
+  if (~ $2 ()) {
+    grep -abo $1 $dir/segm.hex | cut -d: -f1 | head -n1
+  } else {
+    tail -c +$2 $dir/segm.hex | grep -abo $1 | cut -d: -f1 | head -n1
+  }
+}
+
+echo extract files:
+7z x $dir/mfuu-mac-mg5300-1_2b-ea7.dmg
+
+echo
+echo remove binary header
+tail -c +69 $dir'/Printer Update/Printer Update.app/Contents/Resources/MG5300-2_020.dat' > $dir/pixma.srec
+
+echo
+echo convert to binary:
+grep -v -e '^SF' $dir/pixma.srec | srec_cat -o $dir/pixma.bin -binary
+
+echo
+echo check binary:
+strings -td $dir/pixma.bin > $dir/pixma.str
+
+grep --color=always '$Id: ' $dir/pixma.str
+offset = `{ grep '$Id: ' $dir/pixma.str | awk '{print $1}' }
+~ $offset () && exit 1
+
+echo
+echo create temp segment:
+start = `{ bc <<< $offset-1024*1024$nl }
+dd if=$dir/pixma.bin of=$dir/segm.bin bs=1 skip=$start count=2M
+
+echo
+echo convert to hex
+xxd -p $dir/segm.bin | tr -d '\n' > $dir/segm.hex
+
+echo
+echo find id token
+token = `(cat $dir/id.hex)
+offset = `(find $token)
+
+echo find end token
+token = `(cat $dir/end.hex)
+tmp = `(find $token $offset)
+~ $tmp () && exit 1
+count = `{ bc <<< $offset+$tmp+7$nl }
+
+echo rtrim:
+dd if=$dir/segm.hex of=$dir/../fwbegin/blob.hex bs=$count count=1
+
+echo
+echo delete temp files
+rm -rf $dir/Printer Update
+rm $dir/pixma.srec
+rm $dir/pixma.bin
+rm $dir/pixma.str
+rm $dir/segm.bin
+rm $dir/segm.hex

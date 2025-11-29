@@ -1,0 +1,8 @@
+0000A8D8 gpio_init(uint pin, bool rx/tx)
+00017B70 gpio_init_cfg(uint pin, uint cfg1, uint cfg2)
+00017C20 gpio_init_output_and_set(uint pin, uint value)
+00017C08 gpio_9000024C_set_bits0_3(uint cfg)
+00017C64 gpio_9000024c_set_bits4_7(uint cfg)
+00017D1C gpio_init_input(uint pin)
+0001B168 gpio_config(uint pin, bool bit1, bool bit2)
+0001C894 gpio_set_output(uint pin, uint value)

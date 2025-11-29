@@ -1,0 +1,11 @@
+# TODO:finish: ??
+~ ?? == 1 && gpio_control_deserialize; exit
+
+gpio_control_serialize
+~ ?? != 1 && exit
+
+*C0001263 = ??
+gpio_init_pin4_input
+gpio_update_80002808_90000220
+event_handle24(*C0001158)
+*C001B24C = 0

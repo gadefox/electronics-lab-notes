@@ -1,0 +1,13 @@
+serial_push_reg
+~ serial_read(0) != 38333058 && exit  # EEPROM magic
+
+while size > 0:
+  val = serial_read(addr)
+
+  *payload++ = (val >> 24) & FF
+  *payload++ = (val >> 16) & FF
+  *payload++ = (val >> 8) & FF
+  *payload++ = val & FF
+
+  addr += 4
+  size--

@@ -1,0 +1,7 @@
++14 byte   num_cfgs
++15 byte
++16 word   num_slots
++18 slot[] slot registry
++1C cfg[]  config registry
+----
+ 20h sizeof

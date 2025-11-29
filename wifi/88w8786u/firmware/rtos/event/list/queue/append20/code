@@ -1,0 +1,4 @@
+~ status == 1 && queue_append(040034E8, qnode)
+~ status == 4 && queue_append(040034D4, qnode)
+
+calls external function @03F01FC8

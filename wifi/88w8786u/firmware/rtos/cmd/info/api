@@ -1,0 +1,3 @@
+00003A30 get_C00026B4
+0000A8CC set_C00026B4
+0001420C handle_eeprom  see `eeprom`

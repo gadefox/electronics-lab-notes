@@ -1,0 +1,8 @@
+f<100Hz   󰦒(x+20)   [mHz]
+
+f<1kHz    󰦒(x+0.2)  [Hz]
+f<10kHz   󰦒(x+2)    [Hz]
+f<100kHz  󰦒(x+20)   [Hz]
+
+f<1MHz    󰦒(x+0.2)  [kHz]
+f<10MHz   󰦒(x+2)    [kHz]

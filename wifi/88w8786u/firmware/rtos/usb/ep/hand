@@ -1,0 +1,10 @@
+0000C1A4 usb_irq_handler
+00011678 usb_clear_feature_handler(bool process_request, undef param2)
+00011708 usb_get_config_handler
+00011838 usb_get_status_handler(bool process_request)
+000118F0 usb_set_address_handler(bool process_request)
+00011968 usb_set_config_handler(bool process_request)   see `config`
+00011A40 usb_set_feature_handler(bool is_setup_pck)     see `feature`
+00021C7C usb_dispatch_handler                           see `dispatch`
+00021CD8 usb_setup_handler                              see `setup`
+0002669C usb_send_status_zlp(bool wait_for_completion)

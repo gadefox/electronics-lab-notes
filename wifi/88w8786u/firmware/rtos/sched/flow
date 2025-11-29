@@ -1,0 +1,21 @@
+network packet arrives at PHY
+             ↓
+MAC controller triggers hardware IRQ
+             ↓
+IRQ matrix routes to allocated slot
+             ↓
+ARM CPU enters IRQ handler
+             ↓
+scheduler examines register engine tasks
+             ↓
+finds highest priority ready task
+             ↓
+dispatches via jump table to handler
+             ↓
+handler programs DMA/NPU for processing
+             ↓
+returns from IRQ
+             ↓
+HW engine processes packet autonomously
+             ↓
+completion triggers next IRQ cycle

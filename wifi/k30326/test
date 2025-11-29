@@ -1,0 +1,20 @@
+A───M52(VIN)
+
+   VCC
+    │
+     1kΩ on-chip
+    │
+R───┴───M58
+
+S-M59 W-M65 Z-M66 X-M67:
+T───┬───Mnn
+    │
+     1kΩ on-chip
+    │
+   GND
+
+Y───┬───M68
+    │
+     1kΩ
+    │
+   GND

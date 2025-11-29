@@ -1,0 +1,5 @@
+0000C038 usb_teardown_all_endpoints(bool delay)
+00026094 usb_endpoint_disable(byte ep, bool rx/tx)
+00026280 usb_endpoint_init(byte ep, uint size, bool rx/tx, byte type, byte flags); see `init`
+0002676C usb_endpoint_set_clear_halt(byte ep_rx/tx, bool set)
+000267CC usb_entpoint_set_stall(byte ep, bool rx/tx)

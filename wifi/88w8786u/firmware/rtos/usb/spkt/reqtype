@@ -1,0 +1,3 @@
+7:   0=host → device, 1=device → host
+6-5: 00=standard, 01=class, 10=vendor, 11=reserved
+4-0: 00000=device, 00001=interface, 00010=endpoint, ..

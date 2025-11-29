@@ -1,0 +1,6 @@
+addr     struct sizeof note
+C000134C slot   10h    sizeof(slot)=18h!
+C000135C pool   20h
+C000137C cfg    1C
+----
+C0001398 eod

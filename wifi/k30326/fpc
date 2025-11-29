@@ -1,0 +1,12 @@
+  _______________
+ ╱ 2   4   6   8|
+╱1   3   5   7  |
+
+F1 EN    LDO(VIN)  I
+F2 VBUS  USB       I
+F3 GND
+F4 GND
+F5 UD-   M50       I
+F6 UD+   M49       I
+F7 GND
+F8 STAT  M39       O  [3V=READY, 1.8V=ERROR]

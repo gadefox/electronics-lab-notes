@@ -1,0 +1,4 @@
+~ index < table->num && offset = table->offsets[index]        # case 0..num-1:
+~ index >= table->num && offset = table->offsets[table->num]  # default:
+addr = table + offset * 2 + 1  # addr & 1 != 0, meaning it's a thumb code
+jump addr & ~1

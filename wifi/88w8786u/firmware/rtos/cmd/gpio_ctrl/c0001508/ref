@@ -1,0 +1,2 @@
+00014378 get *C0001508
+00017D18 dispatch; ~ param in (0 6 7) && *C0001508=param

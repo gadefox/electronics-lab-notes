@@ -1,0 +1,6 @@
+000057BC calls pool_alloc_slot(_, 256)
+00005E18 calls pool_alloc_slot(_, 400)
+00006048 aes_key_wrap: calls pool_alloc_slot(_, 400)
+000075B0 calls pool_alloc_slot(_, 400)
+000076B4 calls pool_alloc_slot(_, 400)
+00027B38 init

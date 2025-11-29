@@ -1,0 +1,4 @@
+M60(CS)     M64(VCC)
+M61(DO)     M64(HOLD)
+M64(WP)     M63(CLK)
+GND         M62(DI)

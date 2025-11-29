@@ -1,0 +1,7 @@
++00 node head in linked list
++04 node tail in linked list
++08 uint number of nodes in linked list
++0C
++10 uint max count                          ~ max > num && max=num
+----
+ 14h sizeof

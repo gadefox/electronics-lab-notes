@@ -1,0 +1,8 @@
+CPU core: Feroceon
+class: 9
+architecture: v5TE
+
+thumb instruction set
+enhanced DSP extensions e.g MLA (a+b×c)
+jazelle not supported
+little endian

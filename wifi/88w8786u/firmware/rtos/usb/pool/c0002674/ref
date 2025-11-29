@@ -1,0 +1,16 @@
+000026E8
+00002700
+00002D88 C0002674->size = size
+0000D618 function uses C0002674->size
+0000EE6C function uses C0002674->field28
+0000EE7C function uses C0002674->field28
+0000EEBC function uses C0002674->field01
+0000F360 function uses C0002674->field00
+0000F694 function uses C0002674->count14
+0000FAA8 function uses C0002674->count30
+0000FF18 data?
+000103F4 data?
+00010CF4 data?
+00011604 function uses C0002674->size
+000172C8 function uses C0002674->field01
+00025EC0 function uses C0002674->size

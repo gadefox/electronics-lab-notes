@@ -1,0 +1,13 @@
+flags1 = node1[23h]
+flags2 = node2[23h]
+
+~ (flags1 & 1) != (flags2 & 1) && (flags1 & 2) != (flags2 & 2) && exit(1)
+~ flags1 & 16 && exit(0)
+ 
+flags3 = node1[1E]
+flags4 = node2[1E]
+
+~ ((flags3 & 1) != (flags4 & 1) && (flags3 & 2) != (flags4 & 2)) ||
+   (flags1 & 4) != (flags2 & 4) && exit(1)
+
+return memcmp(node1[18h], node2[18h], 6)

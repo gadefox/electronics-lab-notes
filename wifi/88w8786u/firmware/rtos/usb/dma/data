@@ -1,0 +1,13 @@
+addr     struct     sizeof  note
+04001B10 node[96]   480     ring; 0C*60h
+04001F90 ptr[8]     020
+04001FB0 pool       0A0
+04002050 descr[96]  9C0     1A*60h
+04002A10 node[96]   480     descr; 0C*60h
+04002E90 descr      01A
+----
+04002EAA eod
+
+C0027400 ring[96]   C00     20*60h
+----
+C0028000 eod

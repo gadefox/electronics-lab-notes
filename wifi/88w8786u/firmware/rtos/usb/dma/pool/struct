@@ -1,0 +1,33 @@
++00
++0C ptr    descr                               04002E90 or null
++10 ptr                                        04002050
++14 ptr    head descr in linked list
++18 ptr    tail descr in linked list
++1C
++20 uint   num descr in linked list            96
++24 ptr    TX                                  0
++28 ptr    RX                                  0
++2C uint   TX transfer counter                 0
++30 uint   RX transfer counter                 0
++34 ptr    endpoint rings                      see ctx[18]
++38 ptr                                        C0027400
++3C ptr    head ring in linked list
++40 ptr    tail ring in linked list
++44 ptr[8] EP queue heads array indexed by ep*2+dir
++64 ptr[8]
++84 ptr                                        04002A10
++88 ptr                                        04001B10
++8C byte   device state: 0=default, 1=addressed, 2=configured
++8D byte
++8E word                                       ~ C000291F & 80h && 1 || 0
++92 word   num rings in linked list            96
++94 word   `start of frame` counter
++96 word   saved device state during the reset
++98 word   error/special counter               0
++9A byte   speed: 0=Full-Speed, 2=High-Speed
++9B byte   EP count                            max=4
++9C byte   active configuration number
++9D byte   addr
++9F byte   debug/suspend state                 0
+----
+ A0 sizeof

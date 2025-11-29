@@ -1,0 +1,7 @@
+FEDCBA9876543210 bits used by the firmware:
+0000010000000010 read
+0000010000000001 write
+0000010000001000 serial command 5
+0000010000001010 serial command 4
+0000010000010100 erase block 64KiB
+0000010000000100 write status register

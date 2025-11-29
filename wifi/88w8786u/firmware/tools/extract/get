@@ -1,0 +1,16 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+bin = $dir/bin
+
+fn getbytes {
+  echo -n 0x
+  offset = `{ bc <<< 'ibase=16;'$3-$2$nl }
+  dd if=$bin/$1 bs=1 skip=$offset count=$4 >[2] /dev/null | xxd -p | rev | sed -E 's/(.)(.)/\2\1/g'
+  exit 0
+}
+
+~ $1 4 && getbytes 1001 0 $2 $3
+~ $1 c && getbytes 1002 1100 $2 $3
+
+exit 1

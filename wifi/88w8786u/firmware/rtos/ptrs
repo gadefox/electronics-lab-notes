@@ -1,0 +1,95 @@
+0400005C OSA_Sema lock state
+04000064 queue pool
+04000084 callback function
+040000EC struct
+04000100 data ($Id)
+04000104 pool1
+04000124 config1
+04000140 pool2
+04000160 config2
+0400017C pool3
+0400019C config3
+040001B8 pool4
+040001D8 config4
+040001F3 config4
+04000210 pool5
+04000230 config5
+0400024C pool6
+0400026C config6
+04000288 pool7
+040002A8 config7
+040002C4 pool8
+040002E4 config8
+04000300 pool9
+04000320 config9
+0400033C pool10
+0400035C config10
+04000378 slots5
+0400037C slots6
+04000384 slots9
+04000388 slots10
+040004CC struct (bit masks)
+04002F10 slots1
+04002F80 slots2
+04002F90 slots3
+04002FA0 slots4
+04002FB4 slots7
+04002FC0 slots8
+04002EE0 event
+040034D4 queue2
+040034E8 queue2
+040034FC event
+04003800 serial
+040038C0 tree
+0400399C timer
+040039C8 timer
+
+C0001158 usb event node
+C000115C wlan event node
+C0001188 event list
+C00011C0 thread
+C00011C4
+C00011C8 queue
+C00011E0 event identifier
+C00011E4 event node
+C0001288 thread
+C0001290 queue
+C00012D0 struct (BGScan timer)
+C0002674 struct mempool-slot
+C0002676 mempool-slot size
+C0002690 thread
+C0002694
+C0002698 queue
+C0002788 thread
+C00028FC struct
+C000291F
+C0002954
+C0002AA4 jump table
+C0002B00 descriptor1
+C0012700 descriptor2
+C0014700 descriptor3
+C0015700 descriptor4
+C0016700 descriptor5
+C0017100 descriptor6
+C0018100 descriptor7
+C0019900 descriptor8
+C0019F00 descriptor9
+C001A700 descriptor10
+C001AE2C event
+C001B29C queue
+C001B2A4 queue
+C001B858 timer
+C001CAF0 queue2
+C001CB04 queue2
+C001D4E8 queue2
+C001D4FC queue2
+C001D510 queue2
+C001DBD0 tree
+C001DE90 tree
+C001DEB8 tree
+C0024098 tree
+C00247B0 tree
+C00247FC timer
+C0027400 USB/DMA
+C0002904 
+C000291F

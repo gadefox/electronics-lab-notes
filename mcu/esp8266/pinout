@@ -1,0 +1,39 @@
+1   VDDA         P    Analog Power 2.5-3.6V
+2   LNA          I/O  RF antenna interface. Chip output impedance = 39 + j6 Ω. It is suggested to retain the π-type matching network to match the antenna
+3   VDD3P3       P    Amplifier Power 2.5-3.6V
+4   VDD3P3       P    Amplifier Power 2.5-3.6V
+5   VDD_RTC      P    NC (1.1V)
+6   TOUT         I    ADC pin. It can be used to test the power-supply voltage of VDD3P3 (Pin3 and Pin4) and the input power voltage of TOUT(Pin 6). However, these two functions cannot be used simultaneously
+7   CHIP_EN      I    Chip Enable; High: On, chip works properly; Low: Off, small current consumed
+8   XPD_DCDC     I/O  Deep-sleep wakeup (need to be connected to EXT_RSTB); GPIO16
+
+9   MTMS         I/O  GPIO 14; HSPI_CLK
+10  MTDI         I/O  GPIO 12; HSPI_MISO
+11  VDDPST       P    Digital/IO Power Supply (1.8-3.6V)
+12  MTCK         I/O  GPIO 13; HSPI_MOSI; UART0_CTS
+13  MTDO         I/O  GPIO 15; HSPI_CS; UART0_RTS
+14  GPIO2        I/O  UART TX during flash programming; GPIO2
+15  GPIO0        I/O  GPIO0; SPI_CS2
+16  GPIO4        I/O  GPIO4
+
+17  VDDPST       P    Digital/IO Power Supply (1.8-3.6V)
+18  SDIO_DATA_2  I/O  Connect to SD_D2 (Series R: 20Ω); SPIHD; HSPIHD; GPIO9
+19  SDIO_DATA_3  I/O  Connect to SD_D3 (Series R: 200Ω); SPIWP; HSPIWP; GPIO10
+20  SDIO_CMD     I/O  Connect to SD_CMD (Series R: 200Ω); SPI_CS0; GPIO11
+21  SDIO_CLK     I/O  Connect to SD_CLK (Series R: 200Ω); SPI_CLK; GPIO6
+22  SDIO_DATA_0  I/O  Connect to SD_D0 (Series R: 200Ω); SPI_MISO; GPIO7
+23  SDIO_DATA_1  I/O  Connect to SD_D1 (Series R: 200Ω); SPI_MOSI; GPIO8
+24  GPIO5        I/O  GPIO5
+
+25  U0RXD        I/O  UART Rx during flash programming; GPIO3
+26  U0TXD        I/O  UART TX during flash programming; GPIO1; SPI_CS1
+27  XTAL_OUT     I/O  Connect to crystal oscillator output, can be used to provide BT clock input
+28  XTAL_IN      I/O  Connect to crystal oscillator input
+29  VDDD         P    Analog Power 2.5-3.6V
+30  VDDA         P    Analog Power 2.5-3.6V
+31  RES12K       I    Serial connection with a 12 kΩ resistor and connect to the ground
+32  EXT_RSTB     I    External reset signal (Low voltage level: active)
+
+note:
+- GPIO2, GPIO0, and MTDO are used to select booting mode and the SDIO mode;
+- U0TXD should not be pulled externally to a low logic level during the powering-up.

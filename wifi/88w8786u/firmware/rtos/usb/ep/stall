@@ -1,0 +1,3 @@
+protocol error (invalid request)
+unsupported command
+invalid request state

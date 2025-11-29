@@ -1,0 +1,8 @@
+BGR
+
+red   5 bits
+green 6 bits
+blue  5 bits
+
+white=0x0000
+black=0xFFFF

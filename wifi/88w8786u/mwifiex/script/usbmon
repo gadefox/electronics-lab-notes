@@ -1,0 +1,13 @@
+#!/bin/rc
+
+lsmod | grep --color=auto usbmon
+echo
+
+dir = `(dirname $0)
+. $dir/mrvl
+
+mrvl = `mrvl_usb
+~ $mrvl () && exit 1
+mrvl_print $mrvl
+
+cat /sys/kernel/debug/usb/usbmon/$mrvl(5)

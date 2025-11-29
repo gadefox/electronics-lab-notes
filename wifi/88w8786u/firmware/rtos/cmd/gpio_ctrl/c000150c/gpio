@@ -1,0 +1,6 @@
++00 byte
++01 byte pin   GPIO pin (0..11h); 12h is used for input
++02 byte case  switch table index; see `switch`
++03 byte cfg   config for GPIO registers (e.g. 9000024C)
+----
+ 04 sizeof

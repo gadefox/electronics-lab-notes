@@ -1,0 +1,12 @@
+~ buf[2] != 4 && exit
+
+block_i = buf[5] - 1
+~ block_i < 3 || exit
+block = blocks[block_i]
+
+gpio_i = buf[4]
+~ gpio_i < 9 || exit
+
+gpio = block[gpio_i]
+gpio->case = buf[6]
+gpio->cfg = buf[7]

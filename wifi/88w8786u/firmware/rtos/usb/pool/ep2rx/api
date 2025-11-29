@@ -1,0 +1,6 @@
+00002CE8 usb_pool_ep2_rx_reset
+0000BCD0 usb_pool_ep2_rx_check_integrity1       see `check`
+0000D21C usb_pool_ep2_rx_check_integrity2
+0001A9A0 usb_pool_ep2_rx_et_al_free_slot        see `free`
+0001E15C usb_pool_ep2_rx_check_integrity3
+0001E20C usb_pool_ep2_rx_check_integrity4

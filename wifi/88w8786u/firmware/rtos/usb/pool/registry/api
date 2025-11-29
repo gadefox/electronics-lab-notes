@@ -1,0 +1,5 @@
+0000B950 registry_add(ptr object, param)
+0000B9A4 registry_check_timeouts
+0000BA14 registry_clear
+0000BA30 registry_remove(ptr object)
+0000BA80 registy_free_all_slots

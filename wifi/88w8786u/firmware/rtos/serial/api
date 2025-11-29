@@ -1,0 +1,16 @@
+00009214 serial_write_buffer
+00009328 serial_get(word port)
+000093D4 serial_set(word port, byte val)
+0000CB44 serial_push_reg
+0000CB74 serial_pop_reg
+0001B6C8 serial_detect_mode
+0001CB58 serial_block_erase64         D8 (flash mem)
+0001CBD8 serial_read(uint addr)
+0001CC44 serial_write(uint addr, uint value)
+0001CCC4 serial_wait_ready
+0001CCDC serial_get_status            5=RDSR
+0001CD0C serial_write_disable         4=WRDI
+0001CD38 serial_write_enable          6=WREN
+0001CD64 serial_write_status_reg      1=WRSR
+00025354 serial_set_mode
+0002543C serial_port_ready

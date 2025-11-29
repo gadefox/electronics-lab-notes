@@ -1,0 +1,7 @@
++00 byte     num
++01
++04 ptr      language ID descriptor
++08 ptr[num] descs
++0C ptr      fallback
+----
+num*4+C sizeof

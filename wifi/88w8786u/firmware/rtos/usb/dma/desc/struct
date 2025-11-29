@@ -1,0 +1,12 @@
++00 byte    ep                         EP index: 0..F
++01 byte    dir                        direction: 0=RX; 1=TX
++02 byte    type                       0=EP0; 1=not used; 2=EP1,EP2,EP3
++03 byte                               1
++04 byte[]  buffer
++08 uint    size
++10 word    max packet size            0x40=FullSpeed; 0x200=HighSpeed
++12 byte    class                      0=control EP; 1=non-control EP
++13 byte[3] align
++16 node    next node in linked list   04002A10+i*0C
+----
+ 1A sizeof

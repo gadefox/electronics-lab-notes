@@ -1,0 +1,7 @@
+0000680C calls this handler(*C000115C, 04000140, 0, 5)
+0000EEC4 calls this handler(*C000115C, ?, 0, 3, C0002674)
+00012164 calls this handler(*C000115C, ?, ?, 5)
+00016B64 calls this handler(*C000115C, param1, 0, 2)
+000279E4 calls this handler(*C000115C, param1, ?, 5)
+0002808C *C00011E4 = null
+000280A8 *C00011E4 = handler

@@ -1,0 +1,18 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+
+offset = `{ tail -c +2 $dir/blob.hex | grep -abo '01000000' | cut -d: -f1 | head -n1 }
+offset = `{ bc <<< $offset+1$nl }
+
+# hex
+rm $dir/segm.hex >[2] /dev/null
+dd if=$dir/blob.hex of=$dir/segm.hex bs=1 skip=$offset >[2] /dev/null
+
+# bin
+rm $dir/segm.bin >[2] /dev/null
+xxd -r -p $dir/segm.hex $dir/segm.bin
+
+# is valid?
+python3 $dir/valid.py
+cp -f $dir/segm.hex $dir/blob.hex

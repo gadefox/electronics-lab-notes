@@ -1,0 +1,5 @@
+00005F54 bool aes128_key_wrap(uint[] round_keys, _, uint num_blocks, block[] input, block integrity, block[] output)
+00020BB0 aes128_process_block(uint[] round_keys, uint num_rounds /* 10 */, block[2] input, block[2] output)
+00020EB4 aes128_invert_round_keys(uint[] round_keys, block[2] key, uint key_bits /* 128 */, uint num_rounds /* 10 */)
+00021000 /* 10 */ uint aes128_expand_key(uint[44] expanded_keys, block[2] key, uint key_bits /* 128 */);
+000210D2 aes128_init_ctx(uint[] round_keys, byte[] key, uint key_bits, bool encrypt)

@@ -1,0 +1,20 @@
+byte    uint8_t
+countof sizeof(array) / sizeof(array[0])
+eod     end of data
+hand    handler
+le      little endian
+ptr     pointer
+uint    uint32_t
+undef   undefined
+word    uint16_t
+
+EP      endpoint
+HW      hardware
+ISR     interrupt service routine
+MAC     media access control
+NPU     network processor unit
+PHY     physical layer
+RTOS    real time OS
+RX      host → device (EP-OUT)
+TX      device → host (EP-IN)
+SME     state machine engine

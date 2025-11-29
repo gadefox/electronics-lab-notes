@@ -1,0 +1,22 @@
+***
+desc->type = type           # 0=EP0; 1=not used; 2=EP1,EP2,EP3
+desc->class = flags & 1     # 00=EP0 01=EP2/EP3 11=EP1
+***
+
+bits = packetsize << 16
+switch type:
+case 0:
+  bits |= 1 << 15
+case 1:
+  bits |= 1 << 30
+case 2:
+  ~ flags & 1 && bits |= 1 << 29
+
+index = ep * 2 + rx/tx
+ctx = 04000068
+ctx->rings[index * 64] = bits
+
+~ flags & 2 && bits = 1 << 7 || bits = 3 << 6
+bits |= type << 2
+~ rx/tx && bits <<= 16
+800001C0 + ep * 4 |= bits

@@ -1,0 +1,11 @@
+00002840 calls serial_get(16E), serial_set(16E), serial_get_loop, serial_set_22-25;2a
+0000919C calls serial_write_buffer(C00019C8), serial_write_buffer(C00019C8), serial_update_104, serial_update(9), serial_set(27h), serial_set(29h), serial_set(2A)
+00009310 serial_update_104: val = serial_get(104h); serial_set(104h, val & 0xFD)
+00009358 serial_set_1B2
+000093C4 serial_set_delay
+00020AA8 serial_write_C00013F8_lookup_table
+00020AFC serial_set_22-25;2a
+00020B5A serial_update_3_101h
+00020B90 serial_get_loop
+000252FC serial_set_mode(3)
+0002537C serial_set_mode(2), 90000804=58h

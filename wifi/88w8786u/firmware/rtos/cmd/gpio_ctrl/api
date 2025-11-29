@@ -1,0 +1,9 @@
+0000ED24 gpio_control_serialize(byte[] buf, block[3] blocks)
+0000EDB8 gpio_control_serialize_end(byte[] buf)
+00010F72 gpio_control_handle
+00014370 gpio_control_getC0001508
+00017C80 gpio_control_dispatch(uint param)
+00017D1C gpio_control_callback(uint pin)
+0001D1D4 gpio_control_update_field(byte[] buf, _, block[3] blocks)
+0001D214 gpio_control_deserialize_pins(byte[] buf, word size, block[3] blocks, ptr callback)
+0001E07C gpio_control_deserialize(byte[] buf, uint size)

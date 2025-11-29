@@ -1,0 +1,17 @@
++00 byte index          index into a 32-bit lookup table (index * 4 byte offset)
++01 byte bit mask       1F
++02 byte bit mask       1F
++03 byte
++04 word bit mask       FFFF
++06 word
++08 word
++10 uint
++14
++18 uint
++0C word
++1C uint bit mask       7FFFDFEF
++20 uint bit mask       7FFFDFEF
++24
++34 uint
++3C uint
++40

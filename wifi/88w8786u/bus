@@ -1,0 +1,7 @@
+host: USB
+
+peripheral:
+ UART
+ 1 wire serial
+ 2 wire serial / I²C
+ 4 wire serial / SPI

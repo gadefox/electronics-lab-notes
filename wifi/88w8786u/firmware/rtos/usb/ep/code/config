@@ -1,0 +1,38 @@
+!~ process_request && exit
+
+ctx = 04000068
+spkt = 0400008C
+
+if spkt->bmRequestType == 0 && spkg->wIndex == 0 && spkg->wLength == 0:
+  bValue = spkt->wValue >> 8
+  if bValue == 0:
+    pool = ctx->pool
+    if (pool->devstate == 0 || pool->devstate == 1) && bValue <= 1:
+      if bValue == 0:
+        pool->active_cfg_num = 0
+        pool->devstate = 1
+        pool->field8d = 0
+        usb_endpoint_disable(3, true);
+        usb_endpoint_disable(2, false)
+      else:
+        if bValue != pool->active_cfg_num:
+          if bValue == 1:
+            if *80000184 & (1 << 9):
+              pool->speed = 2
+              packetsize = 200h
+            else:
+              pool->speed = 0
+              packetsize = 40h
+            
+            usb_endpoint_init(2, packetsize, false, 2, 1)
+            usb_endpoint_init(3, packetsize, true, 2, 1)
+            ctx->handler(4, 0, null)
+
+          pool->active_cfg_num = bValue
+
+        pool->devstate = 0
+        pool->field8d = 0
+
+      usb_ep0_send_status_zlp(0);
+
+return usb_endpoint_set_stall(0, false)

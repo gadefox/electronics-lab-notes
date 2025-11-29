@@ -1,0 +1,5 @@
++00 uint                            1
++04                                 & 0xFFFF80FF
++1C ptr  next node in linked list
+----
+ 20h sizeof

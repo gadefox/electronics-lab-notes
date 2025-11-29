@@ -1,0 +1,12 @@
+#!/bin/rc
+
+dir = `(dirname $0)
+. $dir/mrvl
+
+mrvl = `mrvl_usb
+~ $mrvl () && exit 1
+mrvl_print $mrvl
+
+echo
+echo force bind driver
+echo $mrvl(3)$mrvl(4) > /sys/bus/usb/drivers/mwifiex/new_id

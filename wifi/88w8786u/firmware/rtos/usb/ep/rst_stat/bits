@@ -1,0 +1,3 @@
+0 USB RESET     host resets the BUS
+5 USB SPEED     1=High-Speed, 0=Full-Speed
+7 speed valid   speed detection completed

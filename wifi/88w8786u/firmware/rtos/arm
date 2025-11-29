@@ -1,0 +1,2 @@
+ARM code can be spotted in hex dumps because most instructions will start with
+the hex digit "e" (4th byte in little-endian).

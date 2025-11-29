@@ -1,0 +1,5 @@
++00 ptr next item in linked list
++04 ptr append_item function
++08
+----
+ 0C sizeof

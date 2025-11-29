@@ -1,0 +1,9 @@
+# event_wlanusb_handle
+
+event = event_find_node_and_init("wlan", 0)
+*C000115C = event
+
+event_usb_handle
+
+event = *C0001158
+~ event != null && event_dispatch(event)

@@ -1,0 +1,27 @@
+evctx = 040000EC
+ep = tag & FF
+rx/tx = tag >> 16
+udctx = param3 & ~FF
+
+if phase == 100h:
+  ~ ep == 1 ***
+  ~ ep == 2 || ep == 3 ***
+  ***
+elif phase == 200h:
+  if rx/tx == 0:
+    pool_free_slot(slot)
+    ~ ep == 2 && evctx->ep2count-- || evctx->ep1count--
+    usb_alloc_and_submit_rx_transfer(ep)
+  else:
+    ***
+    if *param3 == F00DFACE:
+      udctx[0C] += 4
+      udctx[10h] = 10h
+      evctx->handler(event_usbdma, udctx, 0, 1)
+      evctx->ep1count--
+      *C00021F8 = 1
+    else:
+      udctx[10h] = 2
+      evctx->handler(event_usbdma, udctx, 0, 4)
+      evctx->ep2count--
+      ~ evctx->ep2count < 0 && assert

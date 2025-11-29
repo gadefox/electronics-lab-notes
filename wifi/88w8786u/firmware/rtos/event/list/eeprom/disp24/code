@@ -1,0 +1,4 @@
+~ cmdid != 1 && exit
+serial_write_enable
+serial_block_erase64(addr)
+serial_write_disable

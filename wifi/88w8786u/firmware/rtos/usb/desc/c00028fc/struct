@@ -1,0 +1,3 @@
++07 byte ep0 packet size
++08 uint                    =eeprom[0030h]
++0C

@@ -1,0 +1,42 @@
+black   0
+brown   1
+red     2
+orange  3
+yellow  4
+green   5
+blue    6
+purple  7
+grey    8
+white   9
+
+4 stripes:
+
+silver  nn0mΩ
+gold    n.nΩ
+black   nnΩ
+brown   nn0Ω
+red     n.nkΩ
+orange  nnkΩ
+yellow  nn0kΩ
+green   n.nMΩ
+blue    nnMΩ
+purple  nn0MΩ
+
+5/6 stripes:
+silver  n.nnΩ
+gold    nn.nΩ
+black   nnnΩ
+brown   n.nnkΩ
+red     nn.nkΩ
+orange  nnnkΩ
+yellow  n.nnMΩ
+green   nn.nMΩ
+blue    nnnMΩ
+
+silver  󰦒10%
+gold    󰦒5%
+brown   󰦒1%
+red     󰦒2%
+green   󰦒0.5%
+blue    󰦒0.25%
+purple  󰦒0.1%

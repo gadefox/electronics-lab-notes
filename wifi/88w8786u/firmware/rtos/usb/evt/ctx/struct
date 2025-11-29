@@ -1,0 +1,7 @@
++00 uint
++04 byte[] name
++08 uint   cmdid
++0C uint   ep2count
++10 uint   ep1count
++14 uint   field14
++18

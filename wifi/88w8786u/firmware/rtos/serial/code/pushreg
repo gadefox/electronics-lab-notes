@@ -1,0 +1,4 @@
+*C000139B = *90000800  # byte
+*C000139C = *90000804  # word
+serial_detect_mode
+*C000139A = 04003080   # byte

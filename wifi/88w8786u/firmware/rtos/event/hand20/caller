@@ -1,0 +1,8 @@
+00018AD4 event_dispatch
+
+00003ED8 calls *C000115C event handler20
+00004010 calls *C000115C event handler20
+00004190 calls *C000115C event handler20
+000099D0 calls *C000115C event handler20; called from event dispatch handler
+000099EC calls *C0001158 event handler20; called from event dispatch handler
+0000A138 calls *C000115C event handler20

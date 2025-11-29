@@ -1,0 +1,77 @@
+M39 F8
+M49 F6
+M50 F5
+
+connected: M1 M27 M30 M37 M42
+
+M1 M15-M19:
+M25-M26 M30:
+M35 M37 M42:
+Mnn───┤├───GND
+
+M2 M36 M64:
+Mnn───┬─┬──────VCC
+      │ │
+      │ └──┤├──GND
+      │
+       1kΩ on-chip
+      │
+     GND
+
+    VCC
+     │
+      1kΩ on-chip
+     │
+M3───┴──────GND
+        51kΩ
+
+M13 M14:
+     VCC
+      │
+       1kΩ on-chip
+      │
+Mnn───┴───GND
+
+     VCC
+      │
+       6.8kΩ on-chip
+      │
+M24───┴──────GND
+         6kΩ
+
+     VCC
+      │
+       100kΩ
+      │
+M32───┴───┤├───GND
+
+M31 M43-M44 M56:
+     VCC
+      │
+       31kΩ on-chip
+      │
+Mnn───┼──┤├──GND
+      │
+       31kΩ on-chip
+      │
+     GND
+
+M48───┬───VCC
+      │
+       1kΩ on-chip
+      │
+     GND
+
+M51───┬─┬──────VCC
+      │ │
+      │ └──┤├──GND
+      │
+       1kΩ
+      │
+     GND
+
+N/C:
+ M7 M8 M9 M10
+ M20 M21 M22 M23 M33 M34
+ M38 M40 M41 M45 M46 M47
+ M53 M54 M55 M57

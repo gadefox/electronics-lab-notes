@@ -1,0 +1,12 @@
++02 word ishalted           temporary buffer for endpoint status
++04 word address
++06 word
++08 uint boolean
++0C uint count0C
++10 uint suspend
++14 ptr  pool               04001FB0
++18 ptr  rings              *80000158; 64-byte blocks indexed by EP*2+dir
++1C ptr  handler
++20 uint node count         3FF
+----
+ 24 sizeof

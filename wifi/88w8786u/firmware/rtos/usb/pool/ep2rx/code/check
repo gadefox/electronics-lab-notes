@@ -1,0 +1,5 @@
+***
+1b8_slots = pool_get_allocated_count(040001B8);
+ep2_rx_slots = pool_get_allocated_count(pool_ep2_rx);
+tagged_count = pool_count_by_key(pool_ep2_rx, 8);
+return 1b8_slots + ep2_rx_slots == tagged_count

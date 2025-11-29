@@ -1,0 +1,6 @@
+0000C984 sched_dispatch_hw_events
+00017EE8 sched_collect_minmax_stats
+00020060 sched_find_pending_bit
+0002018C sched_select_next_priority; calls sched_find_first_set_bit_reverse_chain
+000201C8 sched_find_first_set_bit_reverse_chain
+0002024C sched_find_first_set_bit_with_chain

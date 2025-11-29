@@ -1,0 +1,10 @@
+# event_usb_handle
+
+event = *C0001158
+~ event != null && exit  # NOTE: yes, not equal - it's not a typo!
+
+event = event_find_node_and_init("usb", 0)
+*C0001158 = event
+
+event_dispatch(event)       # usb event node
+event_dispatch(*C000115C)   # wlan event node

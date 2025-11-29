@@ -1,0 +1,12 @@
++04 ptr    next event node in linked list
++08 byte[] event name
++0C
++10 ptr    init handler
++14 ptr    event handler14
++18 ptr    event handler18
++1C ptr    event handler1C
++20 ptr    event handler20
++24 ptr    dispatch handler
++28 ptr    event handler28
+----
+ 2C sizeof

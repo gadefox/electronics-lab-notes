@@ -1,0 +1,13 @@
++00 byte
++01 byte boolean
++02 word pool EP2 RX slot size
++10 uint count10
++14 uint count14
++18 uint
++1C ptr
++20
++24
++28 ptr
++2C ptr
++30 ptr                             pool slot[1C]
++34

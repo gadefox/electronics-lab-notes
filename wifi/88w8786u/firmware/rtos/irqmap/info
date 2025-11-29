@@ -1,0 +1,10 @@
+IRQ sources (50+) e.g. UART/SPI/I2C, Network RX/TX, Timers, DMA channels, GPIO
+       ↓
+IRQ matrix (slot system)
+       ↓
+[route mapping]
+ ├─ slot0 → UART IRQ
+ ├─ slot1 → Network RX
+ └─ slot2 → DMA complete
+       ↓
+ARM CPU IRQ lines (4-8)

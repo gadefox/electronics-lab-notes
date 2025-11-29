@@ -1,0 +1,4 @@
+0000C394 usb_dma_init
+00025ED4 usb_dma_submit_transfer_to_queue(descr)
+000261C4 usb_dma_append_descr(descr)
+00026228 usb_dma_append_ring(ring)

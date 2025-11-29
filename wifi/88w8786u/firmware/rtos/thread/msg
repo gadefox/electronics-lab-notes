@@ -1,0 +1,9 @@
++04 ptr  callback function
++08 byte message type / status
++09 byte
++0A byte
++0B byte
++0C uint command identifier
++10
+----
+ 20 sizeof

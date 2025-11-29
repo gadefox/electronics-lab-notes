@@ -1,0 +1,7 @@
+0000EB4C pool_alloc_slot(pool, uint size, uint flags)
+0000EBDA pool_free_slot(slot)
+0000EC22 pool_allocated_slots_count(pool); get number of currently allocated slots
+0000EC50 pool_get_total_capacity(pool); sum of all block counts across configs
+0000EC78 pool_slot_count_by_tag(pool, uint tag); count allocated slots with matching tag
+0000ECAE pool_init_slots(pool)
+000170D0 pool_init_from_config(pool, cfg[] configs, slot[] slots, descr[] descrs)

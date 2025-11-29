@@ -1,0 +1,8 @@
++00 byte active count
++01
++02 word timeout count
++04 word error count
++06
++08 uint timestamp
+----
+ 0C sizeof
