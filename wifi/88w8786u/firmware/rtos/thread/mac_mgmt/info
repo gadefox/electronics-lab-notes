@@ -1,0 +1,3 @@
+Processes 802.11 management operations such as scanning, authentication,
+association, disassociation, and beacon handling.
+Implements or interfaces with the internal MAC state machine.

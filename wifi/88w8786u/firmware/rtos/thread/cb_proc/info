@@ -1,0 +1,5 @@
+Callback-processing thread that handles asynchronous callbacks and events
+from lower MAC/PHY or firmware layers.
+It dequeues messages from the callback/event queue and dispatches them to
+the appropriate handlers (e.g. connection status changes, received frames,
+or driver-level notifications).
