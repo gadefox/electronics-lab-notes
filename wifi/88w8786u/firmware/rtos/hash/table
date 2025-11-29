@@ -1,7 +1,7 @@
 +00 ptr[] buckets
 +04 uint  count
-+08 ptr   hash_fn
-+0C ptr   compare_fn
++08 ptr   hash_fn       see `hash`
++0C ptr   compare_fn    see `cmp`
 +10 uint
 +14 uint
 ----

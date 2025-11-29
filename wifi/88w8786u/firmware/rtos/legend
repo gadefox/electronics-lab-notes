@@ -1,6 +1,8 @@
+~       if condition
 byte    uint8_t
 countof sizeof(array) / sizeof(array[0])
 eod     end of data
+exit    return
 hand    handler
 le      little endian
 ptr     pointer
