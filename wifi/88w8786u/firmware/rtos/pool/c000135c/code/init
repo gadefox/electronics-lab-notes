@@ -1,0 +1,22 @@
+~ pool_init_from_config(C000135C, C000137C, C000134C, 04003D28) != 0 && exit(1)
+~ hash_table_init(C001D1FC, 04003E10, 8, 000076C1, 000076CB) != 0 && exit(1)
+
+desc = pool_alloc_slot(C000135C, 70h)
+if desc != null:
+  memclear(desc + 0x18, 50h)
+  if desc[18h] != 0:
+    desc[23h] |= 12h
+    desc[23h] &= FE
+  hash_table_insert(C001D1FC, desc, desc[68])
+else:
+  desc = pool_alloc_slot(C000135C, 70h)
+  if desc != null:
+    memclear(desc + 0x18, 50h)
+    if desc[18h] != 0:
+      desc[23h] |= 11h
+      desc[23h] &= FD
+    hash_table_insert(C001D1FC, desc, desc[68])
+
+*C0001354 = 00009F85  # func
+***
+exit(0)
