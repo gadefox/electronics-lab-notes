@@ -4,6 +4,7 @@ addr     struct       sizeof node
 04000068
 
 04000824              FA
-04000920
+04000920 ctx
+040015DC pool5        534h
 ----
 04001B10 eod

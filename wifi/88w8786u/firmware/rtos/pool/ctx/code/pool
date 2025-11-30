@@ -1,9 +1,9 @@
-pool = arg + 1FC
+pool = offset + 1FC
 ~ tx_semaphore_create(pool->sema, "OSA_Sema", 1) != 0 && exit(1)
 
 pool->field0 = 0
 pool->field4 = 0
-pool->head = pool->nodex
+pool->head = pool->nodes
 pool->tail = null
 
 node = pool->nodes

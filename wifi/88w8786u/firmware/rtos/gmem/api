@@ -1,4 +1,0 @@
-00007820 gmem_init                      see `init`
-000079F8 toto
-00007F7C byte gmem_get_ctx(ptr* ctx)    see `get`
-00008162 gmem_init_pool                 see `pool`

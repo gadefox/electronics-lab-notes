@@ -1,0 +1,3 @@
+00007820 mem_init                       see `init`
+00007F7C byte pool_get_ctx(ptr* ctx)    see `get`
+00008162 pool_init(uint offset)         see `pool`

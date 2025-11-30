@@ -1,4 +1,4 @@
-+000 uint    field0
++000 uint    allocated count
 +004 uint    field4
 +008 ptr     sema           ThreadX semaphore
 +024 node[7] nodes

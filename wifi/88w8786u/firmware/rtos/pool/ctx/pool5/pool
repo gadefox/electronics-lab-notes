@@ -1,0 +1,9 @@
++000 uint     allocated count
++004
++008 ptr      sema              ThreadX semaphore
++00C node[17] nodes
++518
++52C node     used_tail
++530 node     free_head
+----
+ 534h sizeof

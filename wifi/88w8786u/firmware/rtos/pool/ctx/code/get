@@ -1,4 +1,4 @@
-# gmem_get_ctx
+# pool_get_ctx
 
 *04000064 = 04000920
 *ctx = 04000920
