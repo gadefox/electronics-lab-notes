@@ -1,5 +1,5 @@
-+94 ptr      next node in linked list
-+98 ptr      previous node in linked list
++94 node     next node in linked list
++98 node     previous node in linked list
 +9C byte     active
 +9D byte[8]  name
 +A5

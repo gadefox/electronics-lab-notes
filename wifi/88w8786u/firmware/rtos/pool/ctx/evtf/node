@@ -1,0 +1,5 @@
++20 uint ID counter
++24 node next node in linked list
++28 node previous node in linked list
+----
+ 2C sizeof

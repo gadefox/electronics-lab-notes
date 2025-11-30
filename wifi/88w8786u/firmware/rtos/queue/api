@@ -1,2 +1,1 @@
-00007C04 fn in ROM??
 00008040 queue_create(ptr queue, byte[] name, uint size, uint num_msgs, byte[] buffer)

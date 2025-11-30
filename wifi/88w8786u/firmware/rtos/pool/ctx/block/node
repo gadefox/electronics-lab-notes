@@ -2,7 +2,7 @@
 +38 ptr  desc
 +3C uint mem_size
 +40 uint block_size
-+44 ptr  next node in linked list
-+48 ptr  previous node in linked list
++44 node next node in linked list
++48 node previous node in linked list
 ----
  4C sizeof

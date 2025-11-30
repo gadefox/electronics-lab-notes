@@ -2,8 +2,8 @@
 +3C uint alloc_type                     0=allocated by us, 1=external
 +40 uint msg_size                       message size (32-bit words)
 +44
-+48 ptr  next node in linked list
-+4C ptr  previous node in linked list
++48 node next node in linked list
++4C node previous node in linked list
 +50 uint restype                        0=queue
 +54 pool parent
 +58

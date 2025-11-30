@@ -1,7 +1,9 @@
 +000 pool_q query
 +1F4 pool_t thread
++6B8
 +878 pool_s sema
-+A78
-+CBC pool_5 pool5
++A78 pool_e evtf
++C88
++CBC pool_b block
 ----
 11F0 sizeof
