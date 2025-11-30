@@ -1,0 +1,4 @@
+00002C64 pool_134c_init: calls hash_table_init and hash_table_insert
+0000A038 calls hash_table_init and hash_table_insert
+00017560 calls hash_table_lookup
+000176C4 calls hash_table_lookup

@@ -1,0 +1,7 @@
+~ (evt & 2) == 0 && exit
+
+~ C0002674->field01 && exit
+~ queue_get_head(040034E8) == null && exit
+handle_command
+
+***

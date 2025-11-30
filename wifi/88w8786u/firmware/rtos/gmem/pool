@@ -1,0 +1,8 @@
++000 uint    field0
++004 uint    field4
++008 ptr     sema           ThreadX semaphore
++024 node[7] nodes
++4A0
++4BC node    head
++4C0 node    tail
++4C4

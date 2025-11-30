@@ -1,0 +1,16 @@
+addr     struct sizeof
+040034D4 list   14h
+040034E8 list   14h
+----
+040034FC eod
+
+C001CAF0 list   14h
+C001CB04 list   14h
+----
+C001CB18 eod
+
+C001D4E8 list   14h
+C001D4FC list   14h
+C001D510 list   14h
+----
+C001D524 eod

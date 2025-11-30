@@ -1,0 +1,5 @@
+0000F384 cbproc_thread: calls pool_alloc_slot(_, 2000)
+0000FAA4 cbproc_command_dispatch: calls pool_alloc_slot(_, 200)
+000112A8 calls pool_allocated_slots_count
+00011600 usb_pool_ep0_tx_alloc_and_dispatch: calls pool_alloc_slot(_, 2000)
+00027B18 init

@@ -1,0 +1,4 @@
++00 byte init_flags
++01 byte state
++02
++04

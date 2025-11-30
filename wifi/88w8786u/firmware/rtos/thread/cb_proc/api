@@ -1,2 +1,2 @@
-00002644 thread_cbproc_create
-0000F6EE thread_cbproc_dispatch
+00002644 cbproc_create_thread_and_queue
+0000F6EE cbproc_command_dispatch

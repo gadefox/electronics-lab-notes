@@ -1,0 +1,4 @@
+~ status == 1 && list_append(040034E8, node)
+~ status == 4 && list_append(040034D4, node)
+
+calls external function @03F01FC8

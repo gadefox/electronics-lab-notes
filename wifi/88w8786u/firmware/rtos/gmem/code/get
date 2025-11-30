@@ -1,0 +1,8 @@
+# gmem_get_ctx
+
+*04000064 = 04000920
+*ctx = 04000920
+
+status = *0400005C  # byte
+~ status != 0 && status = 1
+exit(status)

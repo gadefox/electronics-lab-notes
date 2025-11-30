@@ -1,4 +1,4 @@
-0000A324 pool_4x1b8_alloc_and_handle
-00019A98 pool_4x1b8_alloc
-00019F88 pool_4x1b8_descr_init1
-00019F88 pool_4x1b8_descr_init2
+0000A324 pool_1b8_alloc_and_handle
+00019A98 pool_1b8_alloc
+00019F88 pool_1b8_descr_init1
+00019F88 pool_1b8_descr_init2

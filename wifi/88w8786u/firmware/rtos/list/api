@@ -1,0 +1,4 @@
+00014018 list_merge
+000147FC list_remove_head
+0001D762 list_get_head
+0001FCDA list_append

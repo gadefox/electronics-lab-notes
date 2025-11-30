@@ -1,0 +1,5 @@
++00 ptr  sema           ThreadX semaphore
++28 node used_list
++2C node free_list
+----
+ 30h sizeof??

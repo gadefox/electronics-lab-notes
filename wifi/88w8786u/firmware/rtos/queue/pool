@@ -1,3 +1,0 @@
-+000 uint <=5 number of active queues
-+1EC node     tail of free list
-+1F0 node     head of allocated list

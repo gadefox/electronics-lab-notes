@@ -1,0 +1,9 @@
+addr     struct       sizeof node
+0400005C              1      see `status`
+04000064 ptr          4      =04000920
+04000068
+
+04000824              FA
+04000920
+----
+04001B10 eod

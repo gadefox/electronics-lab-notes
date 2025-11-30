@@ -1,0 +1,8 @@
++00 byte[94] data?
++94 node     next node in linked list
++98
++9C byte     field9C
++9D byte[8]  field9D
++A5
+----
+ A8 sizeof

@@ -1,0 +1,49 @@
+~ gpool_get(pool) != 0 && exit(arg2 << 32)  # ulonglong
+
+*0400005C = 1  # byte
+memclear(pool, 11F0)
+memset(04000824, FA, A5)
+~ fn_03f014f4(_, C00013B0, ..) != 0 && error
+    
+    // === VYTVOR 4 SUB-POOLY SO SEMAFORMI ===
+    
+    // POOL 1: offset +0x878, 13 blokov
+    if (tx_semaphore_create(&pool[0x878].sema, "OSA_Sema", 1) == 0) {
+        pool[0x878].state = 0;
+        pool[0x878].free_list = &pool[0x878].blocks[0];
+        // Link 13 blocks into free list
+        for (i = 0; i < 13; i++) {
+            blocks[i].next = &blocks[i+1];
+        }
+        blocks[12].next = NULL;
+    }
+    
+    // POOL 2: offset +0xCBC (0xC88+0x34), 17 bloków
+    if (tx_semaphore_create(&pool[0xCBC].sema, "OSA_Sema", 1) == 0) {
+        // ... inicjalizacja 17 bloków ...
+    }
+    
+    // POOL 3: offset +0xA78, 11 bloków  
+    if (tx_semaphore_create(&pool[0xA78].sema, "OSA_Sema", 1) == 0) {
+        // ... inicjalizacja 11 bloków ...
+    }
+    
+    // POOL 4: offset +0x6B8 (0x1ae*4), 6 bloków
+    if (tx_semaphore_create(&pool[0x6B8].sema, "OSA_Sema", 1) == 0) {
+        // ... inicjalizacja 6 bloków ...
+    }
+    
+    // POOL 5: offset +0x04, 5 bloków (pre queues!)
+    if (tx_semaphore_create(&pool[0x04].sema, "OSA_Sema", 1) == 0) {
+        // Link 5 queue control blocks
+        for (i = 0; i < 5; i++) {
+            queue_blocks[i].next = &queue_blocks[i+1];
+            queue_blocks[i].owner = pool;
+        }
+        queue_blocks[4].next = NULL;
+    }
+    
+    return param_2 << 32;  // Success
+}
+
+memclear(param_1,000011F0);

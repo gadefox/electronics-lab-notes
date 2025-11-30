@@ -1,0 +1,5 @@
++00 uint state
++04 ptr  sema           ThreadX semaphore
++2C ptr  used_list
++30 ptr  free_list
++34

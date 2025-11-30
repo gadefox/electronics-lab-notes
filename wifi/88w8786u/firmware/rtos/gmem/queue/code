@@ -1,0 +1,35 @@
+# queue_create_from_pool
+
+gpool_get(pool)
+~ pool->state == 5 && exit(1C)  # error: pool full/invalid
+
+tx_semaphore_get(pool->sema)
+node = pool->free_list
+node->prev = null
+
+if node != null:
+  pool->free_list = node->next
+  node->next = null
+
+if pool->used_list == null:
+  pool->used_list = node
+else:
+  pool->used_list_tail->next = node
+  node->prev = pool->used_list_tail
+  pool->used_list_tail = node
+}
+
+pool->count++
+tx_semaphore_put(pool->sema)
+
+ret = queue_create(block, name, msg_size, num_msgs, null)
+if ret == 0:
+  node->type = 0
+  node->pool = pool
+  *queue = node
+else:
+  tx_semaphore_get(pool->sema)
+  pool->count--;
+  tx_semaphore_put(pool->sema)
+
+exit(ret)

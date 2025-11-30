@@ -1,5 +1,0 @@
-+00 ptr  next node in linked list
-+04 ptr  owning queue
-+08 word relative offset to locate node's payload or data section
-+0C word flag / status or type indicator (e.g. 4)
-+0E
