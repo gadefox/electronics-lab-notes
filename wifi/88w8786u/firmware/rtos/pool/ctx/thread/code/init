@@ -1,17 +1,17 @@
-pool = offset + 1FC
+pool = ctx->pool_thread
 ~ tx_semaphore_create(pool->sema, "OSA_Sema", 1) != 0 && exit(1)
 
-pool->field0 = 0
+pool->alloc_count = 0
 pool->field4 = 0
-pool->head = pool->nodes
-pool->tail = null
+pool->free_head = pool->nodes
+pool->used_tail = null
 
 node = pool->nodes
 for i in 0..6:
   node->next = node + sizeof(node)
-  node->field9C = 0
+  node->active = false
+  memclear(node->name, 8)
   memclear(node, 94h)
-  memclear(node->field9D, 8)
 
   node = node->next
 }

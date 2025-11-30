@@ -1,26 +1,26 @@
 pool_get_ctx(ctx)
-pool5 = ctx->pool5
-~ pool5->count == 17 && exit(1F)  # pool is full
+pool = ctx->pool_queue
+~ pool->alloc_count == 17 && exit(1F)
 
 _tx_interrupt_control(DISABLE)
 
-node = pool5->free_head
+node = pool->free_head
 if node != null:
-  pool5->free_head = node->next
+  pool->free_head = node->next
   node->next = null
 }
 node->prev = null
 
-if pool5->free_tail == null:
-  pool5->free_tail = node
+if pool->used_tail == null:
+  pool->used_tail = node
   node->next = null
 else:
-  pool5->used_tail->prev = node
-  node->next = pool5->used_tail
-  pool5->used_tail = node
+  pool->used_tail->prev = node
+  node->next = pool->used_tail
+  pool->used_tail = node
 }
 
-pool5->count++
+pool->alloc_count++
 
 _tx_interrupt_control(ENABLE)
 
@@ -31,22 +31,22 @@ if ret == 0:
   node->mem_size = mem_size
   node->block_size = block_size
   
-  *block = node
+  *out = node
   exit(0)
 }
 
 # cleanup
 _tx_interrupt_control(DISABLE)
 
-pool5->alloc_count--
+pool->alloc_count--
 
-~ node->prev != null && node->prev->next = node->next || pool5->used_tail = node->next
+~ node->prev != null && node->prev->next = node->next || pool->used_tail = node->next
 ~ node->next != null && node->next->prev = node->prev
 
 node->prev = null
 
-node->next = pool5->free_head
-pool5->free_head = node
+node->next = pool->free_head
+pool->free_head = node
 
 _tx_interrupt_control(ENABLE)
 exit(ret)

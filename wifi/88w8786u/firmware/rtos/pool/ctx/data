@@ -5,6 +5,8 @@ addr     struct       sizeof node
 
 04000824              FA
 04000920 ctx
-040015DC pool5        534h
+04000B14 pool?        4C4   thread
+04000FD8
+040015DC pool5        534h  queue
 ----
 04001B10 eod

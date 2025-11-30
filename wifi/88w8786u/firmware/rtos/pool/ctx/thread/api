@@ -1,0 +1,2 @@
+00007D8C pool_thread_alloc(ptr* out, undef param2, uint priority, byte[] name, ptr entry_func, undef arg); see `alloc`
+00008162 pool_thread_init; see `init`
