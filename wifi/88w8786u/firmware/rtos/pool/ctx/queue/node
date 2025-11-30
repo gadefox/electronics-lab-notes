@@ -1,8 +1,11 @@
-+34 uint num
-+38 ptr  desc
-+3C uint mem_size
-+40 uint block_size
-+44 ptr  next node in linked list
-+48 ptr  previous node in linked list
++38 ptr  buffer
++3C uint alloc_type                     0=allocated by us, 1=external
++40 uint msg_size                       message size (32-bit words)
++44
++48 ptr  next node in linked list
++4C ptr  previous node in linked list
++50 uint restype                        0=queue
++54 pool parent
++58
 ----
- 4C sizeof
+ 5C sizeof

@@ -2,7 +2,7 @@ pool = ctx->pool_thread
 ~ tx_semaphore_create(pool->sema, "OSA_Sema", 1) != 0 && exit(1)
 
 pool->alloc_count = 0
-pool->field4 = 0
+pool->created_count = 0
 pool->free_head = pool->nodes
 pool->used_tail = null
 

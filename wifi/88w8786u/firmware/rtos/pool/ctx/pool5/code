@@ -1,5 +1,6 @@
 pool_get_ctx(ctx)
-pool = ctx->pool_thread
+pool = ctx->pool5
+~ pool->alloc_count == 17 && exit(1F)
 tx_semaphore_get(pool->sema)
 
 node = pool->free_head
@@ -21,12 +22,12 @@ else:
 pool->alloc_count++
 tx_semaphore_put(pool->sema)
 
-ret = tx_thread_create(node, param2, stack_size, priority, name, entry_func, arg)
+ret = tx_block_pool_create(node, num, desc, mem_size, block_size)
 if ret == 0:
-  memcpy(node->name, name, 8)
-  node->active = true
-
-  tx_thread_resume(node)
+  node->num = num
+  node->desc = desc
+  node->mem_size = mem_size
+  node->block_size = block_size
   
   *out = node
   exit(0)
@@ -34,6 +35,7 @@ if ret == 0:
 
 # cleanup
 tx_semaphore_get(pool->sema)
+
 pool->alloc_count--
 
 ~ node->prev != null && node->prev->next = node->next || pool->used_tail = node->next

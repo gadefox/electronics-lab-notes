@@ -1,12 +1,15 @@
 addr     struct       sizeof node
-0400005C              1      see `status`
+0400005C byte         1      see `status`
 04000064 ptr          4      =04000920
-04000068
 
 04000824              FA
-04000920 ctx
-04000B14 pool?        4C4   thread
+0400091E byte[2]             padding?
+04000920 pool_q       1F4    queue
+04000B14 pool_t       4C4    thread
 04000FD8
-040015DC pool5        534h  queue
+04001198 pool_s       200h   sema
+04001398
+040015A0              3C     queue buffer
+040015DC pool5        534h
 ----
 04001B10 eod

@@ -1,6 +1,4 @@
-+000 uint    allocated count
-+004 uint
-+008 ptr     sema              ThreadX semaphore
++000 pool    head
 +00C node[7] nodes
 +4A4
 +4BC node    used_tail

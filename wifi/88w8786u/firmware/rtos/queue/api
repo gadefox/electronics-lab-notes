@@ -1,3 +1,2 @@
-00007B40 queue_create_from_pool(ptr queue, byte[] name, uint msg_size /* 4 */, uint num_msgs /* 5 */)
 00007C04 fn in ROM??
 00008040 queue_create(ptr queue, byte[] name, uint size, uint num_msgs, byte[] buffer)

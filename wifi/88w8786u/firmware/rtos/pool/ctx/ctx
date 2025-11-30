@@ -1,5 +1,7 @@
-+000
-+1F4 pool2 thread
-+CBC pool3 query
++000 pool q query
++1F4 pool_t thread
++878 pool_s sema
++A78
++CBC pool_5
 ----
 11F0 sizeof

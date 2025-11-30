@@ -1,0 +1,7 @@
++000 pool     head
++00C node[13] nodes
++1E0
++1F8 node     used_tail
++1FC node     free_head
+----
+ 200h sizeof

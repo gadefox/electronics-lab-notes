@@ -1,0 +1,1 @@
+000079F8 pool5_alloc(ptr* out, uint num, ptr desc, uint mem_size, uint block_size); see `code`

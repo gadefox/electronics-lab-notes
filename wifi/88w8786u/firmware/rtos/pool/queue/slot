@@ -5,7 +5,7 @@
 +0A word
 +0C word tag/key
 +0E word
-+10 pool parent             owning pool
++10 pool parent
 +14 uint
 ----
  18h sizeof
