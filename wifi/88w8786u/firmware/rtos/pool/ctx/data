@@ -10,6 +10,6 @@ addr     struct       sizeof node
 04001198 pool_s       200h   sema
 04001398
 040015A0              3C     queue buffer
-040015DC pool5        534h
+040015DC pool_5       534h
 ----
 04001B10 eod
