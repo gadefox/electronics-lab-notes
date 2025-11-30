@@ -1,5 +1,5 @@
 pool_get_ctx(ctx)
-pool = ctx.pool5
+pool = ctx.pool_block
 ~ pool.alloc_count == 17 && exit(1F)
 tx_semaphore_get(pool.sema)
 
@@ -24,7 +24,7 @@ tx_semaphore_put(pool.sema)
 
 ret = tx_block_pool_create(node, num, desc, mem_size, block_size)
 if ret == 0:
-  node.field34 = param2
+  node.type_id = param2
   node.desc = desc
   node.mem_size = mem_size
   node.block_size = block_size

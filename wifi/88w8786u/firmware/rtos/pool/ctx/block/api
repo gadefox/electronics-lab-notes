@@ -1,1 +1,2 @@
-000079f8 pool_block_alloc(ptr* out, uint /* 9 */, ptr desc, uint mem_size, uint block_size); see `code`
+000079F8 pool_block_alloc(ptr* out, uint /* 9 */, ptr desc, uint mem_size, uint block_size); see `alloc`
+00007AD0 pool_block_free(ptr node); see `free`

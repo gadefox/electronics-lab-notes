@@ -1,0 +1,3 @@
+ret = type == 10 ? tx_byte_free || tx_byte_free(out)
+~ ret != 0 && { ~ ret != 16 && ret = 1 || ret = 3 }
+exit(ret)

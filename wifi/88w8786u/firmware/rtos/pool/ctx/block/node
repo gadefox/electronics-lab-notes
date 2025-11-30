@@ -1,4 +1,4 @@
-+34 uint field34
++34 uint type_id?
 +38 ptr  desc
 +3C uint mem_size
 +40 uint block_size

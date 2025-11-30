@@ -8,8 +8,7 @@ for i in 0..pool.num_cfgs - 1
 
   size = (cfg.block_size + 4) * cfg.num_blocks
   ret = pool_block_alloc(cfg.alloc_block, 9, descs, size, cfg.block_size)
-  if ret != 0:
-    exit(1)
+  ~ ret != 0 && exit(1)
 
   pool.num_slots += cfg.num_blocks
   descs += size

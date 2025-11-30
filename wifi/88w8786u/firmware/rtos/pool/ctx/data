@@ -8,8 +8,8 @@ addr     struct       sizeof node
 04000B14 pool_t       4C4    thread
 04000FD8
 04001198 pool_s       200h   sema
-04001398
-040015A0              3C     queue buffer
-040015DC pool_5       534h
+04001398 pool_e       210h   evtf
+040015A8 pool_by      3C     byte
+040015DC pool_bl      534h   block
 ----
 04001B10 eod

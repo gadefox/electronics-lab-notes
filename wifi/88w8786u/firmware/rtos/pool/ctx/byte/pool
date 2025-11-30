@@ -1,0 +1,5 @@
++00 uint   available bytes
++04 uint   fragments
++08 byte[] start
++0C byte[] end
++10

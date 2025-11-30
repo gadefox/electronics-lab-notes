@@ -1,0 +1,19 @@
+pool_get_ctx(ctx)
+pool = ctx.pool_block
+
+ret = tx_block_pool_delete(node, node.type_id)
+~ ret != 0 && exit(ret)
+
+tx_semaphore_get(pool.sema)
+
+~ node.prev != null && node.prev.next = node.next || pool.used_tail = node.next
+~ node.next != null && node.next.prev = node.prev
+
+node.prev = null
+node.next = pool.free_head
+
+pool.alloc_count--
+pool.free_head = node
+
+tx_semaphore_put(pool.sema)
+exit(0)
