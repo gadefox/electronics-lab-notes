@@ -1,14 +1,14 @@
 ctx = 040000EC
-ctx->handler = null
+ctx.handler = null
 
 node = 04002EE0
-node->name = ctx->[04]
-node->init = 0002698D
-node->handler14 = null
-node->handler18 = null
-node->handler1C = null
-node->handler20 = 00026A05
-node->dispatcher = 00026821
-node->handler28 = 00026981
+node.name = ctx.field4
+node.init = 0002698D
+node.handler14 = null
+node.handler18 = null
+node.handler1C = null
+node.handler20 = 00026A05
+node.dispatcher = 00026821
+node.handler28 = 00026981
 
 event_list_append_node(node)

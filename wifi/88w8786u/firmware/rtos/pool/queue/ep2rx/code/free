@@ -2,4 +2,4 @@
 struct = ptr & ~FF
 struct[10h] = 1
 pool_free_slot(struct[4])
-~ struct->pool == pool_ep2_rx && event_handle24(*C0001158)
+~ struct.pool == pool_ep2_rx && event_handle24(*C0001158)

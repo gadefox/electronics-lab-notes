@@ -1,6 +1,6 @@
 # TODO: finish
 
-if packet->gpio == FF:
+if packet.pio == FF:
   pin = *C000126C
   ~ pin != FF && pin != FE && gpio_init(pin, false)
   *C0001268 = FFFFFFFF
@@ -8,7 +8,7 @@ if packet->gpio == FF:
   *C001B24C = 0  # byte
   exit
 
-*C0001268 = packet->gpio
+*C0001268 = packet.gpio
 *C000126D = ??
 sleep_memcpy_C001B244
 *C001B245 = 1

@@ -1,30 +1,30 @@
 pool_get_ctx(ctx)
-pool = ctx->pool_thread
-tx_semaphore_get(pool->sema)
+pool = ctx.pool_thread
+tx_semaphore_get(pool.sema)
 
-node = pool->free_head
+node = pool.free_head
 if node != null:
-  pool->free_head = node->next
-  node->next = null
+  pool.free_head = node.next
+  node.next = null
 }
-node->prev = null
+node.prev = null
 
-if pool->used_tail == null:
-  pool->used_tail = node
-  node->next = null
+if pool.used_tail == null:
+  pool.used_tail = node
+  node.next = null
 else:
-  pool->used_tail->prev = node
-  node->next = pool->used_tail
-  pool->used_tail = node
+  pool.used_tail.prev = node
+  node.next = pool.used_tail
+  pool.used_tail = node
 }
 
-pool->alloc_count++
-tx_semaphore_put(pool->sema)
+pool.alloc_count++
+tx_semaphore_put(pool.sema)
 
 ret = tx_thread_create(node, param2, stack_size, priority, name, entry_func, arg)
 if ret == 0:
-  memcpy(node->name, name, 8)
-  node->active = true
+  memcpy(node.name, name, 8)
+  node.active = true
 
   tx_thread_resume(node)
   
@@ -33,16 +33,16 @@ if ret == 0:
 }
 
 # cleanup
-tx_semaphore_get(pool->sema)
-pool->alloc_count--
+tx_semaphore_get(pool.sema)
+pool.alloc_count--
 
-~ node->prev != null && node->prev->next = node->next || pool->used_tail = node->next
-~ node->next != null && node->next->prev = node->prev
+~ node.prev != null && node.prev.next = node.next || pool.used_tail = node.next
+~ node.next != null && node.next.prev = node.prev
 
-node->prev = null
+node.prev = null
 
-node->next = pool->free_head
-pool->free_head = node
+node.next = pool.free_head
+pool.free_head = node
 
-tx_semaphore_put(pool->sema)
+tx_semaphore_put(pool.sema)
 exit(ret)

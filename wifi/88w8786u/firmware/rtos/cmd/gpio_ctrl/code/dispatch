@@ -1,21 +1,21 @@
 for block_i in 0..2:
   block = blocks[block_i]
   gpio = block[gpio_i]
-  ~ gpio->pin >= 12h && continue
+  ~ gpio.pin >= 12h && continue
 
-  switch (gpio->case)
+  switch (gpio.case)
     case 0:  # 00017CC0
     case 1:  # 00017CAC
-      gpio_init_output_and_set(gpio->pin, *C0001500 == 0)
+      gpio_init_output_and_set(gpio.pin, *C0001500 == 0)
     case 2:  # 00017CCA
-      gpio_init_cfg(gpio->pin, gpio->cfg / 16, gpio->cfg & 0F)
+      gpio_init_cfg(gpio.pin, gpio.cfg / 16, gpio.cfg & 0F)
     case 3:  # 00017CDE
-      gpio_9000024C_set_bits0_3(gpio->cfg & 0F)
+      gpio_9000024C_set_bits0_3(gpio.cfg & 0F)
     case 4:  # 00017CD6
-      gpio_9000024C_set_bits4_7(gpio->cfg / 16)
+      gpio_9000024C_set_bits4_7(gpio.cfg / 16)
     case 5:  # 00017D02
-      gpio_9000024C_set_bits0_3(gpio->cfg & 0F)
-      gpio_9000024C_set_bits4_7(gpio->cfg / 16)
+      gpio_9000024C_set_bits0_3(gpio.cfg & 0F)
+      gpio_9000024C_set_bits4_7(gpio.cfg / 16)
   exit
 
 ~ gpio_i in (0 6 7) && *C0001508 = gpio_i

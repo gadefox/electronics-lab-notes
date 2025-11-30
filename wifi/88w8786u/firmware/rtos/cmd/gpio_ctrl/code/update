@@ -8,5 +8,5 @@ gpio_i = buf[4]
 ~ gpio_i < 9 || exit
 
 gpio = block[gpio_i]
-gpio->case = buf[6]
-gpio->cfg = buf[7]
+gpio.case = buf[6]
+gpio.cfg = buf[7]

@@ -1,50 +1,50 @@
 pool_get_ctx(ctx)
-pool = ctx->pool5
-~ pool->alloc_count == 17 && exit(1F)
-tx_semaphore_get(pool->sema)
+pool = ctx.pool5
+~ pool.alloc_count == 17 && exit(1F)
+tx_semaphore_get(pool.sema)
 
-node = pool->free_head
+node = pool.free_head
 if node != null:
-  pool->free_head = node->next
-  node->next = null
+  pool.free_head = node.next
+  node.next = null
 }
-node->prev = null
+node.prev = null
 
-if pool->used_tail == null:
-  pool->used_tail = node
-  node->next = null
+if pool.used_tail == null:
+  pool.used_tail = node
+  node.next = null
 else:
-  pool->used_tail->prev = node
-  node->next = pool->used_tail
-  pool->used_tail = node
+  pool.used_tail.prev = node
+  node.next = pool.used_tail
+  pool.used_tail = node
 }
 
-pool->alloc_count++
-tx_semaphore_put(pool->sema)
+pool.alloc_count++
+tx_semaphore_put(pool.sema)
 
 ret = tx_block_pool_create(node, num, desc, mem_size, block_size)
 if ret == 0:
-  node->num = num
-  node->desc = desc
-  node->mem_size = mem_size
-  node->block_size = block_size
+  node.field34 = param2
+  node.desc = desc
+  node.mem_size = mem_size
+  node.block_size = block_size
   
   *out = node
   exit(0)
 }
 
 # cleanup
-tx_semaphore_get(pool->sema)
+tx_semaphore_get(pool.sema)
 
-pool->alloc_count--
+pool.alloc_count--
 
-~ node->prev != null && node->prev->next = node->next || pool->used_tail = node->next
-~ node->next != null && node->next->prev = node->prev
+~ node.prev != null && node.prev.next = node.next || pool.used_tail = node.next
+~ node.next != null && node.next.prev = node.prev
 
-node->prev = null
+node.prev = null
 
-node->next = pool->free_head
-pool->free_head = node
+node.next = pool.free_head
+pool.free_head = node
 
-tx_semaphore_put(pool->sema)
+tx_semaphore_put(pool.sema)
 exit(ret)

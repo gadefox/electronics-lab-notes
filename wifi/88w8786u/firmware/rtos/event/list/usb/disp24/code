@@ -16,10 +16,10 @@ case 0F:
 case 1B:
   return pool_count_by_key(040002C4, 2)
 case 32:  # 00026926
-  ctx->cmdid = cmdid
+  ctx.cmdid = cmdid
 case 35:  # 0002692A
   usb_endpoint_complete(2, 0)  # 2=end point
-  ctx->ep2count = 0
+  ctx.ep2count = 0
 case 36:  # 00026932
   usb_alloc_and_submit_rx_transfer(2)
 case 37:  # 0002693E
@@ -30,7 +30,7 @@ case 37:  # 0002693E
 case 38:  # 00026948
   if *04000078 != 0:
     delay_calibrated  # 3 conditions
-    ~ cxt->field14 != 0 && set_some_registers
+    ~ cxt.field14 != 0 && set_some_registers
 case 0D:  # 7 bytes payload
   *040000100 = 0
   serial_config

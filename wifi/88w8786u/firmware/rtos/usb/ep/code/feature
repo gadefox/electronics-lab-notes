@@ -2,22 +2,22 @@
 ctx = 04000068
 spck = 0400008C
 
-~ pool->state != 0 &&                                   # default
-  pool->state != 1 &&                                   # addressed
-  (pool->state != 2 ||                                  # configured
-  spck->bmRequestType != 0 || spck->bRequest != 2) && exit
+~ pool.state != 0 &&                                    # default
+  pool.state != 1 &&                                    # addressed
+  (pool.state != 2 ||                                   # configured
+  spck.bmRequestType != 0 || spck.bRequest != 2) && exit
 
-if spck->bRequest == 1:                                 # GET_DESCRIPTOR
+if spck.bRequest == 1:                                  # GET_DESCRIPTOR
   ***                                                   # error condition
   pool[8E] |= 2                                         # word
   usb_ep0_send_status_zlp(0)                            # ACK
-elif spck->bRequest == 2:                               # SET_ADDRESS
+elif spck.bRequest == 2:                                # SET_ADDRESS
   ***                                                   # error condition
   ctx[08] = 1
-  ctx->addr = addr
-  ~ ctx->addr == 0 && exit
+  ctx.addr = addr
+  ~ ctx.addr == 0 && exit
   usb_ep0_send_status_zlp(0)                            # ACK
-elif spck->bRequest == 0 && spck->bmRequestType == 2    # CLEAR_FEATURE
+elif spck.bRequest == 0 && spck.bmRequestType == 2      # CLEAR_FEATURE
   ***                                                   # error condition
   ***                                                   # clear stall/feature
   usb_ep0_send_status_zlp(0)                            # ACK

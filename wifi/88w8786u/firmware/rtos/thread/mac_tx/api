@@ -1,1 +1,2 @@
-0000BB0C mac_tx_create_thread_and_queue
+0000BB0C mac_tx_create_thread_and_queue; calls mac_tx_create_queue
+00025650 mac_tx_create_queue

@@ -3,4 +3,4 @@
 00014338
 0001B778
 0001CAD4
-00026968 usb_evt->dispatch24; see `check`
+00026968 usb_evt.dispatch24; see `check`

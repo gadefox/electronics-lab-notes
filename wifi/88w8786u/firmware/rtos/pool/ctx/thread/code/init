@@ -1,20 +1,20 @@
-pool = ctx->pool_thread
-~ tx_semaphore_create(pool->sema, "OSA_Sema", 1) != 0 && exit(1)
+pool = ctx.pool_thread
+~ tx_semaphore_create(pool.sema, "OSA_Sema", 1) != 0 && exit(1)
 
-pool->alloc_count = 0
-pool->created_count = 0
-pool->free_head = pool->nodes
-pool->used_tail = null
+pool.alloc_count = 0
+pool.created_count = 0
+pool.free_head = pool.nodes
+pool.used_tail = null
 
-node = pool->nodes
+node = pool.nodes
 for i in 0..6:
-  node->next = node + sizeof(node)
-  node->active = false
-  memclear(node->name, 8)
+  node.next = node + sizeof(node)
+  node.active = false
+  memclear(node.name, 8)
   memclear(node, 94h)
 
-  node = node->next
+  node = node.next
 }
-node->next = null
+node.next = null
 
 exit(0)

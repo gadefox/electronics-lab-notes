@@ -1,2 +1,2 @@
-ctx->handler = handler
-ctx[20] = param2
+ctx.handler = handler
+ctx.field20 = param2

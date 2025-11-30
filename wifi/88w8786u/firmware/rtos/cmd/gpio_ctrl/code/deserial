@@ -2,15 +2,15 @@ while true:
   ~ size == 0 && gpio_control_dispatch(*C0001504); exit
   ~ size < 4 && break
 
-  ~ packet->action == ACT_SET:
-    switch packet->task:
+  ~ packet.action == ACT_SET:
+    switch packet.task:
       case 8:
         gpio_control_deserialize_pins
       case 9:
         gpio_control_update_field
 
   # next packet
-  size -= packet->size + 4  # sizeof(header)
+  size -= packet.size + 4  # sizeof(header)
   packet++
 
 ----

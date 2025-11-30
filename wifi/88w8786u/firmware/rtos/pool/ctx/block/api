@@ -1,1 +1,1 @@
-000079F8 pool_block_alloc(ptr* out, uint num, ptr desc, uint mem_size, uint block_size); see `code`
+000079f8 pool_block_alloc(ptr* out, uint /* 9 */, ptr desc, uint mem_size, uint block_size); see `code`
