@@ -2,4 +2,4 @@ R       56Ω, 100Ω, 3.3kΩ, 33kΩ, 100kΩ, 330kΩ
 C       47nF x3, 220nF, 300nF, 470nF, 1µF
 D       4148, BAV99, MB10F
 SCR     MCR100
-VAR
+VDR     MYG3 10K360, 07?420
