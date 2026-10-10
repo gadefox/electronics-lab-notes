@@ -1,0 +1,4 @@
+1 CLKIN             8 Y1
+2 EN                7 Y3
+3 Y0                6 VCC
+4 GND               5 Y2

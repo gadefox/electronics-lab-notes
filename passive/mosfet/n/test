@@ -1,0 +1,5 @@
+red=S  black=D → 0.4-0.7V
+turn on: red=G black=S
+red=D  black=S → 0V
+turn off: G+S
+red=D  black=S → OL

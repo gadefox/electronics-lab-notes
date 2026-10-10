@@ -1,0 +1,4 @@
+1 GND -> GND
+2 VCC -> 5V
+3 SCL -> A5(PC5)
+4 SDA -> A4(PC4)

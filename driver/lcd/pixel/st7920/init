@@ -1,0 +1,17 @@
+80 3C  # 00111100  function set: 8-bit; extended instr.; graph. display off
+80 0C  # 00001100  display on; cursor off; blink off
+80 17  # 00010111  cursor display control: cursor moves right by 1
+80 06  # 00000110  entry mode: cursor moves right
+80 3D  # 00111101  function set: 8-bit; extended instr.; graph. display off
+80 85  # 10000101  set DDRAM addr: 5
+80 11  # 00010001  cursor display control: cursor moves left by 1
+80 0C  # 00001100  display on; cursor off; blink off
+80 3E  # 00111110  function set: 8-bit; extended instr.; graph. display on
+80 0A  # 00001010  display off; cursor on; blink off
+80 06  # 00000110  entry mode: cursor moves right
+80 11  # 00010001  cursor display control: cursor moves left by 1
+80 3F  # 00111111  function set: 8-bit; extended instr.; graph. display on
+80 4A  # 01001010  set CGRAM addr: 10
+80 FF  # 11111111  set graphic RAM addr: 127
+80 38  # 00111000  function set: 8-bit; basic instr.
+80 01  # 00000001  clear

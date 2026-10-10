@@ -1,0 +1,22 @@
+1  HT24_COM3         22 HT38_SEG18
+2  HT23_COM2         21 HT39_SEG17
+3  HT22_COM1         20 HT40_SEG16
+4  HT21_COM0         19 HT41_SEG15
+5  HT7_SEG1          18 HT42_SEG14
+6  HT6_SEG2          17 HT43_SEG13
+7  HT5_SEG3          16 HT44_SEG12
+8  HT4_SEG4          15 HT45_SEG11
+9  HT3_SEG5          14 HT46_SEG10
+10 HT2_SEG6          13 HT47_SEG9
+11 HT1_SEG7          12 HT48_SEG8
+
+LED_A────────MCU10
+        330Ω
+
+                         VIN
+                          │
+                1kΩ        12kΩ
+              ┌─────┐    │
+LED_K────┬────┤      ├────┴────MCU11
+         │    └──┤├──┘
+        GND     C16

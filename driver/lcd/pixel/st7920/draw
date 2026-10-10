@@ -1,0 +1,5 @@
+for row in 0..9:
+  80 38         # 00111000  function set: 8-bit; basic instr.
+  80 80         # 10000000  set DDRAM addr: 0
+  80 40+row     # 0100xxxx  set CGRAM addr: row
+  40 [data0] [data1]..[data127]

@@ -1,0 +1,14 @@
+14 ?                GND
+13 VOUT             J14-4/5
+12 VEE              J14-7
+11 GND
+10 VCC
+9  D2
+8  D1
+7  NC
+6  D0
+5  EN               1kΩ pull-down/MCU-39
+4  D6
+3  D5
+2  D4
+1  D3

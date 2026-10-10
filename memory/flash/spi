@@ -1,0 +1,24 @@
+# write operations
+02 PAGE_PROGRAM         24-bit address + data (max 256B)
+
+# read operations
+03 READ_DATA            24-bit address
+
+# status & control
+05 READ_STATUS_REG
+04 WRITE_DISABLE
+06 WRITE_ENABLE
+
+# erase operations
+20 SECTOR_ERASE_4KB     24-bit address
+52 BLOCK_ERASE_32KB     24-bit address
+D8 BLOCK_ERASE_64KB     24-bit address
+C7 CHIP_ERASE
+
+# device identification
+90 READ_DEVICE_ID       3 dummy bytes
+9F READ_JEDEC_ID        returns Manufacturer + Device info
+
+# power management
+B9 DEEP_POWER_DOWN      sleep mode
+AB RELEASE_POWER_DOWN   3 dummy bytes; wakes up and returns Device ID

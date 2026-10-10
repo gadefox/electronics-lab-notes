@@ -1,0 +1,7 @@
+CC:
+          200Ω   ─►red
+LM_2OUT─────────▶├────BUCK_FB
+
+ON:
+       10kΩ   ─►green
+MCU5─────────▶├────GND

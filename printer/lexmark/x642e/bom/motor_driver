@@ -1,0 +1,11 @@
+IC:
+U3      HCT37               SOP-20          octal D-type edge-triggered flip-flop
+U7/8    MTD1110             ZIP-27          stepping motor drive
+U6      SLA7051M            SIP-18          unipolar stepper motor translator/PWM driver
+U4      SST39SF512          TSOP-II-32      parallel NOR flash
+
+DC/DC buck:
+U6      LM2575S             5-pin           3.3V
+
+XTAL:
+32MHz

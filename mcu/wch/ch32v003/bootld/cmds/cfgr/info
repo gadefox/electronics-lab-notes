@@ -1,0 +1,2 @@
+Reads the device's options, unique ID, and other information.
+CH32V003 always returns all information.

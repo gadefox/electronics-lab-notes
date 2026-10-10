@@ -1,0 +1,4 @@
+blocks×4 slices=1920 (2×LUT4 4×flip-flop arithmetic/carry)
+
+SLICEM 960; distributed RAM=32b; shift regs
+SLICEL 960

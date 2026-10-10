@@ -1,0 +1,5 @@
+1.14≤VCC≤1.26V       1.2V      core LUTs SRAM ..
+1.14≤VCCPLL≤1.26V    1.2V      PLL
+3.135≤VCCAUX≤3.465V  3.3V      auxiliary voltage
+1.14≤VCCJ≤3.465V     1.2-3.3V  JTAG
+1.14≤VCCIO≤3.465V    1.2-3.3V  I/O banks

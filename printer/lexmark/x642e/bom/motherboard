@@ -1,0 +1,65 @@
+IC:
+U13         7407            SOP-14      SN7407; 6x buffer, non-inverting
+U17         74VHCT08A       SOP-14      quad 2-input AND gate
+U5          7Z32            SOT-25      NC7Z32; OR gate
+U3          AT88SC          SOP-8       secure EEPROM
+U4/33       CC306           SOP-8       TI SN74CBTD3306; dual FET BUS switch with level shifting; VCC=5V
+U24         HCT14           SOP-14      SN74HCT14; 6x invertor w/ Schmitt trigger
+U10         MIC2026-2YM     SOP-8       2x high-side load switch
+U2          TUSB2036        LQFP-32     TI; USB 2.0 Full-Speed
+U21         WJLXT972C       LQFP-64     Intel; 10/100 Mbit Ethernet PHY transceiver
+CR3/27      E61             SOT-353     RSA6.1EN; ESD Protection
+
+buzzer
+
+comparator:
+U16         LM339           SOP-14      quad
+U7          LM393           SOP-8       dual
+
+flash:
+U6          K9F1208U0B      TSOP-48     Samsung; 64 MiB 8-bit NAND
+
+L:
+1R2
+2xPE-53651NL                            Pulse Electronics; 5.1µH 5.4A 
+
+LDO:
+U15         PGB             SOT-26      TI; VOUT=3.3V
+U23         SC1541          TO-263-5    Semtech; VOUT=3.3V 1A
+U19         SC4205          SOP-8       Semtech; VIN=2.6V VOUT=2V
+U800        AH00            SOT-26      RT9011; VOUT1=2.5V 300mA; VOUT2=5V 300mA
+
+MCU:
+U14         PPC750CXRKQ5524T            IBM PowerPC 750CXe
+
+MOSFET:
+U9/19       12W             SOT-23      2N7002; N-ch
+Q24/26/?    FDS9926A        SOP-8       N-ch
+Q1/5        FL9014          SOT-223     IRFL9014; P-ch
+Q8          FR9120          DPAK        IRFR9120; P-ch
+Q14         FR9024N         DPAK        IRFR9024N; P-ch
+Q30/32      KL              SOT-23      2SK2731; N-ch
+Q20         LL014N          SOT-223     AUIRLL014N; N-ch
+WIND0/1/2   TPC8403         SOP-8       P+N-ch
+
+PWM:
+U31         SC2672S         SOP-16      Semtech
+
+Q:
+Q2/3/4/9/10
+ 12/15/22   1P              SOT-23      MMBT2222A
+Q6/7/11     2F              SOT-23      MMBT2907A
+Q21         BEIB6           SOT-23      ?
+Q16/17/18   K1G             SOT-23      NPN
+Q13         TR4             SOT-23      2SA1530A; PNP
+
+SDRAM:
+U801/802/
+ 803/804    MT46V32M8       TSOP-66     Micron; 32MiB 8-bit DDR
+
+shunt:
+2x R200
+
+XTAL:
+6MHz
+25MHz

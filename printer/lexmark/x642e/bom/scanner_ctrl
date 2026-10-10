@@ -1,0 +1,36 @@
+IC:
+U1      LC541A              SOP-20      octal buffer / line driver (3-state)
+U17     M41T0               SOP-8       RTC
+U9/15   H6V16M16            SOP-66      MT48H6V16M16; SDRAM
+
+CPLD:
+U19     LC4128V5TN100       LPFQ-100    ispMACH 4000V; 128 macrocells
+
+DC/DC buck:
+U13     5ATI 51100          SOP-10      TI TPS51100; VIN=5V VREF=1.2V
+U8      TPS54110            SOP-20      TI; VIN=5V VOUT=2.5V
+U5      TPS54310            SOP-20      TI; VIN=5V VOUT=1.2V
+
+fuse:
+F1/2/3  P185                            1.85A
+
+LDO:
+U6      SC4215              SOP-8       VIN=5V VOUT=3.3V
+
+LDVS:
+U10     SN65LVDS95          SOP-48      parallel → serial LVDS
+
+MOSFET:
+Q4/5    FDS4672A            SOP-8       N-ch
+
+PWM:
+U14     PS51020             SOP-30      TPS51020; TI dual DDR selectable
+
+Q:
+Q1/8    1P                  SOT-23      MMBT2222A
+
+R blue:     0.01%
+R71/73/125
+
+R green:    0.1%
+R77/112

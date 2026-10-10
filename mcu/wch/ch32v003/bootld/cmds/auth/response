@@ -1,0 +1,4 @@
++00 byte     variant        see `variant`
++01 byte     type           see `type`
+----
+ 02h sizeof

@@ -1,0 +1,4 @@
+1 VREF          8 VCC
+2 IN            7 OUT
+3 GND           6 Noise absorb
+4 OUT diff      5 IN latch

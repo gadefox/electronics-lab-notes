@@ -1,0 +1,29 @@
+1  IO_L83N_VREF_3         LT
+2  IO_L83P_3              LT
+4  VCCO_3
+5  IO_L52N_3              LT
+6  IO_L52P_3              LT
+7  IO_L51N_3              LT
+8  IO_L51P_3              LT
+9  IO_L50N_3              LT
+10 IO_L50P_3              LT
+11 IO_L49N_3              LT
+12 IO_L49P_3              LT
+14 IO_L44N_GCLK20_3       LT
+15 IO_L44P_GCLK21_3       LT
+16 IO_L43N_GCLK22_IRDY2_3 LT
+17 IO_L43P_GCLK23_3       LT
+18 VCCO_3
+21 IO_L42N_GCLK24_3       LB
+22 IO_L42P_GCLK25_TRDY2_3 LB
+23 IO_L41N_GCLK26_3       LB
+24 IO_L41P_GCLK27_3       LB
+26 IO_L37N_3              LB
+27 IO_L37P_3              LB
+29 IO_L36N_3              LB
+30 IO_L36P_3              LB
+31 VCCO_3
+32 IO_L2N_3               LB
+33 IO_L2P_3               LB
+34 IO_L1N_VREF_3          LB
+35 IO_L1P_3               LB

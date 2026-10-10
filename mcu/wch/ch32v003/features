@@ -1,0 +1,11 @@
+1-wire serial debug interface
+low-power modes: sleep; standby
+programmable voltage detector
+18 I/O ports, mapping an external interrupt
+1 group of 1-channel general-purpose DMA controller
+1 group of op-amp comparator
+1 group of 10-bit ADC
+16-bit advanced-control+general-purpose timers
+2 WDOG
+32-bit SysTick
+64-bit chip unique ID

@@ -1,0 +1,3 @@
++00 bool action     0=do nothing; 1=reset
+----
+ 01h sizeof

@@ -1,0 +1,5 @@
+CC/CV
+soft start                              see `schematic/aod4184.jpg`
+input reverse connection protection     see `schematic/aod4184.jpg`
+short circuit protection
+output stop the current from feeding back protection

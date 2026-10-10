@@ -1,0 +1,3 @@
+Output Enable:
+ GND:  Ax=N/C && Bx=N/C
+ VCCA: Bx=Ax || Ax=Bx

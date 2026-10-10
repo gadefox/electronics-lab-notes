@@ -1,0 +1,6 @@
+BOOT0 nBOOT1 BOOT_SEL source
+pin44   bit     bit   (mode)
+----------------------------------------------------
+  0     x       1     flash memory; user firmware
+  1     1       1     system memory; bootloader
+  1     0       1     embedded SRAM

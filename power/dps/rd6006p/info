@@ -1,0 +1,5 @@
+On the capacity account: they are switched on/turned off depending on the specified current (I-SET).
+47uF is activated at I-SET >= 0.2000A, and is switched off at I-SET < 0.1950A
+220uF is activated at I-SET >= 1.1000A, and shuts down at I-SET < 1.0950A
+
+https://www.eevblog.com/forum/testgear/ruideng-riden-rd6006p-dc-power-supply/

@@ -1,0 +1,4 @@
+arduino-cli board listall
+arduino-cli compile --verbose --fqbn ** .
+arduino-cli core update-index
+arduino-cli upload -p /dev/tty**0 --fqbn ** .

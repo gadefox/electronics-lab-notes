@@ -1,0 +1,4 @@
+0.05≤Iref≤10 [mA]
+1≤Iout≤100 [mA]
+
+Idiv=Vout/(R1+R2) [A]

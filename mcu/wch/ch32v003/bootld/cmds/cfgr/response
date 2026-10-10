@@ -1,0 +1,20 @@
++00 byte bits       see `bits`
++01 byte
++02 byte RDPR
++03 byte nRDPR
++04 byte USER
++05 byte nUSER
++06 byte DATA0
++07 byte nDATA0
++08 byte DATA1
++09 byte nDATA1
++0A byte WRPR0
++0B byte WRPR1
++0C byte WRPR2
++0D byte WRPR3
++0E word BTVER1
++10 word BTVER2
++12 uint ESIG_UNIID1
++16 uint ESIG_UNIID2
+----
+ 1A sizeof

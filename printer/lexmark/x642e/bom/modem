@@ -1,0 +1,26 @@
+IC:
+U3      CONEXANT 20493      QFN-28      SmartDAA Line Side Device (LSD)
+U4      CONEXANT CX86710    TQFP-64     fax data pump
+
+D:
+CR3     CEN43               4-pin       bridge rectifier
+
+MOSFET:
+CR1     K1                  SOT-363     UM6K1N=2x 2SK3018 (N-ch)
+
+op-amp:
+U12     LM386               SOP-8       dual
+
+Q:
+Q2/3    1D                  SOT-23      MMBTA42 NPN
+Q4      1P                  SOT-23      MMBT2222A
+Q1      FZT458                          NPN 400V
+
+R blue:                                 0.01%
+R84
+
+transformer:
+T1      MIDCOM SC545LF1     4-pin       SMD telecom coupling transformer
+
+zener D:
+U7/8    8Q                  SOT-23      MMBZ5240

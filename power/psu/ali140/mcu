@@ -1,0 +1,11 @@
+1 VCC                       16 GND
+2 TEST_D/LM_1IN+ (Q-B)      15 SW_IO
+3 TEST_C/LM_1IN+ (Q-B)      14 SW_ON
+4 BUCK_EN (R25 Q-B)         13 LM_1OUT (R18)
+5 LED_ON (R28)              12 TRIM_CV (R3)
+6 HT12_DATA                 11 LCD_LEDK (R6)
+7 HT11_WR                   10 LCD_LEDA (R19)
+8 HT9_CS                    9  TEST_O
+
+VCC───┤├───GND
+    130nF

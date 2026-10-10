@@ -1,0 +1,40 @@
+IC:
+U22         65LVDS96    SOP-48      3× LVDS + 1× CLK -> 21-bit LVTTL BUS
+U12         DJ5C        SOT-143     MAX6314 µP supervisor (reset watchdog / power monitor IC)
+U7          LM555       SOP-8       555 timer
+U10         LS14        SOP-14      SN74LS14; 6× NOR Schmitt-Trigger
+
+buzzer
+
+DC/DC buck:
+U17         LM2592      5-pin
+
+LDO:
+U21         17-33                   3.3V
+
+DC/DC boost:
+U23         ABTK        SOT-23      MAX8571EUT
+
+MCU:
+U3          DF3654CH
+            H8/3684     QFP-64      Renesas; ROM=32KiB RAM=4KiB
+
+DF3654CH
+H8/3684
+
+MOSFET:
+Q8          702         SOT-24      2N7002; N-ch
+U20         P543C       SOP-8       International Rectifier IRF7420; P-ch 
+U19         P610H       SOP-8       International Rectifier IRF7241; P-ch 
+
+op-amp:
+U5          LM358       SOP-8       dual
+U9          LM386       SOP-8       audio power amplifier
+
+oscilator:
+14.745MHz
+
+Q:
+Q2/3        1AM         SOT-23      MMBT3904 NPN
+Q6/7        2F          SOT-23      MMBT2907A PNP
+Q1/4        2T          SOT-23      MMBT4403 PNP

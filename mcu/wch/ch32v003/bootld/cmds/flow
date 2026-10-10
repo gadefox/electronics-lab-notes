@@ -1,0 +1,17 @@
+authenticate and identify (A1)
+    ↓
+read configuration (A7)
+    ↓
+erase and write new configuration - if required (A8) 
+    ↓
+XOR-key calculation (A3)
+    ↓
+erase flash (A4)
+    ↓
+write flash (A5) → multiple, in order of lowest to highest address
+    ↓
+XOR-key calculation (A3)
+    ↓
+verify flash (A6) → multiple, in order of lowest to highest address
+    ↓
+reset (A2)

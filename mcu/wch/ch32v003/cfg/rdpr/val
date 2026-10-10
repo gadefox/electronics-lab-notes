@@ -1,0 +1,2 @@
+A5: disabled; flash can be read; triggers a full flash erase
+or: enabled; flash cannot be read

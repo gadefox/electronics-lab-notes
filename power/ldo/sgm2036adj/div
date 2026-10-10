@@ -1,0 +1,3 @@
+R1=R2×(Vout/0.8-1)
+
+choose R2=160kΩ to maintain a 5µA minimum load ➜ R1=200×Vout-160 [kΩ]

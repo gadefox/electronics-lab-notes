@@ -1,0 +1,4 @@
++00 byte status     0=success; F5=non-matching data; FE=error
++01 byte
+----
+ 02h sizeof
