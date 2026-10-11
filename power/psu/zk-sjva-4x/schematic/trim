@@ -6,7 +6,7 @@ CC:
 3────────VCC
 
 CV:
-1 BUCK_FB
+1 PWM_FB
 2 VOUT
 3 VOUT
 

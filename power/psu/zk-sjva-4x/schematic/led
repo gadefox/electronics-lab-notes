@@ -1,6 +1,6 @@
 CC:
           200Ω   ─►red
-LM_2OUT─────────▶├────BUCK_FB
+LM_2OUT─────────▶├────PWM_FB
 
 ON:
        10kΩ   ─►green

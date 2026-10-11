@@ -1,0 +1,5 @@
+CC/CV
+soft start                              see `schematic/pwm`
+input reverse connection protection     see `schematic/pwm`
+short circuit protection
+output stop the current from feeding back protection
