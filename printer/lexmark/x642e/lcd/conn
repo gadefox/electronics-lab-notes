@@ -1,14 +1,14 @@
-1  D3
-2  D4
-3  D5
-4  D6
-5  EN               1kΩ pull-down/MCU-39
-6  D0
+1  D0
+2  D1
+3  D2
+4  D3
+5  EN               1kΩ pull-down/MCU39
+6  FLM
 7  NC
-8  D1
-9  D2
+8  CLK-LINE         45ns pulse
+9  CLK_PIXEL        45ns pulse
 10 VCC
 11 GND
 12 VEE              J14-7
 13 VOUT             J14-4/5
-14 ?                GND
+14 FGND
