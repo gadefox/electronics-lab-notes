@@ -13,7 +13,7 @@ LDO:
 U21         17-33                   3.3V
 
 DC/DC boost:
-U23         ABTK        SOT-23      MAX8571EUT
+U23         ABTK        SOT-23      MAX8571EUT; R1=3.92MΩ R2=191kΩ; VOUT=26.4V
 
 MCU:
 U3          DF3654CH
