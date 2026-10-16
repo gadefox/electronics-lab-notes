@@ -7,7 +7,7 @@ U10         LS14        SOP-14      SN74LS14; 6× NOR Schmitt-Trigger
 buzzer
 
 DC/DC buck:
-U17         LM2592      5-pin
+U17         LM2592      5-pin       5V
 
 LDO:
 U21         17-33                   3.3V
