@@ -1,0 +1,103 @@
+1   GND
+2   TDI
+3   B0	            B^0
+4   B2	            B^1
+5   B4	            B^2
+6   B6	            B^3
+7   GND (Bank 0)
+8   B8	            B^4
+9   B10	            B^5
+10  B12	            B^6
+11  B13	            B^7
+12  I
+13  VCCO (Bank 0)
+14  C14	            C^7
+15  C12	            C^6
+16  C10	            C^5
+17  C8	            C^4
+18  GND (Bank 0)
+19  C6              C^3
+20  C5              C^2
+21  C4              C^1
+22  C2              C^0
+23  I
+24  TCK
+25  VCC
+
+26  GND
+27  I
+28  D13             D^7
+29  D12             D^6
+30  D10             D^5
+31  D8              D^4
+32  GND (Bank 0)
+33  VCCO (Bank 0)
+34  D6              D^3
+35  D4              D^2
+36  D2              D^1
+37  D0              D^0
+38  CLK1/I
+39  CLK2/I
+40  VCC
+41  E0              E^0
+42  E2              E^1
+43  E4              E^2
+44  E6              E^3
+45  VCCO (Bank 1)
+46  GND (Bank 1)
+47  E8              E^4
+48  E10             E^5
+49  E12             E^6
+50  E14             E^7
+
+51  GND
+52  TMS
+53  F0              F^0
+54  F2              F^1
+55  F4              F^2
+56  F6              F^3
+57  GND (Bank 1)
+58  F8              F^4
+59  F10             F^5
+60  F12             F^6
+61  F13             F^7
+62  I
+63  VCCO (Bank 1)
+64  G14             G^7
+65  G12             G^6
+66  G10             G^5
+67  G8              G^4
+68  GND (Bank 1)
+69  G6              G^3
+70  G5              G^2
+71  G4              G^1
+72  G2              G^0
+73  I
+74  TDO
+75  VCC
+
+76  GND
+77  I
+78  H13             H^7
+79  H12             H^6
+80  H10             H^5
+81  H8              H^4
+82  GND (Bank 1)
+83  VCCO (Bank 1)
+84  H6              H^3
+85  H4              H^2
+86  H2              H^1
+87  H0/GOE1         H^0
+88  CLK3/I
+89  CLK0/I
+90  VCC
+91  A0/GOE0         A^0
+92  A2              A^1
+93  A4              A^2
+94  A6              A^3
+95  VCCO (Bank 0)
+96  GND (Bank 0)
+97  A8              A^4
+98  A10             A^5
+99  A12             A^6
+100 A14             A^7
