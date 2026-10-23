@@ -1,0 +1,15 @@
+73 IO_L01P_3/VRN_3  DCI
+74 IO_L01N_3/VRP_3  DCI
+76 IO               I/O
+77 IO_L20P_3        I/O
+78 IO_L20N_3        I/O
+79 IO_L21P_3        I/O
+80 IO_L21N_3        I/O
+82 IO_L22P_3        I/O
+83 IO_L22N_3        I/O
+84 IO_L23P_3/VREF_3 VREF
+85 IO_L23N_3        I/O
+86 IO_L24P_3        I/O
+87 IO_L24N_3        I/O
+89 IO_L40P_3        I/O
+90 IO_L40N_3/VREF_3 VREF

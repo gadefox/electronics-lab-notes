@@ -1,0 +1,3 @@
+#!/bin/rc
+
+gdb-multiarch -x gdb.ini -ex 'load' -ex 'detach' -ex 'quit' bin/blink.elf

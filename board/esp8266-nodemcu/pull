@@ -1,0 +1,14 @@
+GPIO0(D3)──────VCC
+          12kΩ
+
+GPIO2(D4)──────VCC
+          12kΩ
+
+GPIO15(D8)──────GND
+           12kΩ
+
+EN──────VCC
+   12kΩ
+
+nRST──────VCC
+     12kΩ

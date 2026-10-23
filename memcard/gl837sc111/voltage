@@ -1,0 +1,3 @@
+VCC=3.3V
+VCI=5V
+internal LDO

@@ -1,0 +1,2 @@
+stm32flash UART/I²C
+dfu-util   USB

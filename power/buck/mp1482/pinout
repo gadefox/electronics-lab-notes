@@ -1,0 +1,6 @@
+1 BS*           8 SS
+2 VIN           7 EN
+3 OUT           6 COMP
+4 GND           5 FB
+
+*upper MOSFET supply

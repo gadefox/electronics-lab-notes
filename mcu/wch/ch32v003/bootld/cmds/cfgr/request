@@ -1,0 +1,4 @@
++00 byte bits       see `bits`
++01 byte
+----
+ 02h sizeof

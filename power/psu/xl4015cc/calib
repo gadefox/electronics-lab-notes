@@ -1,0 +1,6 @@
+Long-press the button on the right side (holding it for >2 s).
+The related LED will blink to indicate which voltage is now calibrating.
+The numeric display will blink with the present value.
+Short-press the button on the right side to increase the voltage by one unit.
+Short-press the button on the left side to reduce the voltage by one unit.
+Long-press button on the right side to store the redressed value.

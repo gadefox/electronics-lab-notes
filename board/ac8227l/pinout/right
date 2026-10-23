@@ -1,0 +1,25 @@
+RF1 GPS
+RF2 BT
+RF3 GND
+
+R1  GND
+R2  USB1_D+
+R3  USB1_D-
+R4  GND
+R5  USB0_D+
+R6  USB0_D-
+R7  GND
+R8  LVDS_D0              Rserial=2Ω
+R9  LVDS_D0              Rserial=2Ω
+R10 LVDS_D1              Rserial=2Ω
+R11 LVDS_D1              Rserial=2Ω
+R12 LVDS_D2              Rserial=2Ω
+R13 LVDS_D2              Rserial=2Ω
+R14 LVDS_CLK             Rserial=2Ω
+R15 LVDS_CLK             Rserial=2Ω
+R16 LVDS_D3              Rserial=2Ω
+R17 LVDS_D3              Rserial=2Ω
+R18 GND
+R19 I²C1_SCL
+R20 I²C1_SDA
+R21 GND

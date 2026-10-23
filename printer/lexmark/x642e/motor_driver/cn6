@@ -1,0 +1,19 @@
+C1 GND                      C2 GND
+1  MDC ON                   2  25V
+3  25V                      4  nTOP ADF
+5  nSTART LINE              6  MDC TXD
+7  GND                      8  nCOVER CLOSED
+9  OUT A                    10 OUT A
+11 OUT B                    12 OUT B
+13 GND                      14 nFLAT LENGTH1
+15 nFLAT LENGTH3            16 GND
+17 FAN BACK                 18 nRESET
+19 25V                      20 25V
+21 nTOP FB                  22 GND
+23 GND                      24 MDC RXD
+25 nADF PRESENT             26 GND
+27 OUT nA                   28 OUT nA
+29 OUT nB                   30 OUT nB
+31 GND                      32 nFLAT LENGTH2
+33 nHOME                    34 FAN ON
+35 5V                       36 GND

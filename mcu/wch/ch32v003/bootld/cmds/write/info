@@ -1,0 +1,2 @@
+Writes data to a given location in flash.
+Recommended: sequential offsets; final zero-length write.

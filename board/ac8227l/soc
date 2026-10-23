@@ -1,0 +1,10 @@
+AutoChips AC8227L (MT8127)
+4×ARM Cortex-A7 1.2GHz
+
+4×UART
+3×I2C
+1×SPI
+2×USB 2.0
+CVBS            video out
+LVDS            LCD
+MIPI DSI        LCD

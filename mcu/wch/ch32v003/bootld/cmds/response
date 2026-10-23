@@ -1,0 +1,9 @@
++00 word   header       55AA
++02 byte   command
++03
++04 byte   length       max 60 
++05
++06 byte[] payload
++nn byte   checksum     sum(payload) & FF
+----
+length+7 sizeof

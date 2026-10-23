@@ -1,0 +1,6 @@
+press and hold the BOOT button
+press RST (or plug in the USB cable)
+release RST
+release BOOT
+
+lsusb | grep Raspberry

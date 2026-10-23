@@ -1,0 +1,4 @@
+1 EMITTER/GND   8 VCC
+2 IN+           7 COLECTOR OUT
+3 IN-           6 BALANCE/STROBE
+4 VEE           5 BALANCE

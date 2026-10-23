@@ -1,0 +1,8 @@
+1 GND -> GND
+2 VCC -> 3V3 (optional?)
+3 SCL -> D13(PB5)
+4 SDA -> D11(PB3)
+5 RES -> GPIO (LOW=reset)
+6 DC  -> GPIO
+7 CS  -> GPIO (LOW=enable; HIGH=disable) || GND
+8 BLK -> optional

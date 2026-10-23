@@ -1,0 +1,24 @@
+IC:
+U11     3S1             10-pin      ?
+U2/5    AC86            SOP-14      74AC86; 4× XOR
+U1      AHCT04          SOP-14      74AHCT04; 6× NOT
+U3      AHCT32          SOP-14      74AHCT32; 4× OR
+U10     LVC541A         SOP-20      74LVC541A; octal buffer/line driver/3-state
+
+ADC:
+U7      WM8214S         SOP-28      40Msps 16bit
+
+LDO:
+U9      SC4215          SOP-8       Semtech
+
+MOSFET:
+Q7      702             SOT-24      2N7002; N-ch
+
+PWM:
+U8      T1451A          SOP-16      dual
+
+Q:
+Q5      1P              SOT-23      MMBT2222A
+Q1/2/3  ALG             SOT-23      KTC3875; NPN
+Q6      FZT940A         SOT-223     PNP
+Q4      HY              SOT-89      TIP KTA1663; PNP

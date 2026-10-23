@@ -1,0 +1,14 @@
+92  IO_L40P_2/VREF_2 VREF
+93  IO_L40N_2        I/O
+95  IO_L24P_2        I/O
+96  IO_L24N_2        I/O
+97  IO_L23P_2        I/O
+98  IO_L23N_2/VREF_2 VREF
+99  IO_L22P_2        I/O
+100 IO_L22N_2        I/O
+102 IO_L21P_2        I/O
+103 IO_L21N_2        I/O
+104 IO_L20P_2        I/O
+105 IO_L20N_2        I/O
+107 IO_L01P_2/VRN_2  DCI
+108 IO_L01N_2/VRP_2  DCI

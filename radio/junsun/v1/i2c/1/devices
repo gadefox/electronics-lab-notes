@@ -1,0 +1,6 @@
+addr name                         driver
+0C   camera_main_af               MAINAF
+28h  nfc
+36h  kd_camera_hw1 (camera_main)  kd_camera_hw
+44h  tda7729	                  tda7729
+63h  strobe_main

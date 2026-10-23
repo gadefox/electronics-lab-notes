@@ -1,0 +1,6 @@
+S1 S2 channel operation
+0  0  A/B off
+0  1  B off
+1  0  normal; 2 CH
+1  1  interleaving; 1 CH (data available on rising edge of CLK_A.
+                          channel B data is delayed a 1/2 clock cycle)

@@ -1,0 +1,4 @@
+0≤Vmeas≤100V
+4.5≤Vin≤30V
+
+~ Vmeas<10 && Vres=10mV || Vres=100mV

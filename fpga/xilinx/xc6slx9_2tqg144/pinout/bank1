@@ -1,0 +1,27 @@
+74  IO_L74N_DOUT_BUSY_1   RB
+75  IO_L74P_AWAKE_1       RB
+76  VCCO_1
+78  IO_L47N_1             RB
+79  IO_L47P_1             RB
+80  IO_L46N_1             RB
+81  IO_L46P_1             RB
+82  IO_L45N_1             RB
+83  IO_L45P_1             RB
+84  IO_L43N_GCLK4_1       RB
+85  IO_L43P_GCLK5_1       RB
+86  VCCO_1
+87  IO_L42N_GCLK6_TRDY1_1 RB
+88  IO_L42P_GCLK7_1       RB
+92  IO_L41N_GCLK8_1       RT
+93  IO_L41P_GCLK9_IRDY1_1 RT
+94  IO_L40N_GCLK10_1      RT
+95  IO_L40P_GCLK11_1      RT
+97  IO_L34N_1             RT
+98  IO_L34P_1             RT
+99  IO_L33N_1             RT
+100 IO_L33P_1             RT
+101 IO_L32N_1             RT
+102 IO_L32P_1             RT
+103 VCCO_1
+104 IO_L1N_VREF_1         RT
+105 IO_L1P_1              RT

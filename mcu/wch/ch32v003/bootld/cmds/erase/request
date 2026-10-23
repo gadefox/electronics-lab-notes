@@ -1,0 +1,3 @@
++00 uint count of 1KiB-size sectors     CH32V003 always erases the entire flash
+----
+ 04h sizeof

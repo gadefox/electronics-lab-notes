@@ -1,0 +1,8 @@
+1 5V IN
+2 BUTTON ADMIN (5V default, GND when pushed)
+3 GND
+4 VO (contrast wheel output)
+5 VO (contrast wheel output)
+6 GND
+7 VEE ±24V
+8 VEE ±24V

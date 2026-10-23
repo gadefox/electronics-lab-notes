@@ -1,0 +1,4 @@
+1 5V IN
+2 BUTTON HOME
+3 BUTTON HELP (5V default, GND when push Go)
+4 GND

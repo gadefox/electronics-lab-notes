@@ -1,0 +1,4 @@
+0≤Imeas≤10A
+I≤20mA
+
+~ Imean<10A && Ires=10mA || Ires=100mA

@@ -1,0 +1,7 @@
++00 byte   magic            =23h
++01 byte   cmd
++02 byte   len
++03 byte[] data
+    byte   checksum         XOR of all previous bytes except first byte
+----
+len+4 sizeof

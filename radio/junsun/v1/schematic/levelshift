@@ -1,0 +1,11 @@
+dual MOSFETs pinout:
+ 1 S1       6 D1
+ 2 G1       5 G2
+ 3 D2       4 S2
+
+Source SoM
+Drain  DSP/touch/tuner
+
+DSP     B E
+touch   C D
+tuner   A

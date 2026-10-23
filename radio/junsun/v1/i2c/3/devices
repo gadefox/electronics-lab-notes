@@ -1,0 +1,6 @@
+addr name                         driver
+0C   msensor
+39h  alsps
+44h  camera_sub                   kd_camera_hw_bus2
+68h  gsensor
+69h  gyro

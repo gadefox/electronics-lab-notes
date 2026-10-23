@@ -1,0 +1,3 @@
+Output Enable:
+ LOW:  Y=A
+ HIGH: Y=N/C

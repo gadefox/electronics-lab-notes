@@ -1,0 +1,4 @@
+SCL PB6; pull-up 1.8kΩ
+SDA PB7; pull-up 1.8kΩ
+
+addr=3B

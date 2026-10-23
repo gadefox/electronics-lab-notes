@@ -1,0 +1,5 @@
+ nCLR nSP nSPE
+▶ H    H    H    count down: rising edge (CLK) and falling edge (nCLK)
+  X    X    L    Jn data is preset
+  L    H         Q=L
+  H    L         Q=H

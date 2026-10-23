@@ -1,0 +1,1 @@
+Erase the option bytes section of flash and then write the provided new values.

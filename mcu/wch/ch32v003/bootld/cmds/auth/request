@@ -1,0 +1,5 @@
++00 byte     variant        see `variant`
++01 byte     type           see `type`
++02 byte[16] passphrase     see `pass`
+----
+ 18h sizeof

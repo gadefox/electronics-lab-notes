@@ -1,0 +1,30 @@
+L1  GND
+L2  VIN
+L3  GND
+L4  UART2_RX            I
+L5  UART2_TX            O
+L6  UART3_RX            I
+L7  UART3_TX            O
+L8  ?
+L9  ?
+L10 ?
+L11 ?
+L12 ?
+L13 ?
+L14 ?
+L15 GND
+L16 ?
+L17 GPIO916
+L18 GPIO919
+L19 ?
+L20 I²C2_SCL
+L21 I²C2_SDA
+L22 GPIO926             O
+L23 GPIO910             I
+L24 CVBS                O
+L25 GND
+L26 ?
+L27 GPIO918             O
+L28 I²C3
+L29 I²C3
+L30 GND

@@ -1,0 +1,6 @@
+addr | R/W
+80 command1
+80 command2
+..
+80 commandN
+[40 data1 data2 .. dataM]

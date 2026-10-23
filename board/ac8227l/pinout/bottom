@@ -1,0 +1,27 @@
+DBG1 UART_RX
+DBG2 GND
+DBG3 UART_TX
+
+B11 NC                    no serial R
+B12 NC                    no serial R
+B13 NC                    no serial R
+B14 I²S_DATA_IN           Rserial=100Ω
+B15 I²S_LRCK              Rserial=100Ω
+B16 I²S_BCK               Rserial=100Ω
+
+DBG1 UART_RX
+DBG2 GND
+DBG3 UART_TX
+
+B21  ?
+B22  ?
+B23  ?
+B24  ?
+B25  ?
+B26  ?
+B27  ?
+B28  ?
+B29  ?
+B210 ?
+B211 ?
+B212 GND
