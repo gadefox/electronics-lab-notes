@@ -3,12 +3,12 @@
 3  D2
 4  D3
 5  EN               1kΩ pull-down
-6  FLM
+6  FRAME
 7  NC
-8  LINE             45ns pulse
-9  PIXEL            45ns pulse
+8  LATCH            45ns pulse
+9  SHIFT            45ns pulse
 10 VCC
 11 GND
-12 VEE
+12 VLCD
 13 VO
 14 AGND

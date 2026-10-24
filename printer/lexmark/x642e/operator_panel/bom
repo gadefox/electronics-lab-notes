@@ -8,11 +8,11 @@ buzzer
 DC/DC buck:
 U17         LM2592      5-pin       5V
 
+LCD boost:
+U23         ABTK        SOT-23      MAX8571EUT; R1=3.92MΩ R2=191kΩ; VOUT=26.4V
+
 LDO:
 U21         17-33                   3.3V
-
-DC/DC boost:
-U23         ABTK        SOT-23      MAX8571EUT; R1=3.92MΩ R2=191kΩ; VOUT=26.4V
 
 LVDS:
 U22         65LVDS96    SOP-48      3× LVDS + 1× CLK → 21-bit LVTTL BUS

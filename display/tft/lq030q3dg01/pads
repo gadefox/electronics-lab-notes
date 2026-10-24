@@ -1,8 +1,4 @@
-FPC:
-26 29 VCC
-2     GND
-
-pad   FPC
+pad   conn
 1     10
 2     11
 3     12

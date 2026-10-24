@@ -1,2 +1,2 @@
 VCC=3.3V
-VEE=-26V
+VLCD=26.4V
