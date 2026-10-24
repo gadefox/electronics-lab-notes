@@ -1,14 +1,14 @@
-1  D0
-2  D1
-3  D2
-4  D3
+1  D0               pixel 4*i,y
+2  D1               pixel 4*i+1,y
+3  D2               pixel 4*i+2,y
+4  D3               pixel 4*i+3,y
 5  EN               1kΩ pull-down
-6  FRAME
+6  FRAME            next display cycle
 7  NC
-8  LATCH            45ns pulse
-9  SHIFT            45ns pulse
-10 VCC
+8  LATCH            display data latch; 45ns pulse
+9  SHIFT            display data shift; 45ns pulse
+10 VCC              power supply for logic circuit
 11 GND
-12 VLCD
-13 VO
-14 AGND
+12 VLCD             power supply for LCD driving
+13 VO               operating voltage for LCD driving
+14 FGND             front panel GND

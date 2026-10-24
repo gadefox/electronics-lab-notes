@@ -1,7 +1,7 @@
        ─►white
 VCC────▶├────LEDK
-   VF=2.8-3V
-   IF=15-20mA
+    V=2.8-3V
+    I=15-20mA
 
 VCC────┤├────GND
       1µF
