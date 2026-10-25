@@ -5,7 +5,7 @@ U1      AHCT04          SOP-14      74AHCT04; 6× NOT
 U3      AHCT32          SOP-14      74AHCT32; 4× OR
 U10     LVC541A         SOP-20      74LVC541A; octal buffer/line driver/3-state
 
-ADC:
+ADC-CCD:
 U7      WM8214S         SOP-28      40Msps 16bit
 
 LDO:
