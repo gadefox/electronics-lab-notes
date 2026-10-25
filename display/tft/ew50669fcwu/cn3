@@ -1,7 +1,7 @@
-1  D0               pixel 4*i,y
-2  D1               pixel 4*i+1,y
-3  D2               pixel 4*i+2,y
-4  D3               pixel 4*i+3,y
+1  D0               pixel(4*i+3,y)
+2  D1               pixel(4*i+2,y)
+3  D2               pixel(4*i+1,y)
+4  D3               pixel(4*i,y)
 5  EN               1kΩ pull-down
 6  FRAME            next display cycle
 7  NC
