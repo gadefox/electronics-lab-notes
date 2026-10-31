@@ -1,0 +1,8 @@
+gpio pin name
+908  27  Card Detect
+966  85  CMD?
+967  86  CLK
+968  87  DAT0?
+969  88  DAT1?
+970  89  DAT2?
+971  90  DAT3?

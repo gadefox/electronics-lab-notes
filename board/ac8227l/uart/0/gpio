@@ -1,2 +1,3 @@
-79 RX
-80 TX
+gpio pin name
+960  79  RX
+961  80  TX
