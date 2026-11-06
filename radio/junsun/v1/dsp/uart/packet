@@ -1,0 +1,7 @@
++00 word   magic            =A88A
++02 byte   cmd
++03 byte   len              <131
++04 byte[] data
+    byte   checksum         XOR of all previous bytes except first byte
+----
+len+5 sizeof

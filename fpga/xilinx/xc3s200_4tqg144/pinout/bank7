@@ -1,0 +1,15 @@
+1  IO_L01P_7/VRN_7  DCI
+2  IO_L01N_7/VRP_7  DCI
+4  IO/VREF_7        VREF
+5  IO_L20P_7        I/O
+6  IO_L20N_7        I/O
+7  IO_L21P_7        I/O
+8  IO_L21N_7        I/O
+10 IO_L22P_7        I/O
+11 IO_L22N_7        I/O
+12 IO_L23P_7        I/O
+13 IO_L23N_7        I/O
+14 IO_L24P_7        I/O
+15 IO_L24N_7        I/O
+17 IO_L40P_7        I/O
+18 IO_L40N_7/VREF_7 VREF

@@ -1,0 +1,9 @@
+bit value meaning
+0   0/1   address (bit0)
+1   0/1   address (bit1)
+2   0/1   address (bit2)
+3   0/1   address (bit3)
+4   0/1   address (bit4)
+5   0/1   address (bit5)
+6   1
+7   1

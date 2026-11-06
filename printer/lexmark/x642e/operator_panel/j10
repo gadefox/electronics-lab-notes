@@ -1,0 +1,9 @@
+1  24V                  2  24V
+3  GND                  4  GND
+5  TXD-                 6  TXD+
+7  nTXD232              8  nRXD232
+9  GND                  10 GND
+11 CLKTX-               12 CLKTX+
+13 NC TX2-              14 NC TX2+
+15 NC TX1-              16 NC TX1+
+17 nRESET               18 GND

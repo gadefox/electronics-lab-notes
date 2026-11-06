@@ -1,0 +1,12 @@
+1  MDC DET              2  25V IN
+3  25V IN               4  25V IN
+5  GND                  6  nTOP FB
+7  nTOP ADF             8  GND
+9  nSTART LINE          10 GND
+11 MDC TXD              12 MDC RXD
+13 GND                  14 nADF Present
+15 nCOVER CLOSED        16 GND
+17 FAN ON               18 FAN BACK
+19 GND                  20 nRESET
+21 3.3V                 22 GND
+23 Signal               24 Signal

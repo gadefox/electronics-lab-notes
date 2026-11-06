@@ -1,0 +1,6 @@
+SLICEM 360; arithmetic/carry; distributed RAM=256b; shift regs=128b
+SLICEL 355; arithmetic/carry
+SLICEX 715
+total  1430
+
+1 slice=4×LUT6+8×flip-flop

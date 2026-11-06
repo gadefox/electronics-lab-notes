@@ -1,0 +1,3 @@
+#!/bin/rc
+
+arm-linux-gnueabi-gcc -O2 -Wall -Wextra -static -march=armv7-a -o gpioctl main.c

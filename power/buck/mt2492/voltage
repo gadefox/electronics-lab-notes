@@ -1,0 +1,2 @@
+4.5≤Vin≤16V
+Vout=0.6×(1+Rout/Rgnd) [V]

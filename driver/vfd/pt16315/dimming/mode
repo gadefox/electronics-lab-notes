@@ -1,0 +1,9 @@
+mode meaning     note
+0    pulse 1/16  default
+1    pulse 1/8
+2    pulse 1/4
+3    pulse 5/8
+4    pulse 11/16
+5    pulse 3/4
+6    pulse 13/16
+7    pulse 7/8

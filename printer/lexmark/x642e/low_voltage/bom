@@ -1,0 +1,18 @@
+D:
+YG805C06    TO-220      Schottky power 60V 20A
+2x YG906C2  TO-220      dual fast recovery rectifier 200V 10-20A
+
+MOSFET:
+2x K2611    TO-247      N-ch 900V 9A Toshiba
+
+optocoupler:
+3x LO603
+
+optotriac:
+TLP3061
+
+PWM:
+TL494CN     DIP-16      TI
+
+TRIAC:
+2x BTB24    TO-220      600V 25A RMS

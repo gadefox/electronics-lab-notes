@@ -1,0 +1,5 @@
+3≤VCC≤30V
+VEE=0V
+
+IN≤VCC-1.5V
+0.5≤IN≤28.5V

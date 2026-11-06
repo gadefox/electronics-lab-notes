@@ -1,0 +1,4 @@
+cmd(3C) cmd(0C)  cmd(17h) cmd(6)
+cmd(3D) cmd(85h) cmd(11h) cmd(0C)
+cmd(3E) cmd(0A)  cmd(6)   cmd(11h)
+cmd(3F) cmd(4A)  cmd(FF)

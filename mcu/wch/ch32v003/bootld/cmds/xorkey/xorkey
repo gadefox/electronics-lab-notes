@@ -1,0 +1,13 @@
+unique_id_checksum = (sum(ESIG_UNIID1) + sum(ESIG_UNIID2)) & FF
+
+a = sizeof(seed) / 5
+b = sizeof(seed) / 7
+
+xor_key[0] = seed[b * 4] ^ unique_id_checksum
+xor_key[1] = seed[a] ^ unique_id_checksum
+xor_key[2] = seed[b] ^ unique_id_checksum
+xor_key[3] = seed[b * 6] ^ unique_id_checksum
+xor_key[4] = seed[b * 3] ^ unique_id_checksum
+xor_key[5] = seed[a * 3] ^ unique_id_checksum
+xor_key[6] = seed[b * 5] ^ unique_id_checksum
+xor_key[7] = (xor_key[0] + device_variant) & 0xFF

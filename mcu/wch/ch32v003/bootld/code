@@ -1,0 +1,12 @@
+# unlock the ability to write to the MODE flag of STATR register
+FLASH.BOOT_MODEKEYR = 45670123
+FLASH.BOOT_MODEKEYR = CDEF89AB
+
+# set to run BOOT flash at next reset (MODE = 1)
+FLASH.STATR = 1 << 14
+
+# clear all reset status flags (RMVF = 1)
+RCC.RSTSCKR |= 1 << 24
+
+# perform software reset (KEYCODE = 0xBEEF, RESETSYS = 1)
+PFIC.CFGR = (BEEF << 16) | (1 << 7)

@@ -1,0 +1,12 @@
+1  VCC
+2  USB D-
+3  USB D+
+4  GND
+5  WL_HOST_WAKE     O
+6  VCC
+7  BT_REG_ON        O
+8  GND
+9  BT_DEV_Wake      O
+10 BT_HOST_Wake     O
+11 GND
+12 GND

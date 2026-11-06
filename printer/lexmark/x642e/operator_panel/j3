@@ -1,0 +1,4 @@
+1 X_DRIVE- / 5V IN
+2 X+       / Y_DRIVE+
+3 Y+       / X_DRIVE+
+4 Y_DRIVE- / 5V IN

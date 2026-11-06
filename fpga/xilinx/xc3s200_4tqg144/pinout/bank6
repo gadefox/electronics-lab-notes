@@ -1,0 +1,14 @@
+20 IO_L40P_6/VREF_6 VREF
+21 IO_L40N_6        I/O
+23 IO_L24P_6        I/O
+24 IO_L24N_6/VREF_6 VREF
+25 IO_L23P_6        I/O
+26 IO_L23N_6        I/O
+27 IO_L22P_6        I/O
+28 IO_L22N_6        I/O
+30 IO_L21P_6        I/O
+31 IO_L21N_6        I/O
+32 IO_L20P_6        I/O
+33 IO_L20N_6        I/O
+35 IO_L01P_6/VRN_6  DCI
+36 IO_L01N_6/VRP_6  DCI

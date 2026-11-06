@@ -1,0 +1,4 @@
++00 byte checksum       sum(key_xor) & FF
++01 byte
+----
+ 02h sizeof

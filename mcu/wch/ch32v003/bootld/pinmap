@@ -1,0 +1,5 @@
+CH32V003F4P6:
+ TX  2
+ RX  3
+ GND 7
+ VCC 9

@@ -1,0 +1,12 @@
+#!/system/bin/sh
+
+/data/local/tmp/gpioctl $1 dir 1
+
+for i in $(seq 1 30); do
+  /data/local/tmp/gpioctl $1 val 1
+  sleep 1
+  /data/local/tmp/gpioctl $1 val 0
+  sleep 1
+done
+
+cat /sys/kernel/debug/gpio

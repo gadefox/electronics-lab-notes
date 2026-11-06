@@ -1,0 +1,19 @@
+IC:
+IC4             SN7407          SOP-14      6× non-inverting buffer
+
+comparator:
+IC3             KA393           DIP-8       dual
+
+LDO:
+IC1             KA7818          TO-220      18V
+
+op-amp:
+IC2             KA324           DIP-14      quad
+
+Q:
+Q404            A733            TO-92       2SA733
+Q201/402        C2383           TO-92L      2SC2383; high-voltage NPN
+Q101/301/304/
+ 401/403        C945            TO-92       2SC945; NPN
+Q302            D2060           TO-220      power NPN
+Q102            D1408           TO-220      Fairchild; power NPN

@@ -1,0 +1,4 @@
+1 1OUT          8 VCC
+2 1IN-          7 2OUT
+3 1IN+          6 2IN-
+4 VEE           5 2IN+

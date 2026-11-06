@@ -1,0 +1,2 @@
+for n in 0..length - 1:
+  data[n] ^= xor_key[n % 8]

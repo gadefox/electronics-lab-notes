@@ -1,0 +1,3 @@
+#!/bin/rc
+
+gdb-multiarch -x gdb.ini bin/blink.elf
