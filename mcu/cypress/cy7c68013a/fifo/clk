@@ -1,4 +1,4 @@
 IFCLK
-internal  30/48MHz
-external: 5-48 MHz
+internal: 30/48MHz
+external: 5-48MHz
 not used: async mode

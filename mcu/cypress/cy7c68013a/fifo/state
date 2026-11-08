@@ -1,5 +1,5 @@
-name  pin  meaning
-FLAGA CTL0 programmable flag
-FLAGB CTL1 full (don't write)
-FLAGC CTL2 empty (don't read)
-FLAGD PA7
+pin  name  meaning
+CTL0 FLAGA programmable flag
+CTL1 FLAGB full (don't write)
+CTL2 FLAGC empty (don't read)
+PA7  FLAGD

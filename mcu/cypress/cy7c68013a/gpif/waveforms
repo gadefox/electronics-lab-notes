@@ -1,5 +1,5 @@
-num name
-0   FIFO read
-1   FIFO write
-2   single read
-3   single write
+type name
+0    FIFO read
+1    FIFO write
+2    single read
+3    single write

@@ -5,5 +5,5 @@ bit value meaning
 3   -
 4   -
 5   -
-6   0/1   0: I2C runs at 100kHz during boot load; 1: runs at 400kHz
+6   0/1   0: I²C runs at 100kHz during boot load; 1: runs at 400kHz
 7   -
