@@ -1,25 +1,28 @@
-CLK────────CN7
-     100Ω
+PL_CLK────────CN7_CLK
+        100Ω
 
-DIN────────CN7
-     100Ω
+PL_DIN────────CN7_DIN
+        100Ω
 
-DOUT────CN7
+PL_DOUT────CN7_DOUT
 
-KEY0────────┬────key-matrix
-      100Ω   │
-              10kΩ
-             │
-            GND
+PL_KEY0────────┬────key-matrix
+         100Ω   │
+                 10kΩ
+                │
+               GND
 
-KEY1────────┬────key-matrix
-      100Ω   │
-              10kΩ
-             │
-            GND
+PL_KEY1────────┬────key-matrix
+         100Ω   │
+                 10kΩ
+                │
+               GND
 
-OSC────────GND
-      20kΩ
+PL_OSC────────GND
+         20kΩ
 
-STB────────CN7
-     100Ω
+PL_STB────────CN7_STB
+        100Ω
+
+IR_OUT────────CN7_IR_OUT
+         1kΩ

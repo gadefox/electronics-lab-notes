@@ -1,0 +1,21 @@
+1  PD5          GPIO-D || FIFO BUS
+2  PD6          GPIO-D || FIFO BUS
+3  PD7          
+4  GND
+5  CLKOUT
+6  GND
+7  RDY0
+8  RDY1
+9  GND
+10 GND
+
+11 GND
+12 IFCLK
+13 SCL
+14 SDA
+15 PB0          GPIO-B || FIFO BUS
+16 PB1          GPIO-B || FIFO BUS
+17 PB2          GPIO-B || FIFO BUS
+18 PB3          GPIO-B || FIFO BUS
+19 VCC
+20 VCC

@@ -48,10 +48,11 @@ int main() {
     sleep_ms(10);
   sleep_ms(200);
 
-  pt6315_init(0, 0,0, 0); // STB, CLK, DIN, DOUT
-  pt6315_set_mode(9);
+  pt6315_init(16, 21, 29, 28); // STB, CLK, DIN, DOUT
+  pt6315_set_mode(PT6315_GRID_9);
   pt6315_clear_block(0, PT6315_RAM_SIZE);
   pt6315_display(true, PT6315_DUTY_14_16);
+  pt6315_set_leds(0x01);
 
   while (true) {
     // Background tasks (non-blocking)
