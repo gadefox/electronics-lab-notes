@@ -1,1 +1,3 @@
-51h
+J1  addr
+on  50h
+off 51h

@@ -1,1 +1,5 @@
-16KiB
+addr       size    type       description
+0000-3FFF  16KiB   code/data  main RAM
+4000-DFFF  40KiB   external
+E000-E1FF  512B    data       scratch RAM
+E200-FFFF  7.5KiB  data       registers/buffers

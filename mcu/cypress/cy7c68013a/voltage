@@ -1,2 +1,2 @@
 3≤VCC≤3.6V
-Vpin≤5.25V      5V tolerant inputs; do not power I/O w/ IC power off
+Vin≤5.25V       5V tolerant inputs; do not power I/O w/ IC power off
