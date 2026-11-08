@@ -123,6 +123,9 @@
 #define ENABLE_GPIFWF() GPIFIE |= 0x02;
 #define CLEAR_GPIFWF() GLEAR_GPIF(); GPIFIRQ = 0x02;
 
+#define ENABLE_IBN() NAKIE |= bmIBN;
+#define ENABLE_EP2IBN() ENABLE_IBN(); IBNIE |= bmEP2IBN;
+
 /**
  * ez-usb has 12 built in ISRs, to get
  * sdcc to put these USB ISRs immediately

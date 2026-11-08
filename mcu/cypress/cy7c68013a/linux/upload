@@ -1,6 +1,6 @@
 #!/bin/rc
 
-usb = `{ lsusb | grep Cypress | awk '{print $2, $4}' | tr -d : }
-~ $#usb 2 || exit 1
+usb = `{ lsusb | grep Cypress | awk '{sub(":","",$4); print $2"/"$4}' }
+~ $usb () && exit 1
 
-fxload -t fx2lp -D /dev/bus/usb/$usb(1)/$usb(2) -I $1
+fxload -t fx2lp -D /dev/bus/usb/$usb -I $1

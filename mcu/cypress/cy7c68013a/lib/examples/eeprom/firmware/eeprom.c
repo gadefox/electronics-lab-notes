@@ -92,7 +92,7 @@ BOOL handle_vendorcommand(BYTE cmd) {
                  while (len) { // still have bytes to read
                     BYTE cur_read = len > 64 ? 64 : len; // can't read more than 64 bytes at a time
                     while (EP0CS&bmEPBUSY); // can't do this until EP0 is ready                
-                    eeprom_read(0x51, addr, cur_read, EP0BUF );
+                    eeprom_read(0x50, addr, cur_read, EP0BUF );
                     EP0BCH=0;
                     SYNCDELAY;
                     EP0BCL=cur_read;
@@ -108,7 +108,7 @@ BOOL handle_vendorcommand(BYTE cmd) {
                    while(EP0CS & bmEPBUSY); // wait
                    cur_write=EP0BCL;
 //                   printf ( "Writing %d Bytes to %d..\n", cur_write, addr );
-                   if ( !eeprom_write(0x51, addr, cur_write, EP0BUF ) ) return FALSE;
+                   if ( !eeprom_write(0x50, addr, cur_write, EP0BUF ) ) return FALSE;
                    addr += cur_write;
                    len -= cur_write;
                 }
