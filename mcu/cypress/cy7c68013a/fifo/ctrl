@@ -1,0 +1,8 @@
+name     pin   meaning           note
+FIFOADR0 PA4   see `fifoadr`
+FIFOADR1 PA5   see `fifoadr`
+PKTEND   PA6   sends USB packet
+SLRD     RDY0  reading from FIFO
+SLWR     RDY1  write to FIFO
+SLOE     PA2   enable output
+SCLS#    PA7   chip select       PORTACFG

@@ -1,2 +1,0 @@
-FD[7:0]  = PB0-PB7; 8-bit BUS
-FD[15:8] = PD0-PD7; if 16-bit BUS

@@ -1,8 +1,0 @@
-name     pin   meaning
-FIFOADR1 PA4   EP2/4/6/8
-FIFOADR0 PA5   EP2/4/6/8
-PKTEND   PA6   sends USB packet
-SLRD     RDY0  reading from FIFO
-SLWR     RDY1  write to FIFO
-SLOE     PA2   enable output
-nSCLS    PA7   chip select

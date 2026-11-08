@@ -1,0 +1,5 @@
+name  pin  meaning
+FLAGA CTL0 programmable flag
+FLAGB CTL1 full (don't write)
+FLAGC CTL2 empty (don't read)
+FLAGD PA7
