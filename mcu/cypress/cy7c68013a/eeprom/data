@@ -1,5 +1,6 @@
 +00 byte               see `boot`
-+01 word vid
-+03 word pid
-+05 word did
-+07 byte config        see `config`
++01 word VID
++03 word PID
++05 word DID
++07 byte config        see `cfg`
++08

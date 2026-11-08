@@ -1,3 +1,4 @@
 value meaning
 C0    EEPROM holds only VID/PID/DID; FW loaded over USB
 C2    EEPROM holds FW; boot-loaded into internal RAM (up to 16KiB)
+other see `note`
