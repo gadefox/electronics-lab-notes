@@ -6,33 +6,22 @@
 #include "pt6315.h"
 
 static int s_state;
-
-#define NUM_GRIDS 9
-#define NUM_SEGS  19
-
-static uint8_t cur_grid = 0;
-static uint8_t cur_seg  = 0;
+static uint8_t s_segm[2];
 
 static void on_button(void) {
   status_led_set_state(!(s_state % 2));
 
-  uint8_t buf[3] = {0, 0, 0};
+  printf("seg=%u\n", s_state);
 
-  // SG1..SG8 -> byte 0, SG9..SG16 -> byte 1, SG17..SG24 -> byte 2
-  buf[cur_seg >> 3] = (uint8_t)(1u << (cur_seg & 7));
-
-  pt6315_clear_block(0, PT6315_RAM_SIZE);
-  pt6315_write_block(cur_grid * 3, buf, 3);
-
-  printf("grid=%u seg=%u (addr=0x%02X byte=%u bit=%u)\n",
-         cur_grid, cur_seg, cur_grid * 3, cur_seg >> 3, cur_seg & 7);
-
-  if (++cur_seg >= NUM_SEGS) {
-    cur_seg = 0;
-    if (++cur_grid >= NUM_GRIDS)
-      cur_grid = 0;
+  if (s_state < 8) {
+    s_segm[0] = 1 << s_state;
+    s_segm[1] = 0;
+  } else {
+    s_segm[0] = 0;
+    s_segm[1] = 1 << s_state;
   }
 
+  pt6315_write_block(6, s_segm, 2);
   s_state++;
 }
 
@@ -50,9 +39,9 @@ int main() {
 
   pt6315_init(16, 21, 29, 28); // STB, CLK, DIN, DOUT
   pt6315_set_mode(PT6315_GRID_9);
-  pt6315_clear_block(0, PT6315_RAM_SIZE);
+  pt6315_clear_block(0, VFD_GRIDS * 3);
   pt6315_display(true, PT6315_DUTY_14_16);
-  pt6315_set_leds(0x01);
+  pt6315_set_leds(0x02);
 
   while (true) {
     // Background tasks (non-blocking)

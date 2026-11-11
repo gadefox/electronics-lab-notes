@@ -12,7 +12,7 @@
 
 #define PT6315_DISPLAY_ON    (1 << 3)
 
-#define PT6315_DELAY_US      1
+#define PT6315_DELAY_US      50
 
 //------------------------------------------------------------------------------
 
@@ -76,17 +76,10 @@ static void pt6315_begin_write(uint8_t addr) {
   pt6315_send_byte(PT6315_CMD_ADDR | addr);
 }
 
-static inline void pt6315_gpio_init_out(uint8_t pin) {
+static inline void pt6315_gpio_init_out(uint8_t pin, bool level) {
   gpio_init(pin);
+  gpio_put(pin, level);
   gpio_set_dir(pin, GPIO_OUT);
-}
-
-static inline void pt6315_gpio_init_in(uint8_t pin, bool pull_up) {
-  gpio_init(pin);
-  gpio_set_dir(pin, GPIO_IN);
-
-  if (pull_up)
-    gpio_pull_up(pin);
 }
 
 //------------------------------------------------------------------------------
@@ -94,16 +87,18 @@ static inline void pt6315_gpio_init_in(uint8_t pin, bool pull_up) {
 void pt6315_init(uint8_t pin_stb, uint8_t pin_clk, uint8_t pin_din,
                  uint8_t pin_dout) {
   s_pin_stb = pin_stb;
-  pt6315_gpio_init_out(pin_stb);
+  pt6315_gpio_init_out(pin_stb, 1);
 
   s_pin_clk = pin_clk;
-  pt6315_gpio_init_out(pin_clk);
+  pt6315_gpio_init_out(pin_clk, 1);
 
   s_pin_din = pin_din;
-  pt6315_gpio_init_out(pin_din);
+  pt6315_gpio_init_out(pin_din, 0);
 
   s_pin_dout = pin_dout; // DOUT is open-drain, external pull-up 1k..10k recommended
-  pt6315_gpio_init_in(pin_dout, true);
+  gpio_init(pin_dout);
+  gpio_set_dir(pin_dout, GPIO_IN);
+  gpio_pull_up(pin_dout);
 }
 
 void pt6315_set_mode(pt6315_mode_t mode) {
@@ -141,7 +136,7 @@ void pt6315_clear_block(uint8_t addr, uint8_t length) {
 void pt6315_set_leds(uint8_t leds) {
   pt6315_select();
   pt6315_send_byte(PT6315_CMD_WRITE_LED);
-  pt6315_send_byte(leds & 0x0F);
+  pt6315_send_byte(~leds & 0x0F);
   pt6315_deselect();
 }
 
