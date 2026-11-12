@@ -1,8 +1,8 @@
 #include "pico/status_led.h"
 #include "pico/stdlib.h"
 #include "button.h"
-#include "display.h"
 #include "ht1621.h"
+#include "lcd.h"
 
 static uint8_t s_state;
 

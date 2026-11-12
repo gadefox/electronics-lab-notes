@@ -1,7 +1,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "pico/stdlib.h"
-#include "display.h"
+#include "lcd.h"
 
 //------------------------------------------------------------------------------
 

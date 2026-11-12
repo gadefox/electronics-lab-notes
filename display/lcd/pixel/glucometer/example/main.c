@@ -3,7 +3,7 @@
 #include "pico/stdlib.h"
 #include "pico/status_led.h"
 #include "button.h"
-#include "display.h"
+#include "lcd.h"
 
 bool s_state;
 

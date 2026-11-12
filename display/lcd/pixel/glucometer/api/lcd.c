@@ -1,7 +1,7 @@
 #include <string.h>
 #include "hardware/i2c.h"
 #include "pico/stdlib.h"
-#include "display.h"
+#include "lcd.h"
 
 //------------------------------------------------------------------------------
 

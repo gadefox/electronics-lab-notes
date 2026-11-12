@@ -2,7 +2,7 @@
 #include <string.h>
 #include "pico/stdlib.h"
 #include "ht1621.h"
-#include "display.h"
+#include "lcd.h"
 
 //------------------------------------------------------------------------------
 

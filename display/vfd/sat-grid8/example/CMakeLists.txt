@@ -5,7 +5,7 @@ include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 project(disp C CXX ASM)
 pico_sdk_init()
 
-add_executable(disp button.c display.c pt6315.c main.c)
+add_executable(disp button.c et16315.c main.c vfd.c)
 target_link_libraries(disp pico_bootsel_via_double_reset pico_stdlib pico_status_led)
 pico_enable_stdio_usb(disp 1)
 pico_enable_stdio_uart(disp 0)
