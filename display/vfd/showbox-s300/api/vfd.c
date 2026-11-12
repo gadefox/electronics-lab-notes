@@ -119,13 +119,13 @@ static uint8_t s_ram_buf[VFD_GRIDS][3];
 //------------------------------------------------------------------------------
 
 static void vfd_set_pixel(uint8_t grid, uint8_t seg, bool state) {
-  uint8_t *p = &s_ram_buf[grid][seg >> 3];
+  uint8_t *ram = &s_ram_buf[grid][seg >> 3];
   uint8_t mask = 1 << (seg & 0b111);
 
   if (state)
-    *p |= mask;
+    *ram |= mask;
   else
-    *p &= ~mask;
+    *ram &= ~mask;
 }
 
 static uint16_t vfd_font_get(char c) {
