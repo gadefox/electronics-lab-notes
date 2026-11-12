@@ -9,27 +9,19 @@
 static int s_state;
 
 static void on_button(void) {
-static const char all[] =
-    "ABCDEFGH" "IJKLMNOP" "QRSTUVWX" "YZ012345"
-    "6789m+*/" "\\_=<>.- ";   /* 48 znakov = 6 riadkov po 8 */
-
-  char buf[9];
-  memcpy(buf, &all[(s_state % 6) * 8], 8);
-  buf[8] = '\0';
-
   status_led_set_state(!(s_state % 2));
 
-  vfd_draw_text(buf, 0);
+  if (s_state % 2) {
+    vfd_set_icons(VFD_ICON_ONE);
+    vfd_draw_num(-2345, 3);
+    vfd_draw_text(" V", 6);
+  } else {
+    vfd_set_icons(VFD_ICON_TWO);
+    vfd_draw_num(6789, 2);
+    vfd_draw_text("mA", 6);
+  }
+
   vfd_flush();
-  s_state++;
-  return;
-
-  status_led_set_state(!(s_state % 2));
-
-//  vfd_draw_num(-1234, 2);
-//  vfd_draw_text("mA", 6);
-//  vfd_flush();
-
   s_state++;
 }
 
@@ -50,6 +42,11 @@ int main() {
   vfd_flush();
 
   while (true) {
+    uint8_t keys = 0;
+    et16315_read_keys(&keys, 1);
+    if (keys)
+      printf("KS: %x\n", keys);
+
     // Background tasks (non-blocking)
     button_task_update();
 

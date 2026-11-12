@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 
 #define VFD_GRIDS   9
-#define VFD_DIGITS  5
+#define VFD_DIGITS  6
 
 #define LOBYTE(x)  ((uint8_t)((x) & 0xFF))
 #define HIBYTE(x)  ((uint8_t)(((x) >> 8) & 0xFF))
@@ -28,56 +28,105 @@
 #define SEG_K   (1 << 13)
 #define SEG_D   (1 << 14)
 
-#define SEG_G  (SEG_G1 | SEG_G2)
+#define SEG_COLON  (1 << 15)
+#define SEG_ICON   (1 << 16)
+
+#define SEG_G  (SEG_G1 | SEG_DP | SEG_G2)
+
+//------------------------------------------------------------------------------
+
+#define MAP_ICON(gr, seg)  (gr) | ((seg) << 4)
+
+static const uint16_t s_icon_map[] = {
+  /* COLON1  */ MAP_ICON(6, 15),
+  /* COLON2  */ MAP_ICON(4, 15),
+  /* COLON3  */ MAP_ICON(2, 15),
+  /* SAT     */ MAP_ICON(7, 16),
+  /* TER     */ MAP_ICON(6, 16),
+  /* FAV     */ MAP_ICON(5, 16),
+  /* TV      */ MAP_ICON(4, 16),
+  /* RADIO   */ MAP_ICON(3, 16),
+  /* MPEG4   */ MAP_ICON(2, 16),
+  /* MPEG2   */ MAP_ICON(1, 16),
+  /* HD      */ MAP_ICON(0, 16),
+  /* EUR     */ MAP_ICON(8, 0),
+  /* PLAY    */ MAP_ICON(8, 1),
+  /* BACK    */ MAP_ICON(8, 2),
+  /* PAUSE   */ MAP_ICON(8, 3),
+  /* FORWARD */ MAP_ICON(8, 4),
+  /* STOP    */ MAP_ICON(8, 6),
+  /* ARROW   */ MAP_ICON(8, 7),
+  /* ALARM   */ MAP_ICON(8, 8),
+  /* TIME    */ MAP_ICON(8, 9),
+  /* BOX     */ MAP_ICON(8, 10),
+  /* ONE     */ MAP_ICON(8, 11),
+  /* TWO     */ MAP_ICON(8, 12),
+  /* KEY     */ MAP_ICON(8, 13),
+  /* 16_9    */ MAP_ICON(8, 14),
+  /* USB     */ MAP_ICON(8, 15),
+  /* DV3     */ MAP_ICON(8, 16)
+};
+
+_Static_assert((sizeof(s_icon_map) / sizeof(s_icon_map[0])) == VFD_ICON_MAX, "icon map size");
 
 //------------------------------------------------------------------------------
 
 static const uint16_t s_font_digits[10] = {
-  /* 0 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_J | SEG_M,
+  /* 0 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_J | SEG_K | SEG_DP,
   /* 1 */ SEG_B | SEG_C,
-  /* 2 */ SEG_A | SEG_B | SEG_G | SEG_E | SEG_D | SEG_DP,
-  /* 3 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_G | SEG_DP,
-  /* 4 */ SEG_F | SEG_G | SEG_B | SEG_C | SEG_DP,
-  /* 5 */ SEG_A | SEG_F | SEG_G | SEG_C | SEG_D | SEG_DP,
-  /* 6 */ SEG_A | SEG_F | SEG_G | SEG_E | SEG_C | SEG_D | SEG_DP,
+  /* 2 */ SEG_A | SEG_B | SEG_G | SEG_E | SEG_D,
+  /* 3 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_G,
+  /* 4 */ SEG_F | SEG_G | SEG_B | SEG_C,
+  /* 5 */ SEG_A | SEG_F | SEG_G | SEG_C | SEG_D,
+  /* 6 */ SEG_A | SEG_F | SEG_G | SEG_E | SEG_C | SEG_D,
   /* 7 */ SEG_A | SEG_B | SEG_C,
-  /* 8 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G | SEG_DP,
-  /* 9 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G | SEG_DP
+  /* 8 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* 9 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G
 };
 
 static const uint16_t s_font_alpha[26] = {
-  /* A */ SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G | SEG_DP,
-  /* B */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_I | SEG_L | SEG_G2,
+  /* A */ SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,
+  /* B */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_I | SEG_L | SEG_G2 | SEG_DP,
   /* C */ SEG_A | SEG_D | SEG_E | SEG_F,
-  /* D */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_I | SEG_L,
-  /* E */ SEG_A | SEG_D | SEG_E | SEG_F | SEG_G | SEG_DP,
+  /* D */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_I | SEG_L | SEG_DP,
+  /* E */ SEG_A | SEG_D | SEG_E | SEG_F | SEG_G,
   /* F */ SEG_A | SEG_E | SEG_F | SEG_G1 | SEG_DP,
   /* G */ SEG_A | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G2,
-  /* H */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_G | SEG_DP,
-  /* I */ SEG_A | SEG_D | SEG_I | SEG_L,
+  /* H */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,
+  /* I */ SEG_A | SEG_D | SEG_I | SEG_L | SEG_DP,
   /* J */ SEG_B | SEG_C | SEG_D | SEG_E,
-  /* K */ SEG_E | SEG_F | SEG_G1 | SEG_J | SEG_K | SEG_DP,
+  /* K */ SEG_E | SEG_F | SEG_G1 | SEG_J | SEG_M | SEG_DP,
   /* L */ SEG_D | SEG_E | SEG_F,
-  /* M */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_J,
-  /* N */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_K,
+  /* M */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_J | SEG_DP,
+  /* N */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_M | SEG_DP,
   /* O */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
-  /* P */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G | SEG_DP,
-  /* Q */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_K,
-  /* R */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G | SEG_K | SEG_DP,
-  /* S */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G | SEG_DP,
-  /* T */ SEG_A | SEG_I | SEG_L,
+  /* P */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G,
+  /* Q */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_M,
+  /* R */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G | SEG_M,
+  /* S */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
+  /* T */ SEG_A | SEG_I | SEG_L | SEG_DP,
   /* U */ SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
-  /* V */ SEG_E | SEG_F | SEG_J | SEG_M,
+  /* V */ SEG_E | SEG_F | SEG_J | SEG_K | SEG_DP,
   /* W */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_K | SEG_M | SEG_DP,
-  /* X */ SEG_H | SEG_J | SEG_K | SEG_M,
-  /* Y */ SEG_H | SEG_J | SEG_L,
-  /* Z */ SEG_A | SEG_D | SEG_J | SEG_M
+  /* X */ SEG_H | SEG_J | SEG_K | SEG_M | SEG_DP,
+  /* Y */ SEG_H | SEG_J | SEG_L | SEG_DP,
+  /* Z */ SEG_A | SEG_D | SEG_J | SEG_K | SEG_DP
 };
 
 // RAM buffer
 static uint8_t s_ram_buf[VFD_GRIDS][3];
 
 //------------------------------------------------------------------------------
+
+static void vfd_set_pixel(uint8_t grid, uint8_t seg, bool state) {
+  uint8_t *p = &s_ram_buf[grid][seg >> 3];
+  uint8_t mask = 1 << (seg & 0b111);
+
+  if (state)
+    *p |= mask;
+  else
+    *p &= ~mask;
+}
 
 static uint16_t vfd_font_get(char c) {
   if (c >= '0' && c <= '9')
@@ -92,12 +141,11 @@ static uint16_t vfd_font_get(char c) {
   switch (c) {
     case '+':  return SEG_G | SEG_I | SEG_L;
     case '*':  return SEG_G | SEG_I | SEG_L | SEG_H | SEG_J | SEG_K | SEG_M;
-    case '/':  return SEG_J | SEG_M;
-    case '\\': return SEG_H | SEG_K;
+    case '/':  return SEG_J | SEG_K | SEG_DP;
+    case '\\': return SEG_H | SEG_M | SEG_DP;
     case '_':  return SEG_D;
     case '=':  return SEG_G | SEG_D;
-    case '<':  return SEG_J | SEG_K;
-    case '>':  return SEG_H | SEG_M;
+    case '<':  return SEG_J | SEG_M;
     case '.':  return SEG_DP;
     case '-':  return SEG_G;
     default:   return 0;
@@ -143,7 +191,7 @@ static bool vfd_format_num(int16_t value, uint8_t decimal_pos, uint16_t *grid)
 
   for (int i = 0; i < count; i++) {
     if (decimal_pos > 0 && i == decimal_pos)
-      grid[pos--] = SEG_DP;
+      grid[pos--] = SEG_K;
 
     grid[pos--] = s_font_digits[buf[i]];
   }
@@ -184,6 +232,11 @@ void vfd_draw_text(const char *text, uint8_t grid_pos) {
   }
 }
 
+void vfd_clear(void) {
+  memset(s_ram_buf, 0, sizeof(s_ram_buf));
+  et16315_clear_block(0, sizeof(s_ram_buf));
+}
+
 void vfd_draw_num(int16_t value, uint8_t decimal_pos) {
   uint16_t grid[VFD_DIGITS];
   vfd_format_num(value, decimal_pos, grid);
@@ -199,4 +252,11 @@ void vfd_draw_num(int16_t value, uint8_t decimal_pos) {
 
 void vfd_flush(void) {
   et16315_write_block(0, (uint8_t*)s_ram_buf, sizeof(s_ram_buf));
+}
+
+void vfd_set_icons(uint32_t icon_mask) {
+  for (unsigned i = 0; i < VFD_ICON_MAX; i++) {
+    uint16_t e = s_icon_map[i];
+    vfd_set_pixel(e & 0xF, e >> 4, (icon_mask >> i) & 1);
+  }
 }

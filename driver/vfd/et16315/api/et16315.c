@@ -139,12 +139,15 @@ void et16315_set_leds(uint8_t leds) {
   et16315_deselect();
 }
 
-void et16315_read_keys(uint8_t keys[4]) {
+void et16315_read_keys(uint8_t *keys, size_t length) {
+  if (length > 4)
+    length = 4;
+
   et16315_select();
   et16315_send_byte(ET16315_CMD_READ_KEY);
-  sleep_us(1); // t_wait >= 1us
+  sleep_us(ET16315_DELAY_US);
 
-  for (uint8_t i = 0; i < 4; i++)
+  for (uint8_t i = 0; i < length; i++)
     keys[i] = et16315_recv_byte();
 
   et16315_deselect();

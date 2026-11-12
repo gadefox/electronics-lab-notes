@@ -55,8 +55,8 @@ void et16315_write(uint8_t addr, uint8_t data);
 // Set LED1..LED4 (bit0..bit3, 0 = LED lit)
 void et16315_set_leds(uint8_t leds);
 
-// Read key matrix (16 x 2), 4 bytes
-void et16315_read_keys(uint8_t keys[4]);
+// Read key matrix (16 x 2), max. 4 bytes
+void et16315_read_keys(uint8_t *keys, size_t length);
 
 // Test a key in data returned by et16315_read_keys(), ks = 0..15, k = 0..1
 bool et16315_key_pressed(const uint8_t keys[4], uint8_t ks, uint8_t k);
