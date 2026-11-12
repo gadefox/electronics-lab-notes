@@ -5,37 +5,38 @@
 
 //------------------------------------------------------------------------------
 
-#define COM0 (1u << 0)
-#define COM1 (1u << 1)
-#define COM2 (1u << 2)
-#define COM3 (1u << 3)
+#define COM0  (1 << 0)
+#define COM1  (1 << 1)
+#define COM2  (1 << 2)
+#define COM3  (1 << 3)
 
-#define SEG_A (1u << 0)
-#define SEG_B (1u << 1)
-#define SEG_C (1u << 2)
-#define SEG_D (1u << 3)
-#define SEG_E (1u << 4)
-#define SEG_F (1u << 5)
-#define SEG_G (1u << 6)
+#define SEG_A  (1 << 0)
+#define SEG_B  (1 << 1)
+#define SEG_C  (1 << 2)
+#define SEG_D  (1 << 3)
+#define SEG_E  (1 << 4)
+#define SEG_F  (1 << 5)
+#define SEG_G  (1 << 6)
 
+//------------------------------------------------------------------------------
 // Font definition (bit0=a, bit1=b, bit2=c, bit3=d, bit4=e, bit5=f, bit6=g)
-#define GR_BLANK 0x00
-#define GR_MINUS 0x40
 
 static const uint8_t s_digit_font[] = {
-  /* 0 */ 0x3F,
-  /* 1 */ 0x06,
-  /* 2 */ 0x5B,
-  /* 3 */ 0x4F,
-  /* 4 */ 0x66,
-  /* 5 */ 0x6D,
-  /* 6 */ 0x7D,
-  /* 7 */ 0x07,
-  /* 8 */ 0x7F,
-  /* 9 */ 0x6F
+  /* 0 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
+  /* 1 */ SEG_B | SEG_C,
+  /* 2 */ SEG_A | SEG_B | SEG_D | SEG_E | SEG_G,
+  /* 3 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_G,
+  /* 4 */ SEG_B | SEG_C | SEG_F | SEG_G,
+  /* 5 */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
+  /* 6 */ SEG_A | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* 7 */ SEG_A | SEG_B | SEG_C,
+  /* 8 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* 9 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G
 };
 
-// 9 RAM addresses
+//------------------------------------------------------------------------------
+
+// RAM buffer
 static uint8_t s_ram_buf[9];
 
 //------------------------------------------------------------------------------
@@ -76,4 +77,5 @@ void lcd_set_icons(uint32_t icon_mask) {
 }
 
 void lcd_flush(void) {
+  // TODO
 }

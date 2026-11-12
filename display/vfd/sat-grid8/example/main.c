@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "pico/status_led.h"
 #include "pico/stdlib.h"
 #include "button.h"
@@ -6,36 +7,29 @@
 #include "vfd.h"
 
 static int s_state;
-static uint8_t s_segm[3];
 
 static void on_button(void) {
+static const char all[] =
+    "ABCDEFGH" "IJKLMNOP" "QRSTUVWX" "YZ012345"
+    "6789m+*/" "\\_=<>.- ";   /* 48 znakov = 6 riadkov po 8 */
+
+  char buf[9];
+  memcpy(buf, &all[(s_state % 6) * 8], 8);
+  buf[8] = '\0';
+
   status_led_set_state(!(s_state % 2));
 
-  printf("seg=%u\n", s_state);
+  vfd_draw_text(buf, 0);
+  vfd_flush();
+  s_state++;
+  return;
 
-  if (s_state < 8) {
-    s_segm[0] = 1 << s_state;
-    s_segm[1] = 0;
-    s_segm[2] = 0;
-  } else if (s_state < 16) {
-    s_segm[0] = 0;
-    s_segm[1] = 1 << (s_state - 8);
-    s_segm[2] = 0;
-  } else if (s_state < 24) {
-    s_segm[0] = 0;
-    s_segm[1] = 0;
-    s_segm[2] = 1 << (s_state - 16);
-  }
+  status_led_set_state(!(s_state % 2));
 
-  et16315_write_block(8*3, s_segm, 3);
+//  vfd_draw_num(-1234, 2);
+//  vfd_draw_text("mA", 6);
+//  vfd_flush();
 
-/*
-  s_segm[0] = 1;
-  s_segm[1] = 0;
-  s_segm[2] = 0;
-
-  et16315_write_block(s_state * 3, s_segm, 3);
-*/
   s_state++;
 }
 
@@ -52,7 +46,8 @@ int main() {
   sleep_ms(200);
 
   vfd_init(16, 17, 18, 19); // STB, CLK, DOUT, DIN
-  et16315_set_leds(0x02);
+  vfd_draw_text("HELLO W.", 0);
+  vfd_flush();
 
   while (true) {
     // Background tasks (non-blocking)

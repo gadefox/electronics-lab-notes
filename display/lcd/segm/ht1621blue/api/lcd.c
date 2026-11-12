@@ -6,68 +6,73 @@
 
 //------------------------------------------------------------------------------
 
-#define BLINK_HALF_PERIOD_US 500000u
+#define LCD_DIGITS  4
 
-#define COM0 (1u << 0)
-#define COM1 (1u << 1)
-#define COM2 (1u << 2)
-#define COM3 (1u << 3)
+#define BLINK_HALF_PERIOD_US  500000u
 
-#define SEG_A (1u << 0)
-#define SEG_B (1u << 1)
-#define SEG_C (1u << 2)
-#define SEG_D (1u << 3)
-#define SEG_E (1u << 4)
-#define SEG_F (1u << 5)
-#define SEG_G (1u << 6)
+//------------------------------------------------------------------------------
 
+#define COM0  (1 << 0)
+#define COM1  (1 << 1)
+#define COM2  (1 << 2)
+#define COM3  (1 << 3)
+
+#define SEG_A  (1 << 0)
+#define SEG_B  (1 << 1)
+#define SEG_C  (1 << 2)
+#define SEG_D  (1 << 3)
+#define SEG_E  (1 << 4)
+#define SEG_F  (1 << 5)
+#define SEG_G  (1 << 6)
+
+//------------------------------------------------------------------------------
 // Font definition (bit0=a, bit1=b, bit2=c, bit3=d, bit4=e, bit5=f, bit6=g)
-#define GR_BLANK 0x00
-#define GR_MINUS 0x40
 
 static const uint8_t s_alpha_font[] = {
-  /* A */ 0x77,
-  /* B */ 0x7F,
-  /* C */ 0x39,
-  /* D */ 0x5E, // 'd'
-  /* E */ 0x79,
-  /* F */ 0x71,
-  /* G */ 0x3D,
-  /* H */ 0x76,
-  /* I */ 0x30,
-  /* J */ 0x1E,
-  /* K */ 0x00,
-  /* L */ 0x38,
-  /* M */ 0x00,
-  /* N */ 0x00,
-  /* O */ 0x3F,
-  /* P */ 0x73,
-  /* Q */ 0x67, // 'q'
-  /* R */ 0x50, // 'r'
-  /* S */ 0x6D,
-  /* T */ 0x78, // 't'
-  /* U */ 0x3E,
-  /* V */ 0x00,
-  /* W */ 0x00,
-  /* X */ 0x00,
-  /* Y */ 0x6E,
-  /* Z */ 0x5B
+  /* A */ SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,
+  /* B */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* C */ SEG_A | SEG_D | SEG_E | SEG_F,
+  /* D */ SEG_B | SEG_C | SEG_D | SEG_E | SEG_G,                    // 'd'
+  /* E */ SEG_A | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* F */ SEG_A | SEG_E | SEG_F | SEG_G,
+  /* G */ SEG_A | SEG_C | SEG_D | SEG_E | SEG_F,
+  /* H */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,
+  /* I */ SEG_E | SEG_F,
+  /* J */ SEG_B | SEG_C | SEG_D | SEG_E,
+  /* K */ 0,
+  /* L */ SEG_D | SEG_E | SEG_F,
+  /* M */ 0,
+  /* N */ 0,
+  /* O */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
+  /* P */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G,
+  /* Q */ SEG_A | SEG_B | SEG_C | SEG_F | SEG_G,                    // 'q'
+  /* R */ SEG_E | SEG_G,                                            // 'r'
+  /* S */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
+  /* T */ SEG_D | SEG_E | SEG_F | SEG_G,                            // 't'
+  /* U */ SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
+  /* V */ 0,
+  /* W */ 0,
+  /* X */ 0,
+  /* Y */ SEG_B | SEG_C | SEG_D | SEG_F | SEG_G,
+  /* Z */ SEG_A | SEG_B | SEG_D | SEG_E | SEG_G
 };
 
 static const uint8_t s_digit_font[] = {
-  /* 0 */ 0x3F,
-  /* 1 */ 0x06,
-  /* 2 */ 0x5B,
-  /* 3 */ 0x4F,
-  /* 4 */ 0x66,
-  /* 5 */ 0x6D,
-  /* 6 */ 0x7D,
-  /* 7 */ 0x07,
-  /* 8 */ 0x7F,
-  /* 9 */ 0x6F
+  /* 0 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
+  /* 1 */ SEG_B | SEG_C,
+  /* 2 */ SEG_A | SEG_B | SEG_D | SEG_E | SEG_G,
+  /* 3 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_G,
+  /* 4 */ SEG_B | SEG_C | SEG_F | SEG_G,
+  /* 5 */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
+  /* 6 */ SEG_A | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* 7 */ SEG_A | SEG_B | SEG_C,
+  /* 8 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_G,
+  /* 9 */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G
 };
 
-// Map grud index (0 to 7) to physical addresses
+//------------------------------------------------------------------------------
+// Map grid index (0 to 7) to physical address
+
 static const uint8_t s_grid_pairs[8][2] = {
   /* top row */
   { 16, 15 }, // GR0
@@ -81,7 +86,9 @@ static const uint8_t s_grid_pairs[8][2] = {
   { 6, 7 }    // GR7
 };
 
-// 18 RAM addresses of HT1621
+//------------------------------------------------------------------------------
+
+// RAM buffer
 static uint8_t s_ram_buf[18];
 
 static uint8_t s_blink_mask; // Bitmask for blinking grid
@@ -119,15 +126,15 @@ static void lcd_set_dot(uint8_t dot, bool state) {
 
 static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid)
 {
-  if (decimal_pos >= 4)
+  if (decimal_pos >= LCD_DIGITS)
     goto overflow;
 
-  memset(grid, 0, 4);
+  memset(grid, 0, LCD_DIGITS);
 
   bool is_negative = value < 0;
   uint32_t abs_val = is_negative ? 0u - (uint32_t)value : (uint32_t)value;
 
-  uint8_t buf[5];
+  uint8_t buf[5];  // UINT16_MAX_DIGITS
   int count = 0;
 
   do {
@@ -138,7 +145,7 @@ static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid)
   while (count < decimal_pos + 1)
     buf[count++] = 0;
 
-  if (count + is_negative > 4)
+  if (count + is_negative > LCD_DIGITS)
     goto overflow;
 
   for (int i = 0; i < count; i++) {
@@ -147,12 +154,12 @@ static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid)
   }
 
   if (is_negative)
-    grid[3 - count] = GR_MINUS;
+    grid[3 - count] = SEG_G;
 
   return true;
 
 overflow:
-  memset(grid, GR_MINUS, 4);
+  memset(grid, SEG_G, LCD_DIGITS);
   return false;
 }
 
@@ -179,10 +186,10 @@ void lcd_set_icons(uint32_t icon_mask) {
 }
 
 void lcd_draw_text(lcd_row_t row, const char* text) {
-  int grid_idx = (row == ROW_TOP) ? 0 : 4; // top: GR0-3, bottom: GR4-7
+  int grid_idx = (row == ROW_TOP) ? 0 : LCD_DIGITS; // top: GR0-3, bottom: GR4-7
   int i = 0;
 
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < LCD_DIGITS; i++) {
     char c = toupper((unsigned char)text[i]);
     if ( c == '\0')
       break;
@@ -191,15 +198,15 @@ void lcd_draw_text(lcd_row_t row, const char* text) {
     if (c >= 'A' && c <= 'Z')
       grid = s_alpha_font[c - 'A'];
     else if (c == '-')
-      grid = GR_MINUS;
+      grid = SEG_G;
     else
-      grid = GR_BLANK;
+      grid = 0;
 
     lcd_draw_grid(grid_idx + i, grid);
   }
 
-  for (; i < 4; i++)
-    lcd_draw_grid(grid_idx + i, GR_BLANK);
+  for (; i < LCD_DIGITS; i++)
+    lcd_draw_grid(grid_idx + i, 0);
 
   // Hide all dots in row
   int dot_idx = (row == ROW_TOP) ? 0 : 3; // top: DOT0-2, bottom: DOT3-5
@@ -209,10 +216,10 @@ void lcd_draw_text(lcd_row_t row, const char* text) {
 }
 
 void lcd_draw_num(lcd_row_t row, int16_t value, uint8_t decimal_pos) {
-  uint8_t grid[4];
+  uint8_t grid[LCD_DIGITS];
   lcd_format_num(value, decimal_pos, grid);
 
-  int grid_idx = (row == ROW_TOP) ? 0 : 4; // top: GR0-3, bottom: GR4-7
+  int grid_idx = (row == ROW_TOP) ? 0 : LCD_DIGITS; // top: GR0-3, bottom: GR4-7
 
   for (size_t i = 0; i < sizeof(grid); i++)
     lcd_draw_grid(grid_idx + i, grid[i]);

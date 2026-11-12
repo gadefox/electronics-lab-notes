@@ -4,18 +4,18 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define LCD_ICON_IN      (1 << 0)
-#define LCD_ICON_OUT     (1 << 1)
-#define LCD_ICON_SET     (1 << 2)
-#define LCD_ICON_TEMP_C  (1 << 3)
-#define LCD_ICON_V       (1 << 4)
-#define LCD_ICON_W       (1 << 5)
-#define LCD_ICON_PERCENT (1 << 6)
-#define LCD_ICON_A       (1 << 7)
-#define LCD_ICON_H       (1 << 8)
-#define LCD_ICON_COLON   (1 << 9)
+#define LCD_ICON_IN       (1 << 0)
+#define LCD_ICON_OUT      (1 << 1)
+#define LCD_ICON_SET      (1 << 2)
+#define LCD_ICON_TEMP_C   (1 << 3)
+#define LCD_ICON_V        (1 << 4)
+#define LCD_ICON_W        (1 << 5)
+#define LCD_ICON_PERCENT  (1 << 6)
+#define LCD_ICON_A        (1 << 7)
+#define LCD_ICON_H        (1 << 8)
+#define LCD_ICON_COLON    (1 << 9)
 
-#define LCD_ICON_MAX     10
+#define LCD_ICON_MAX  10
 
 typedef enum {
   ROW_TOP,

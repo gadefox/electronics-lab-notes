@@ -4,6 +4,9 @@ PL_CLK────────CN7_CLK
 PL_DIN────────CN7_DIN
         100Ω
 
+PL_STB────────CN7_STB
+        100Ω
+
 PL_DOUT────CN7_DOUT
 
 PL_KEY0────────┬────key-matrix
@@ -20,9 +23,6 @@ PL_KEY1────────┬────key-matrix
 
 PL_OSC────────GND
          20kΩ
-
-PL_STB────────CN7_STB
-        100Ω
 
 IR_OUT────────CN7_IR_OUT
          1kΩ

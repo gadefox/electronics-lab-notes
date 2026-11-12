@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 // Display RAM: 12 digits x 3 bytes (24 segments), addresses 0x00..0x23
-#define ET16315_RAM_SIZE 36
+#define ET16315_RAM_SIZE  36
 
 typedef enum {
   ET16315_DUTY_1_16,   // default

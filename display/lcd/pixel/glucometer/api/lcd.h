@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define LCD_TEST 1
+#define LCD_TEST  1
 
 void lcd_init(uint8_t pin_sda, uint8_t pin_scl, uint8_t pin_rst);
 void lcd_reset(void);

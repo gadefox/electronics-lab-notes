@@ -5,12 +5,16 @@
 
 //------------------------------------------------------------------------------
 
-#define LCD_ADDR 0x3C
-#define LCD_COLS 128
-#define LCD_ROWS 80
-#define LCD_PAGES (LCD_ROWS >> 3)
+#define LCD_ADDR  0x3C
 
-#define PIX_MASK(y) (1 << ((y) & 0b111))
+#define LCD_COLS  128
+#define LCD_ROWS  80
+
+#define LCD_PAGES  (LCD_ROWS >> 3)
+
+#define PIX_MASK(y)  ((uint8_t)(1 << ((y) & 0b111)))
+
+//------------------------------------------------------------------------------
 
 static const uint8_t s_init_seq[] = {
   0x3C, 0x0C, 0x17, 0x06,
@@ -19,7 +23,7 @@ static const uint8_t s_init_seq[] = {
   0x3F, 0x4A, 0xFF
 };
 
-static uint8_t s_frame_buf[LCD_COLS * LCD_PAGES];
+static uint8_t s_frame_buf[LCD_PAGES][LCD_COLS];
 static uint8_t s_pin_rst;
 
 #if LCD_TEST
@@ -40,7 +44,7 @@ static void fb_set_pixel(uint8_t x, uint8_t y, bool status) {
   if (x >= LCD_COLS || y >= LCD_ROWS)
     return;
 
-  uint8_t *ptr = &s_frame_buf[(y >> 3) * LCD_COLS + x];
+  uint8_t *ptr = &s_frame_buf[y >> 3][x];
 
   if (status)
     *ptr |= PIX_MASK(y);
@@ -88,10 +92,12 @@ void lcd_flush(void) {
     lcd_send_cmd(0x80);        // X = 0
     lcd_send_cmd(0x40 + page); // Y = page
 
-    memcpy(&data[1], &s_frame_buf[page * LCD_COLS], LCD_COLS);
+    memcpy(&data[1], &s_frame_buf[page][0], LCD_COLS);
     i2c_write_blocking(i2c0, LCD_ADDR, data, sizeof(data), false);
   }
 }
+
+//------------------------------------------------------------------------------
 
 #if LCD_TEST
 
@@ -100,12 +106,15 @@ static void fb_fill_grid(uint8_t x, uint8_t page, uint8_t data) {
     return;
 
   for (int i = 0; i < 8; i++)
-    s_frame_buf[page * LCD_COLS + x + i] = data;
+    s_frame_buf[page][x + i] = data;
 }
 
 static void fb_fill_vlines(uint8_t x, uint8_t page) {
+  if (x > LCD_COLS - 8 || page >= LCD_PAGES)
+    return;
+
   for (int i = 0; i < 8; i++)
-    s_frame_buf[page * LCD_COLS + x + i] = (i & 1) ? 0x00 : 0xFF;
+    s_frame_buf[page][x + i] = (i & 1) ? 0x00 : 0xFF;
 }
 
 void lcd_fb_draw_diamond(bool status) {
@@ -132,7 +141,7 @@ static void fb_draw_sym(uint8_t x, uint8_t page, const uint8_t *sym) {
   if (x > LCD_COLS - 8 || page >= LCD_PAGES)
     return;
 
-  memcpy(&s_frame_buf[page * LCD_COLS + x], sym, 8);
+  memcpy(&s_frame_buf[page][x], sym, 8);
 }
 
 void lcd_fb_draw_corners(void) {

@@ -3,9 +3,6 @@
 
 #include <stdint.h>
 
-#define VFD_GRIDS  9
-#define VFD_SEGS   17
-
 #define VFD_SEG_COLON  15
 #define VFD_SEG_ICON   16
 
@@ -27,5 +24,8 @@
 #define VFD_GRID8_DV3      16
 
 void vfd_init(uint8_t pin_stb, uint8_t pin_clk, uint8_t pin_dout, uint8_t pin_din);
+void vfd_draw_text(const char *text, uint8_t grid_pos);
+void vfd_draw_num(int16_t value, uint8_t decimal_pos);
+void vfd_flush(void);
 
 #endif // VFD_SAT_RECEIVER_H

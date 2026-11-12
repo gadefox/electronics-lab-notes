@@ -4,15 +4,15 @@
 //------------------------------------------------------------------------------
 
 // ET16315 command codes
-#define ET16315_CMD_WRITE_RAM 0x40  // write display RAM, auto increment
-#define ET16315_CMD_WRITE_LED 0x41  // write LED port
-#define ET16315_CMD_READ_KEY  0x42  // read key data
-#define ET16315_CMD_DISPLAY   0x80  // display control
-#define ET16315_CMD_ADDR      0xC0  // address (| 0x00..0x23)
+#define ET16315_CMD_WRITE_RAM  0x40  // write display RAM, auto increment
+#define ET16315_CMD_WRITE_LED  0x41  // write LED port
+#define ET16315_CMD_READ_KEY   0x42  // read key data
+#define ET16315_CMD_DISPLAY    0x80  // display control
+#define ET16315_CMD_ADDR       0xC0  // address (| 0x00..0x23)
 
-#define ET16315_DISPLAY_ON    (1 << 3)
+#define ET16315_DISPLAY_ON  (1 << 3)
 
-#define ET16315_DELAY_US      50
+#define ET16315_DELAY_US  1
 
 //------------------------------------------------------------------------------
 
