@@ -8,4 +8,5 @@ out      shift data out of the output shift register
 pull     ISR → RX FIFO
 push     TX FIFO → OSR
 set      set a register or output pins
+side     instruction modifier: set the side-set pin value
 wait     wait for a specific pin or IRQ state
