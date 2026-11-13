@@ -13,28 +13,25 @@
 //------------------------------------------------------------------------------
 
 #define SEG_A   (1 << 0)
-#define SEG_J   (1 << 1)
-#define SEG_I   (1 << 2)
-#define SEG_H   (1 << 3)
 #define SEG_B   (1 << 4)
-#define SEG_F   (1 << 5)
-#define SEG_G2  (1 << 6)
-#define SEG_DP  (1 << 7)
-#define SEG_G1  (1 << 8)
 #define SEG_C   (1 << 9)
-#define SEG_E   (1 << 10)
-#define SEG_M   (1 << 11)
-#define SEG_L   (1 << 12)
-#define SEG_K   (1 << 13)
 #define SEG_D   (1 << 14)
-
-#define SEG_COLON  (1 << 15)
-#define SEG_ICON   (1 << 16)
+#define SEG_E   (1 << 10)
+#define SEG_F   (1 << 5)
+#define SEG_G1  (1 << 8)
+#define SEG_DP  (1 << 7)
+#define SEG_G2  (1 << 6)
+#define SEG_H   (1 << 3)
+#define SEG_I   (1 << 2)
+#define SEG_J   (1 << 1)
+#define SEG_K   (1 << 11)
+#define SEG_L   (1 << 12)
+#define SEG_M   (1 << 13)
 
 #define SEG_G  (SEG_G1 | SEG_DP | SEG_G2)
 
 //------------------------------------------------------------------------------
-
+// gr=0..8 (4 bits), seg=0..16 (5 bits)
 #define MAP_ICON(gr, seg)  (gr) | ((seg) << 4)
 
 static const uint16_t s_icon_map[] = {
@@ -95,22 +92,22 @@ static const uint16_t s_font_alpha[26] = {
   /* H */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,
   /* I */ SEG_A | SEG_D | SEG_I | SEG_L | SEG_DP,
   /* J */ SEG_B | SEG_C | SEG_D | SEG_E,
-  /* K */ SEG_E | SEG_F | SEG_G1 | SEG_J | SEG_M | SEG_DP,
+  /* K */ SEG_E | SEG_F | SEG_G1 | SEG_J | SEG_K | SEG_DP,
   /* L */ SEG_D | SEG_E | SEG_F,
   /* M */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_J | SEG_DP,
-  /* N */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_M | SEG_DP,
+  /* N */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_H | SEG_K | SEG_DP,
   /* O */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
   /* P */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G,
-  /* Q */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_M,
-  /* R */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G | SEG_M,
+  /* Q */ SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F | SEG_K,
+  /* R */ SEG_A | SEG_B | SEG_E | SEG_F | SEG_G | SEG_K,
   /* S */ SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,
   /* T */ SEG_A | SEG_I | SEG_L | SEG_DP,
   /* U */ SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,
-  /* V */ SEG_E | SEG_F | SEG_J | SEG_K | SEG_DP,
+  /* V */ SEG_E | SEG_F | SEG_J | SEG_M | SEG_DP,
   /* W */ SEG_B | SEG_C | SEG_E | SEG_F | SEG_K | SEG_M | SEG_DP,
   /* X */ SEG_H | SEG_J | SEG_K | SEG_M | SEG_DP,
   /* Y */ SEG_H | SEG_J | SEG_L | SEG_DP,
-  /* Z */ SEG_A | SEG_D | SEG_J | SEG_K | SEG_DP
+  /* Z */ SEG_A | SEG_D | SEG_J | SEG_M | SEG_DP
 };
 
 // RAM buffer
