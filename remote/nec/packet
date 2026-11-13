@@ -1,0 +1,8 @@
+                                                min  max [ms]
+leader                                          13.5 13.5
++00 byte addr               LSB first           9    18
++01 byte ~addr              addr|~addr=FF       9    18
++02 byte cmd                LSB first           9    18
++03 byte ~cmd               cmd|~cmd=FF         9    18
+----
+ 04 sizeof                                      49.5 85.5

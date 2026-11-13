@@ -1,0 +1,9 @@
+name   command
+on/off 16h
+time+  07
+time-  10h
+stall+ 06
+stall- 14h
+H      00
+C      01
+L      02
