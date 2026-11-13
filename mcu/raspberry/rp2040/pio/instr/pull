@@ -1,0 +1,1 @@
+pull block  # wait until TX FIFO is empty

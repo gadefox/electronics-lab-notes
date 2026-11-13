@@ -1,0 +1,5 @@
+name           desc
+Side-set       set an auxiliary output pin
+Delay          add extra execution cycles to an instruction
+Clock divider  divide the system clock to generate the PIO clock
+State Machine  independent execution unit that runs a PIO program

@@ -1,0 +1,4 @@
+wait 0 gpio 5   # until (GP5==LOW)
+wait 1 gpio 5   # until (GP5==HIGH)
+wait 1 pin 0    # until (pin[0]==HIGH); see `in_base`
+wait 1 irq 0

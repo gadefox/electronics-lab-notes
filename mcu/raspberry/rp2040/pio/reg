@@ -1,0 +1,6 @@
+name desc                   bits
+X    scratch register       32
+Y    scratch register       32
+ISR  input shift register   32
+OSR  output shift register  32
+PC   program counter        32

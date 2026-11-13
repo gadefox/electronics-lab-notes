@@ -1,0 +1,4 @@
+in null, 6  # 0 ➜ ISR     6 bits
+in OSR, 2   # OSR ➜ ISR   2 bits
+in pins, 4  # pins ➜ ISR  4 bits
+in X, 8     # X ➜ ISR;    8 bits

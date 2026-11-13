@@ -1,0 +1,10 @@
+name  desc
+JMP   jump to another instruction
+WAIT  wait for a specific pin or IRQ state
+IN    shift data into the input shift register
+OUT   shift data out of the output shift register
+PUSH  TX FIFO → OSR
+PULL  ISR → RX FIFO
+MOV   copy data between registers
+IRQ   set, clear or wait for an interrupt
+SET   set a register or output pins

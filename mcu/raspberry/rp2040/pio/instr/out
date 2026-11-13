@@ -1,0 +1,4 @@
+out null, 6  # 0 ➜ OSR     6 bits
+out ISR, 2   # ISR ➜ OSR   2 bits
+out pins, 4  # pins ➜ OSR  4 bits
+out X, 8     # X ➜ OSR;    8 bits
