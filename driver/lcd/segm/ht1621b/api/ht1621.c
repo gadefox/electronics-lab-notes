@@ -11,7 +11,11 @@
 #define HT1621_ID_CMD     0x04 // 0b100
 #define HT1621_ID_WRITE   0x05 // 0b101
 
-#define HT1621_DELAY_US   1
+// WR half-period in microseconds.
+// Datasheet (HT1621 rev 3.40): min WR pulse width in write mode is 3.34 us @
+// VDD=3V (1.67 us @ 5V), max WR clock is 150 kHz @ 3V. 4 us per phase -> 8 us
+// period -> 125 kHz, which satisfies the 3V limits and therefore the 5V ones.
+#define HT1621_DELAY_US   4
 
 //------------------------------------------------------------------------------
 
@@ -21,14 +25,17 @@ static uint8_t s_pin_data;
 
 //------------------------------------------------------------------------------
 
+static inline void ht1621_send_bit(uint32_t data, uint8_t bit) {
+  gpio_put(s_pin_wr, 0);
+  gpio_put(s_pin_data, (data >> bit) & 1);
+  sleep_us(HT1621_DELAY_US);
+  gpio_put(s_pin_wr, 1);
+  sleep_us(HT1621_DELAY_US);
+}
+
 static void ht1621_send_bits(uint32_t data, uint8_t bit_count) {
-  for (int i = bit_count - 1; i >= 0; i--) {
-    gpio_put(s_pin_wr, 0);
-    gpio_put(s_pin_data, (data >> i) & 1);
-    sleep_us(HT1621_DELAY_US);
-    gpio_put(s_pin_wr, 1);
-    sleep_us(HT1621_DELAY_US);
-  }
+  for (int i = bit_count - 1; i >= 0; i--)
+    ht1621_send_bit(data, i);
 }
 
 static inline void ht1621_send_byte(uint8_t data) {
@@ -36,7 +43,8 @@ static inline void ht1621_send_byte(uint8_t data) {
 }
 
 static inline void ht1621_send_data(uint8_t data) {
-  ht1621_send_bits(data, 4);
+  for (int i = 0; i < 4; i++)
+    ht1621_send_bit(data, i);
 }
 
 static inline void ht1621_send_addr(uint8_t addr) {

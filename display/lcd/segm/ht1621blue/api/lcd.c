@@ -12,10 +12,10 @@
 
 //------------------------------------------------------------------------------
 
-#define COM0  (1 << 0)
-#define COM1  (1 << 1)
-#define COM2  (1 << 2)
-#define COM3  (1 << 3)
+#define COM0  (1 << 3)
+#define COM1  (1 << 2)
+#define COM2  (1 << 1)
+#define COM3  (1 << 0)
 
 #define SEG_A  (1 << 0)
 #define SEG_B  (1 << 1)
@@ -197,6 +197,8 @@ void lcd_draw_text(lcd_row_t row, const char* text) {
     uint8_t grid;
     if (c >= 'A' && c <= 'Z')
       grid = s_alpha_font[c - 'A'];
+    else if (c >= '0' && c <= '9')
+      grid = s_digit_font[c - '0'];
     else if (c == '-')
       grid = SEG_G;
     else
