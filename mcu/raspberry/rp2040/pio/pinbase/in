@@ -1,0 +1,8 @@
+// Initialize GPIO pins for PIO
+pio_gpio_init(pio, 1);
+
+// Configure GP1 as input
+pio_sm_set_consecutive_pindirs(pio, sm, 1, 1, false);
+
+// Set the base GPIO pin for PIO input operations to GP1
+sm_config_set_in_pins(&c, 1);

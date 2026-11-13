@@ -1,4 +1,4 @@
-name desc                   bits
+name description            bits
 X    scratch register       32
 Y    scratch register       32
 ISR  input shift register   32

@@ -1,0 +1,2 @@
+nop [5]          ; add 5 extra PIO clock cycles; T=(1+5)×T_PIO
+out pins, 4 [2]  ; add 2 extra PIO clock cycles; T=(1+2)×T_PIO

@@ -1,0 +1,9 @@
+// Initialize GPIO pins for PIO
+for (uint i = 10; i < 14; i++)
+  pio_gpio_init(pio, i);
+
+// Configure GP10–GP13 as outputs
+pio_sm_set_consecutive_pindirs(pio, sm, 10, 4, true);
+
+// Set the OUT pin base to GPIO 10 and configure 4 output pins (GP10–GP13)
+sm_config_set_out_pins(&c, 10, 4);
