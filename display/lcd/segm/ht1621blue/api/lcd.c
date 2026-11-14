@@ -12,10 +12,10 @@
 
 //------------------------------------------------------------------------------
 
-#define COM0  (1 << 3)
-#define COM1  (1 << 2)
-#define COM2  (1 << 1)
-#define COM3  (1 << 0)
+#define COM0  (1 << 0)
+#define COM1  (1 << 1)
+#define COM2  (1 << 2)
+#define COM3  (1 << 3)
 
 #define SEG_A  (1 << 0)
 #define SEG_B  (1 << 1)
@@ -124,8 +124,7 @@ static void lcd_set_dot(uint8_t dot, bool state) {
   lcd_set_pixel(s_grid_pairs[index][1], COM3, state);
 }
 
-static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid)
-{
+static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid) {
   if (decimal_pos >= LCD_DIGITS)
     goto overflow;
 
@@ -150,11 +149,11 @@ static bool lcd_format_num(int16_t value, uint8_t decimal_pos, uint8_t *grid)
 
   for (int i = 0; i < count; i++) {
     uint8_t digit = buf[i];
-    grid[3 - i] = s_digit_font[digit];
+    grid[LCD_DIGITS - 1 - i] = s_digit_font[digit];
   }
 
   if (is_negative)
-    grid[3 - count] = SEG_G;
+    grid[LCD_DIGITS - 1 - count] = SEG_G;
 
   return true;
 

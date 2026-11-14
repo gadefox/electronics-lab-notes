@@ -4,18 +4,18 @@
 //------------------------------------------------------------------------------
 
 // HT1621 command codes
-#define HT1621_CMD_SYS_EN 0x01 // system enable
-#define HT1621_CMD_LCD_ON 0x03 // LCD on
-#define HT1621_CMD_BIAS   0x29 // 1/3 bias, 1/4 duty (COM0-3)
+#define HT1621_CMD_SYS_EN  0x01 // system enable
+#define HT1621_CMD_LCD_ON  0x03 // LCD on
+#define HT1621_CMD_BIAS    0x29 // 1/3 bias, 1/4 duty (COM0-3)
 
-#define HT1621_ID_CMD     0x04 // 0b100
-#define HT1621_ID_WRITE   0x05 // 0b101
+#define HT1621_ID_CMD    0x04 // 0b100
+#define HT1621_ID_WRITE  0x05 // 0b101
 
 // WR half-period in microseconds.
 // Datasheet (HT1621 rev 3.40): min WR pulse width in write mode is 3.34 us @
 // VDD=3V (1.67 us @ 5V), max WR clock is 150 kHz @ 3V. 4 us per phase -> 8 us
 // period -> 125 kHz, which satisfies the 3V limits and therefore the 5V ones.
-#define HT1621_DELAY_US   4
+#define HT1621_DELAY_US  4
 
 //------------------------------------------------------------------------------
 
@@ -98,6 +98,8 @@ void ht1621_init(uint8_t pin_cs, uint8_t pin_wr, uint8_t pin_data) {
   ht1621_send_cmd(HT1621_CMD_SYS_EN);
   ht1621_send_cmd(HT1621_CMD_BIAS);
   ht1621_send_cmd(HT1621_CMD_LCD_ON);
+
+  ht1621_clear_block(0, HT1621_RAM_SIZE);
 }
 
 void ht1621_write(uint8_t addr, uint8_t data) {

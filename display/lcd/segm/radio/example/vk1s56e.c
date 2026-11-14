@@ -1,0 +1,1 @@
+../../../../../driver/lcd/segm/vk1s56e/api/vk1s56e.c

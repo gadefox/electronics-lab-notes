@@ -96,6 +96,8 @@ int main() {
   button_init(PICO_DEFAULT_BUTTON_PIN);
   button_set_callback(on_button);
 
+  ht1621_init(0, 1, 2);  // nCS, nWR, DATA
+
   while (true) {
     // Background tasks (non-blocking)
     button_task_update();

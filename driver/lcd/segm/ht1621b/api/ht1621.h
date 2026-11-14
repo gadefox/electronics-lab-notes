@@ -1,7 +1,8 @@
 #ifndef HT1621_H
 #define HT1621_H
 
-#include <stdint.h>
+// HT1621 RAM
+#define HT1621_RAM_SIZE  32
 
 // Initialize HT1621 hardware pins and internal states
 void ht1621_init(uint8_t pin_cs, uint8_t pin_wr, uint8_t pin_data);
