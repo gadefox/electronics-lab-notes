@@ -1,0 +1,2 @@
+R1=R2x(Vout/2.5-1) [Ω]
+Rx=(Vin-Vout)/(Iload+Idiv)

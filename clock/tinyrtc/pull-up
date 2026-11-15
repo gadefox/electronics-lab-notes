@@ -1,0 +1,4 @@
+DS  3.3kΩ
+SQW 3.3kΩ
+SCL 4.7kΩ (next to DS1307)
+SDA 4.7kΩ (next to EEPROM)

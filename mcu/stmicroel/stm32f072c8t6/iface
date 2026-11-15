@@ -1,0 +1,8 @@
+I²Cs        x2
+SPI/I²S     x2
+HDMI CEC
+UART        4x
+USB         full-speed; crystal-less
+CAN
+ADC         12-bit; 16 channels
+DAC         12-bit; 2 channels

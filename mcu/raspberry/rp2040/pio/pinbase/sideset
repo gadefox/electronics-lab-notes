@@ -1,0 +1,8 @@
+// Initialize GPIO pin for PIO
+pio_gpio_init(pio, 8);
+
+// Configure GP8 as output for the PIO State Machine
+pio_sm_set_consecutive_pindirs(pio, sm, 8, 1, true);
+
+// Set the SIDESET pin base to GP8
+sm_config_set_sideset_pins(&c, 8);

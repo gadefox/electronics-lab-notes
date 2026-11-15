@@ -1,0 +1,9 @@
+bit value meaning
+0   0/1   0: LED0 lit
+1   0/1   0: LED1 lit
+2   0/1   0: LED2 lit
+3   0/1   0: LED3 lit
+4   -
+5   -
+6   -
+7   -

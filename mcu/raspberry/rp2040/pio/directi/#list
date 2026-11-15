@@ -1,0 +1,6 @@
+name          description
+.define       defines a constant
+.program      defines the PIO program name
+.side_set     defines the number of SIDESET pins
+.wrap         marks the end of the automatic wrap region
+.wrap_target  marks the start of the automatic wrap region

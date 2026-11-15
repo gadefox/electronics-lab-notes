@@ -1,0 +1,4 @@
+1 A0                8 VCC
+2 A1                7 WP
+3 A2                6 SCL
+4 GND               5 SDA

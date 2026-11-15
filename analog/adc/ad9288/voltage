@@ -1,0 +1,7 @@
+VD, VDD≤4V
+VD-0.5≤IN_A≤VD+0.5V
+VDD-0.5≤IN_D≤VDD+0.5V
+
+Vin=1.024V p-p centered at VD×0.3
+e.g. VD=3.3V -> VD×0.3 ~ 1V
+0.488≤Vin≤1.512V

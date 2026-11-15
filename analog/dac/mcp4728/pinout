@@ -1,0 +1,5 @@
+1 VCC               10 GND
+2 SCL               9  Vout4
+3 SDA               8  Vout3
+4 nLATCH            7  Vout2
+5 nRDY              6  Vout1

@@ -1,0 +1,8 @@
+BGR 16-bit
+
+red   5 bits
+green 6 bits
+blue  5 bits
+
+white=0
+black=FFFF

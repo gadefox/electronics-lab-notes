@@ -1,0 +1,11 @@
++00 byte     seconds
++01 byte     minutes
++02 byte     hours
++03 byte     day
++04 byte     date
++05 byte     month
++06 byte     year
++07 byte     control
++08 byte[56] user
+----
+ 3F sizeof

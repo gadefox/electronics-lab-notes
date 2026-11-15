@@ -1,0 +1,5 @@
+    Co D/C data           bytes
+00  0  0   N commands     N
+40  0  1   N data         N
+80  1  0   1 command      1
+C0  1  1   data, control  2

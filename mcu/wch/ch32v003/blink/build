@@ -1,0 +1,18 @@
+#!/bin/rc
+
+mkdir -p out
+
+riscv64-unknown-elf-gcc -O2 -flto -ffunction-sections -static-libgcc -lgcc -march=rv32ec_zicsr -mabi=ilp32e -I/usr/include/newlib -nostdlib -I. -Wall -c ch32v003fun.c -o out/ch32v003fun.o
+riscv64-unknown-elf-gcc -O2 -S -ffunction-sections -static-libgcc -lgcc -march=rv32ec_zicsr -mabi=ilp32e -I/usr/include/newlib -nostdlib -I. -Wall -c ch32v003fun.c -o out/ch32v003fun.s
+
+riscv64-unknown-elf-g++ -O2 -flto -ffunction-sections -static-libgcc -lgcc -march=rv32ec_zicsr -mabi=ilp32e -I/usr/include/newlib -nostdlib -I. -Wall -c blink.c -o out/blink.o
+riscv64-unknown-elf-g++ -O2 -S -ffunction-sections -static-libgcc -lgcc -march=rv32ec_zicsr -mabi=ilp32e -I/usr/include/newlib -nostdlib -I. -Wall -c blink.c -o out/blink.s
+
+riscv64-unknown-elf-g++ -O2 -flto -ffunction-sections -static-libgcc -lgcc -march=rv32ec_zicsr -mabi=ilp32e -I/usr/include/newlib -nostdlib -I. -Wall -T ch32v003fun.ld  -Wl,--gc-sections -L. -o out/blink.elf out/ch32v003fun.o out/blink.o -lgcc
+
+riscv64-unknown-elf-size out/blink.elf
+riscv64-unknown-elf-objdump -S out/blink.elf > out/blink.lst
+riscv64-unknown-elf-objdump -t out/blink.elf > out/blink.map
+riscv64-unknown-elf-objcopy -O binary out/blink.elf out/blink.bin
+riscv64-unknown-elf-objcopy -O ihex out/blink.elf out/blink.hex
+xxd -i out/blink.bin > out/blink.h
