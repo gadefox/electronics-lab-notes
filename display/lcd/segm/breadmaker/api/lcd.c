@@ -65,14 +65,20 @@ static void lcd_draw_grid(uint8_t grid, uint8_t seg_mask) {
 //------------------------------------------------------------------------------
 
 void lcd_set_icons(uint32_t icon_mask) {
+  /* COM0 */
+  lcd_set_pixel(8, COM0, icon_mask & LCD_ICON_TRI0);
+
+  /* COM1 */
+  lcd_set_pixel(8, COM1, icon_mask & LCD_ICON_TRI1);
+  
+  /* COM2 */
+  lcd_set_pixel(8, COM2, icon_mask & LCD_ICON_TRI2);
+
+  /* COM3 */
   lcd_set_pixel(1, COM3, icon_mask & LCD_ICON_ONE0);
   lcd_set_pixel(3, COM3, icon_mask & LCD_ICON_ONE1);
   lcd_set_pixel(5, COM3, icon_mask & LCD_ICON_COLON);
   lcd_set_pixel(7, COM3, icon_mask & LCD_ICON_TRI4);
-
-  lcd_set_pixel(8, COM0, icon_mask & LCD_ICON_TRI0);
-  lcd_set_pixel(8, COM1, icon_mask & LCD_ICON_TRI1);
-  lcd_set_pixel(8, COM2, icon_mask & LCD_ICON_TRI2);
   lcd_set_pixel(8, COM3, icon_mask & LCD_ICON_TRI3);
 }
 
