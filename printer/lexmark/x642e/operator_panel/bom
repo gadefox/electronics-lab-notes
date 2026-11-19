@@ -3,6 +3,9 @@ U12         DJ5C        SOT-143     MAX6314 µP supervisor (reset watchdog / pow
 U7          LM555       SOP-8       555 timer
 U10         LS14        SOP-14      SN74LS14; 6× NOR Schmitt-Trigger
 
+audio power amplifier
+U9          LM386       SOP-8
+
 buzzer
 
 DC/DC buck:
@@ -31,7 +34,6 @@ U19         P610H       SOP-8       International Rectifier IRF7241; P-ch
 
 op-amp:
 U5          LM358       SOP-8       dual
-U9          LM386       SOP-8       audio power amplifier
 
 oscilator:
 14.745MHz
