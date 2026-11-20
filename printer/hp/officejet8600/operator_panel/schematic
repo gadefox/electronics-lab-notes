@@ -1,0 +1,20 @@
+D1-4: (clamp)
+            IN
+             │
+GND────▶├────┼────▶├────VCC
+             │
+            OUT
+
+Q2/3: (high-side switch)
+           VCC
+            │
+MCU────────┤ MMBT3906
+      1kΩ   │
+           D1/2
+
+Q50:
+            D3/4
+             │
+MCU────────┤│ UPA6725
+      1kΩ    │
+            GND
