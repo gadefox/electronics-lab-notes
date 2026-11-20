@@ -1,13 +1,13 @@
 1  -
-              2  D3/MCU
-3  D2/MCU9
-              4  D1/MCU10
-5  D4/MCU
+              2  D3/MCU_PC2
+3  D2/MCU_PB7
+              4  D1/MCU_PB6
+5  D4/MCU_PC3
               6  -
 7  C366B
-              8  MCU18
-9  MCU30
-              10 MCU29
+              8  MCU_PC1
+9  MCU_PD5
+              10 MCU_PD4
 11 CN1_15
               12 CN1_14
 13 CN1_12
@@ -41,5 +41,5 @@
 41 C367
               42 C38
 43 C369/C370
-              44 R14
+              44 LED
 45 C366B

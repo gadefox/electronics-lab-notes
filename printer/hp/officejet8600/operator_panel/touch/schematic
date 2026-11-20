@@ -1,0 +1,18 @@
+ALERT────MCU_PD0
+
+RST────────MCU_PD4
+      1kΩ
+
+             VCC
+              │
+          1kΩ 
+              │
+SMCLK────────┴────MCU
+       82.5Ω
+
+              VCC
+               │
+           1kΩ 
+               │
+SMDATA────────┴────MCU
+        82.5Ω
