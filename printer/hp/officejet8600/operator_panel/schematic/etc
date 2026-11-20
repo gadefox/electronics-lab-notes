@@ -6,11 +6,11 @@ GND────▶├────┼────▶├────VCC
             OUT
 
 Q2/3: (high-side switch)
-           VCC
-            │
-MCU────────┤ MMBT3906
-      1kΩ   │
-           D1/2
+               VCC
+                │
+MCU10/9────────┤ MMBT3906
+          1kΩ   │
+               D1/2
 
 Q50:
             D3/4

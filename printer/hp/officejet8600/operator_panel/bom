@@ -9,6 +9,5 @@ MOSFET:
 Q50         MA          SC-70       UPA6725; dual N-ch
 
 Q:
-Q1          W2A         SOT-23      MMBT3906; PNP
-Q2          W1A         SOT-23      MMBT3904; NPN
-Q3
+Q600/900    W1A         SOT-23      MMBT3904; NPN
+Q1-3        W2A         SOT-23      MMBT3906; PNP
