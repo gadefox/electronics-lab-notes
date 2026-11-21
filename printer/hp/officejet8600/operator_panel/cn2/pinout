@@ -1,24 +1,24 @@
 1  -
-              2  D3/MCU_PC2
-3  D2/MCU_PB7
-              4  D1/MCU_PB6
-5  D4/MCU_PC3
+              2  D3/MCU_PC2         TOUCH_RX
+3  D2/MCU_PB7                       TOUCH_TY
+              4  D1/MCU_PB6         TOUCH_LX
+5  D4/MCU_PC3                       TOUCH_BY
               6  -
 7  C366B
               8  MCU_PC1
 9  MCU_PD5
               10 MCU_PD4
-11 CN1_15
-              12 CN1_14
-13 CN1_12
-              14 CN1_10
-15 CN1_9
-              16 CN1_8
-17 CN1_7
-              18 CN1_5
-19 CN1_4
-              20 CN1_3
-21 CN1_2
+11 HSYNC
+              12 VSYNC
+13 CLK
+              14 DATA
+15 DATA
+              16 DATA
+17 DATA
+              18 DATA
+19 DATA
+              20 DATA
+21 DATA
               22 GND
 23 VDD
               24 C361

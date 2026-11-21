@@ -1,23 +1,24 @@
 1  GND
-              2  CN2_21
-3  CN2_20
-              4  CN2_19
-5  CN2_18
+              2  LCD_DATA
+3  LCD_DATA
+              4  LCD_DATA
+5  LCD_DATA
               6  GND
-7  CN2_17
-              8  CN2_16
-9  CN2_15
-              10 CN2_14
+7  LCD_DATA
+              8  LCD_DATA
+9  LCD_DATA
+              10 LCD_DATA
 11 GND
-              12 CN2_13
+              12 LCD_CLK
 13 GND
-              14 CN2_12
-15 CN2_11
+              14 LCD_VSYNC
+15 LCD_HSYNC
               16 VDD
 17 R8
-              18 R11
+              18 LED_A
 19 R7
-              20 R5
+              20 R11
 21 R6
-              22 R3/R12 (NC)
+              22 R5
 23 CN4_1
+              24 R3/R12 (NC)
