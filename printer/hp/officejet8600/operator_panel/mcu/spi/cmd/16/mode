@@ -1,0 +1,6 @@
+mode    blinking
+0       no
+1-127   fast
+128     slow
+129-244 no
+255     flash

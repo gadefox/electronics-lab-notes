@@ -1,0 +1,34 @@
+IC:
+TJA1043T        NPX                 high-speed CAN transceiver
+VN5E050A        STMicroelectronics  1-ch high-side power driver/switch
+
+boost CC:
+MAX16814C       Analog Devices      4-ch LED driver; SEPIC
+
+buck:
+5714Q           Texas Instruments   TPS57140-Q1; 42V 1.5A; Vin=12V
+
+D:
+45t             NXP                 BAS40-05; dual schottky
+JSt             NXP                 BAS21
+S476                                TVS
+Z1W             NXP                 BZX84-C4V7; zener 4.7V
+
+L:
+B82793C0474N215 EPCOS               dual; 470µH 0.7A
+
+LDO:
+(TLE)42764V5    Infineon            400mA; Vin=12V Vout=5V
+
+MCU:
+R7F701414       Renesas             LQFP144; 32-bit
+
+MOSFET:
+(AO)4435                            P-ch; pinout: G=3 S=4 D=1/2/5/6
+J1              NXP                 BSH101; N-ch
+NTD20N06L       ON Semiconductor    N-ch; 60V 20A
+
+Q:
+13t             NXP                 BC847BPN; NPN+PNP
+Dt9             NXP                 PUMD9; NPN+PNP
+W25                                 PDTC123JT; NPN

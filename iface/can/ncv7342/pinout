@@ -1,0 +1,4 @@
+1 TxD           8 STB
+2 GND           7 CANH
+3 VCC           6 CANL
+4 RxD           5 VSPLIT

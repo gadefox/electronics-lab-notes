@@ -1,0 +1,9 @@
+id len target meaning
+17 2   LCD    backlight?
+18 0   LCD    on/off?
+19 0   LCD    off/on?
+21 3   LED    mode
+22 1   keypad backlight?
+65 5   ?
+66 1   ?
+85 3   ?

@@ -1,0 +1,13 @@
+IC:
+U3          CAP1114-1   QFN-32      touch/LED controller
+U4          8S103K3     QFN-32      STMicroelectronics; MCU
+
+D:
+D1-4        KJE         SOT-23      BAV99
+
+MOSFET:
+Q50         MA          SC-70       UPA6725; dual N-ch
+
+Q:
+Q600/900    W1A         SOT-23      MMBT3904; NPN
+Q1-3        W2A         SOT-23      MMBT3906; PNP

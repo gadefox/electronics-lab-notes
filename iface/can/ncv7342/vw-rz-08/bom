@@ -1,0 +1,13 @@
+IC:
+NV7342-0    NCV7342D10R2G
+
+D:
+M7
+WA          BZT52B5V6; zener 5.6V
+
+LDO:
+8650        SE8650; Vout=5.0V
+
+Q:
+L6          2SC1623; NPN
+R1          SRC1201U; NPN+R1/R2

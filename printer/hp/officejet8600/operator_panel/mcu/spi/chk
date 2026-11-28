@@ -1,0 +1,1 @@
+CMD ^ LEN ^ DATA[0] ^ .. ^ DATA[LEN-1]

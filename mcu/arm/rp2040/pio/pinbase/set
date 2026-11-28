@@ -1,0 +1,9 @@
+// Initialize GPIO pins for PIO
+pio_gpio_init(pio, 4);
+pio_gpio_init(pio, 5);
+
+// Configure GP4 and GP5 as outputs for the PIO State Machine
+pio_sm_set_consecutive_pindirs(pio, sm, 4, 2, true);
+
+// Set the SET pin base to GPIO 4 and configure 2 pins (GP4, GP5)
+sm_config_set_set_pins(&c, 4, 2);

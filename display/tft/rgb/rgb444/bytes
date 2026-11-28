@@ -1,0 +1,4 @@
+byte D7 D6 D5 D4 D3 D2 D1 D0  pixel
+1    R3 R2 R1 R0 G3 G2 G1 G0  1
+2    B3 B2 B1 B0 R3 R2 R1 R0  1 2
+3    G3 G2 G1 G0 B3 B2 B1 B0  2

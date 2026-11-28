@@ -1,0 +1,3 @@
+#!/bin/rc
+
+picotool load -x rp2040_swim.uf2

@@ -1,0 +1,9 @@
+  value meaning
+0 0/1   r/w mode settings
+1 0/1   r/w mode settings
+2 0/1   0: increment address 1: fixed address
+3 0/1   0: normal mode 1: test mode
+4 -
+5 -
+6 1
+7 0

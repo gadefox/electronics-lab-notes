@@ -1,0 +1,18 @@
+ALERT────MCU_PD0_ALERT
+
+RST────────MCU_?
+      1kΩ
+
+             VCC
+              │
+          1kΩ 
+              │
+SMCLK────────┴────MCU_I2C_SCL
+       82.5Ω
+
+              VCC
+               │
+           1kΩ 
+               │
+SMDATA────────┴────MCU_I2C_SDA
+        82.5Ω

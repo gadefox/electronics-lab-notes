@@ -1,0 +1,7 @@
+1 TXD           14 nSTB
+2 GND           13 CANH
+3 VCC           12 CANL
+4 RXD           11 SPLIT
+5 VIO           10 VBAT
+6 EN            9  WAKE
+7 INH           8  nERR

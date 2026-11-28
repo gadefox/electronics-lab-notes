@@ -1,0 +1,4 @@
+data0: G2  R7    R6    R5  R4  R3  R2
+data1: B3  B2    G7    G6  G5  G4  G3
+data2: DE  VSYNC HSYNC B7  B6  B5  B4
+data3: CTL B1    B0    G1  G0  R1  R0

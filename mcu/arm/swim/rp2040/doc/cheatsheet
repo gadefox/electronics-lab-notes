@@ -1,0 +1,18 @@
+First real target test:
+swim enter-debug --port /dev/ttyACM0
+
+Probe after `enter-debug` succeeds:
+swim probe --port /dev/ttyACM0
+
+Read the first 256 bytes of program flash:
+swim read --addr 0x8000 --len 8096 --out fw
+
+Flash command shape:
+swim flash --device stm8s103f3 --file firmware.ihx --verify --reset
+
+The current firmware intentionally refuses erase/program commands until the
+flash sequence is hardware-validated.
+
+Unlock flash or EEPROM without erasing:
+swim unlock --device stm8s103f3 --flash
+swim unlock --device stm8s103f3 --eeprom

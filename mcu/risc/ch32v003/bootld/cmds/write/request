@@ -1,0 +1,5 @@
++00 uint   offset       offset % 8=0
++04 byte
++05 byte[] data         encoded with XOR key; max(length)=64; length % 8=0
+----
+length+2 sizeof

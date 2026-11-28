@@ -1,0 +1,24 @@
+1  LCD11        48 LCD12
+2  LCD10        47 LCD13
+3  LCD9         46 LCD14
+4  LCD8         45 LCD15
+5  LCD7         44 LCD16
+6  LCD6         43 LCD17
+7  LCD5         42 LCD18
+8               41 LCD19
+9  MCU8         40 LCD20
+10              39 LCD21
+11 MCU7         38 LCD22
+12 MCU6         37
+13 GND          36
+14              35
+15              34
+16 R16          33
+17 R16 VCC      32
+18              31
+19              30
+20              29
+21 LCD4         28
+22 LCD3         27
+23 LCD2         26
+24 LCD1         25

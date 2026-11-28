@@ -1,0 +1,3 @@
+#!/bin/rc
+
+make hw/cypress-fx2/fx2lafw-cypress-fx2.fw

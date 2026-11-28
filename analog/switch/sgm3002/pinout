@@ -1,0 +1,5 @@
+1 IN1               10 COM1
+2 NO1               9  NC1
+3 GND               8  VCC
+4 NO2               7  NC2
+5 IN2               6  COM2

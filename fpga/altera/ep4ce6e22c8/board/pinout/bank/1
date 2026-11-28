@@ -1,0 +1,16 @@
+1  LED1
+2  LED2
+3  LED3
+7  LED4
+9  nSTATUS
+10 CH340_TX
+11 LED5
+12 DCLK
+13 DATA0
+14 nCONFIG
+15 TDI              ; JTAG
+16 TCK              ; JTAG
+18 TMS              ; JTAG
+20 TDO              ; JTAG
+21 nCE
+23 CH340_RX

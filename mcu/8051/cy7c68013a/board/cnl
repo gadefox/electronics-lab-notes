@@ -1,0 +1,13 @@
+1  PD5              2  PD6
+3  PD7              4  GND
+5  CLKOUT           6  GND
+7  RDY1             8  RDY0
+9  GND              10 VCC
+11 GND              12 IFCLK
+13 SCL              14 SDA
+15 PB0              16 PB1               
+17 PB2              18 PB3
+19 GND              20 VCC
+
+PBn: port B || FD BUS
+PDn: port D || FD BUS

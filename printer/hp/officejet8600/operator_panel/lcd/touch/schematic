@@ -1,0 +1,24 @@
+            IN
+      D1-4   │   D1-4                         (clamp)
+GND────▶├────┼────▶├────VCC
+             │
+            OUT
+
+                 VCC
+                  │
+MCU_PB6/7────────┤ Q2/3                     (high-side switch)
+            1kΩ   │
+                 D1/2
+
+                  D3/4
+                   │
+MCU_PC2/3────────┤│ Q50
+            1kΩ    │
+                  GND
+
+               VCC
+                │
+MCU_PD2────────┤ Q1
+          1kΩ   │
+                └────────TOUCH_LX
+                    10kΩ

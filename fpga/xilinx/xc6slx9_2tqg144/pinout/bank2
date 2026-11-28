@@ -1,0 +1,28 @@
+38 IO_L65N_CSO_B_2            BL
+39 IO_L65P_INIT_B_2           BL
+40 IO_L64N_D9_2               BL
+41 IO_L64P_D8_2               BL
+42 VCCO_2
+43 IO_L62N_D6_2               BL
+44 IO_L62P_D5_2               BL
+45 IO_L49N_D4_2               BL
+46 IO_L49P_D3_2               BL
+47 IO_L48N_RDWR_B_VREF_2      BL
+48 IO_L48P_D7_2               BL
+50 IO_L31N_GCLK30_D15_2       BL
+51 IO_L31P_GCLK31_D14_2       BL
+55 IO_L30N_GCLK0_USERCCLK_2   BR
+56 IO_L30P_GCLK1_D13_2        BR
+57 IO_L14N_D12_2              BR
+58 IO_L14P_D11_2              BR
+59 IO_L13N_D10_2              BR
+60 IO_L13P_M1_2               BR
+61 IO_L12N_D2_MISO3_2         BR
+62 IO_L12P_D1_MISO2_2         BR
+63 VCCO_2
+64 IO_L3N_MOSI_CSI_B_MISO0_2  BR
+65 IO_L3P_D0_DIN_MISO_MISO1_2 BR
+66 IO_L2N_CMPMOSI_2           BR
+67 IO_L2P_CMPCLK_2            BR
+69 IO_L1N_M0_CMPMISO_2        BR
+70 IO_L1P_CCLK_2              BR

@@ -1,0 +1,6 @@
+spi_write(0x055d)
+spi_write(0x2b00)
+delay(0x32)
+init()
+spi_write(0x055f)
+spi_write(0x2b01)

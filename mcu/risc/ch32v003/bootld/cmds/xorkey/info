@@ -1,0 +1,2 @@
+Provides a seed to the bootloader's key calculation algorithm.
+Seed data can be of variable length (30..60 bytes).

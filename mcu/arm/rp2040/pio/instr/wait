@@ -1,0 +1,4 @@
+wait 0 gpio 5  ; while (gpio_get(5) != 0) { /* nop */ }
+wait 1 gpio 5  ; while (gpio_get(5) == 0) { /* nop */ }
+wait 1 pin 0   ; wait until the input pin (selected by IN base) becomes HIGH
+wait 1 irq 0

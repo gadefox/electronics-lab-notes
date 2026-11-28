@@ -1,0 +1,4 @@
+1 REFIN             8 REFOUT
+2 GND               7 VDD
+3 AINN              6 nDRDY/DOUT
+4 AINP              5 SCLK

@@ -1,0 +1,3 @@
+gpio probe
+2    SWIM
+3    RSTn

@@ -1,0 +1,21 @@
+IC:
+U2          EPCS4SI8N                       serial configuration device
+U4          CH340C                          UART bridge
+U9          "E61"            SOT-23-5       TVS
+
+D:
+D1          "KV"                            TVS
+D2          SS510                           power schottky
+
+FLASH:
+U3          W25Q64JV                        8MiB
+
+LDO:
+U5          REG1117-3.3                     3.3V
+U6          REG1117-1.2                     1.2V
+U7          REG1117-1.8                     1.8V
+U8          REG1117-2.5                     2.5V
+
+XTAL:
+X1          "SJK"                           50MHz
+X2          -                               27Mhz

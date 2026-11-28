@@ -1,0 +1,14 @@
+17────────MCU_SPI_SCK
+   R8=1kΩ
+
+18────────MCU_RSTn
+   R11=83Ω
+
+19────────MCU_PC4_IRQ
+   R7=75Ω
+
+20────────MCU_SPI_MISO
+   R5=1kΩ
+
+21────────MCU_SPI_MOSI
+   R6=1kΩ

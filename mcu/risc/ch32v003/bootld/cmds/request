@@ -1,0 +1,8 @@
++00 word   header       57AB
++02 byte   command      A1..A8
++03 byte   length
++04
++05 byte[] payload
++nn byte   checksum     sum(payload) & FF
+----
+length+6 sizeof

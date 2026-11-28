@@ -1,0 +1,45 @@
+1  -
+                            2  D3/MCU_PC2_TOUCH_RX
+3  D2/MCU_PB7_TOUCH_TY
+                            4  D1/MCU_PB6_TOUCH_LX
+5  D4/MCU_PC3_TOUCH_BY
+                            6  -
+7  C366B
+                            8  MCU_PC1_CSn
+9  MCU_PD5_DATA
+                            10 MCU_PD4_CLK
+11 HSYNC
+                            12 VSYNC
+13 CLK
+                            14 DATA
+15 DATA
+                            16 DATA
+17 DATA
+                            18 DATA
+19 DATA
+                            20 DATA
+21 DATA
+                            22 GND
+23 VCC
+                            24 C361
+25 C39A
+                            26 C39B
+27 C47A
+                            28 C47B
+29 C362
+                            30 C46B
+31 C46A
+                            32 C363
+33 C368
+                            34 C48B
+35 C48A
+                            36 C365
+37 C364
+                            38 GND
+39 C366A
+                            40 C366B
+41 C367
+                            42 C38
+43 C369/C370
+                            44 LED
+45 C366B

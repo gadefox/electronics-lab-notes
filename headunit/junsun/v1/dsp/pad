@@ -1,0 +1,6 @@
+L6  UART3_RX    I
+L7  UART3_TX    O
+
+B14 I²S_DATA    I
+B15 I²S_LRCK
+B16 I²S_BCK

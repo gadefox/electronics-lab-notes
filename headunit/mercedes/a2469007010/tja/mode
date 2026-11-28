@@ -1,0 +1,5 @@
+EN STB INH mode
+0  0   H   standby
+0  1   H   listen_only
+1  0   Z   go_to_sleep ➜ sleep
+1  1   H   normal

@@ -1,0 +1,4 @@
+1 GND           8 XOSC
+2 RFIN          7 -
+3 VDD5V         6 -
+4 VDDL          5 DATA

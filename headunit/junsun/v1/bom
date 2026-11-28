@@ -1,0 +1,16 @@
+0Q=SFF     (x2) RT6217E; buck
+3157            SGM3157; analog switch
+3G=Q4A          Richtek; LDO
+3Q=F0M     (x3) Richtek; LDO
+3T=H9A          RT6274C; buck
+7708S           tuner module w/ TDA7708
+BK              fuse
+CS4361          Cirrus; 24-bit DAC; 192kHz
+H25S40          4Mbit flash
+HYBZA           SY7200A; 30V boost LED driver
+ID9MG           MP1540; boost
+J3         (x7) LBSS260DW1T1G; dual MOSFETs SOT-363
+MS2244          video multiplexer 3-to-1 (VCC=5V)
+SGM9119         triple video filter (VCC=5V)
+TDA7851L        amplifier
+YD1821B         3.3V 12V; brake/light/reverse detection

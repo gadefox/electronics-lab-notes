@@ -1,0 +1,9 @@
+1-7   CS
+8     VCC
+9-16  LED/GPIO
+17-19 LED
+20    ALERT
+21    SMDATA
+22    SMCLK
+23    RST
+26-32 CS

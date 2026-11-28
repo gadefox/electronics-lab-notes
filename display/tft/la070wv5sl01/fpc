@@ -1,0 +1,40 @@
+1  LED_A
+2  LED_A
+3  LED_K1               ; MAX_OUT1
+4  LED_K1               ; MAX_OUT1
+5  NC1
+6  NC1
+7  NC2
+8  NC2
+9  LED_A
+10 LED_A
+11 LED_K3               ; MAX_OUT3
+12 LED_K3               ; MAX_OUT3
+13 VDD
+14 b                    ; MCU + 10kΩ pull-down
+15 GND
+16 ?
+17 ?
+18 GND
+19 D0+
+20 D0-
+21 GND
+22 D1+
+23 D1-
+24 GND
+25 D2+
+26 D2-
+27 GND
+28 CLK+
+29 CLK-
+30 GND
+31 D3+
+32 D3-
+33 GND
+34 GND
+35 VDD                  ; 4435 pin1,2,5,6
+36 VDD                  ; 4435 pin1,2,5,6
+37 ?
+38 ?
+39 ?
+40 ?

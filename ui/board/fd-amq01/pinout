@@ -1,0 +1,9 @@
+1 NC                            18 NPN-B BUZZER
+2 IR-OUT                        17 NC
+3 NC                            16 NC
+4 NC                            15 NC
+5 NC                            14 NC
+6 LED+3+4+8+12                  13 LED-12-13-14-15 SW5
+7 LED+2+5+9+13  SW1/2/4         12 LED-4-5-6-7     SW2/3
+8 LED+1+6+10+14                 11 LED-1-2-3       SW1/6
+9 LED+7+11+15   SW3/5/6/7       10 LED-8-9-10-11   SW4/7

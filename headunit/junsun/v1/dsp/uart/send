@@ -1,0 +1,15 @@
+id name        bytes   values
+01 chn         4
+02 adcgain     2       [0, adcgain - 0x38]
+03 volume      1       0 - 197
+04 fadbal      6
+05 filter      6       [enable, freq low-pass, freq high-pass]
+06 loud        7       [enable, low/high freq, low/high gain - 38h]
+07 vbass       22      [enable, gain, level, freq]
+09 delay       6       [fl, fr, rl, rr, 0, 0]
+0A reverb      15
+0B mix         3
+0F eq          30
+11 fs          1       20h || 40h
+14 filter_fb   5
+1B subfreq     2       [subfreq, 0]

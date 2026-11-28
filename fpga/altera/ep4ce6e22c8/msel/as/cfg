@@ -1,0 +1,4 @@
+MSEL2-0  POR       voltage
+010      standard  3.3V
+011      standard  3.0/2.5V
+101      fast      3.3V

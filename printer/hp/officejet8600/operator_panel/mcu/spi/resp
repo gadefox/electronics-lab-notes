@@ -1,0 +1,9 @@
++00        byte   cmd
++01        byte   reqlen            0..7
++02        byte[] data
++02+reqlen byte   reqchk            see `chk`
++03+reqlen byte   0x10
++04+reqlen byte[] resplen
++05+reqlen byte   respchk
+----
+ 06+reqlen+resplen sizeof

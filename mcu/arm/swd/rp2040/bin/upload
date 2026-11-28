@@ -1,0 +1,3 @@
+#!/bin/rc
+
+picotool load -x debugprobe_on_pico.uf2

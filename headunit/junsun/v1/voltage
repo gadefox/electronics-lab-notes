@@ -1,0 +1,14 @@
+buck:
+RT6217E_1: Vin=12V; Vout=3.75V (R1=41.2kΩ R2=11kΩ)
+RT6217E_2: Vin=12V; Vout=5.13V (R1=41.2kΩ R2=7.5kΩ)
+RT6274C: Vin=5.13V; Vout=4.78V (R1=15kΩ R2=3kΩ)
+
+boost:
+MP1540: Vin=5.13V; Vout=10.50V (R1=9.1kΩ R2=01B+220Ω=1.22kΩ)
+
+LDO:
+LDO_3G: Vin=5.13V; Vout=1.77V
+LDO_3Q: Vin=5.13V; Vout=3.27V
+
+CC:
+LED: Vin=5.13V; Vout=29.69V; Iout=133mA (R1=1.5Ω)

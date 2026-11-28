@@ -1,0 +1,6 @@
+gpio probe
+1    RESETn
+2    SWCLK
+3    SWDIO
+4    UART_TX
+5    UART_RX

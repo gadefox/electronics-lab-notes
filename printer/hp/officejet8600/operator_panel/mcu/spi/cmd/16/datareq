@@ -1,0 +1,5 @@
++00 byte mode           see `mode`
++01 byte mask1          see `mask`
++02 byte mask2
+----
+ 03 sizeof

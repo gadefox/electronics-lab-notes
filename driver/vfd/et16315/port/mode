@@ -1,0 +1,5 @@
+mode note
+0    write data to display RAM
+1    write data to LED
+2    read KEY data
+3    -

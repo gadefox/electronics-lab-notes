@@ -1,0 +1,9 @@
+pin status at BOOT:
+D0(GPIO16)   HIGH
+D3(GPIO0)    LOW=boot failure
+D4(GPIO2)    HIGH; LOW=boot failure
+D8(GPIO15)   HIGH=boot failure
+TX(GPIO1)    HIGH; LOW=boot failure
+RX(GPIO3)    HIGH
+SD2(GPIO9)   HIGH
+SD3(GPIO10)  HIGH
