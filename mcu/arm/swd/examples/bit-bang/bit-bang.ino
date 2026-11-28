@@ -419,7 +419,6 @@ static void nrstFree() { pinMode(NRST_PIN, INPUT); }
 
 void setup() {
   Serial.begin(115200);
-  Serial.setTimeout(30);
   digitalWrite(SWCLK_PIN, HIGH);
   pinMode(SWCLK_PIN, OUTPUT);
   dioIn();
@@ -427,9 +426,7 @@ void setup() {
   Serial.println(F("SWD PoC pripraveny: i, d, h, r, w, t, u, g, c, e, p, f, v, x, a, n"));
 }
 
-void loop() {
-  if (!Serial.available()) return;
-  String line = Serial.readStringUntil('\n');
+static void handleLine(String line) {
   line.trim();
   if (!line.length()) return;
   const char *s = line.c_str() + 1;
@@ -512,5 +509,23 @@ void loop() {
       break;
     default:
       Serial.println(F("? prikazy: i d h r w t u g c e p f v x a n"));
+  }
+}
+
+// riadok sa sklada po znakoch bez timeoutu: funguje aj pri rucnom pisani v tio ("r 8000" + Enter)
+static String lineBuf;
+
+void loop() {
+  while (Serial.available()) {
+    char ch = (char)Serial.read();
+    if (ch == '\n' || ch == '\r') {
+      if (lineBuf.length()) {
+        String l = lineBuf;
+        lineBuf = "";
+        handleLine(l);
+      }
+    } else if (lineBuf.length() < 80) {
+      lineBuf += ch;
+    }
   }
 }

@@ -2,11 +2,12 @@
 │ 16 14 12 10 8 6 4 2 │
 │ 15 13 11 9  7 5 3 1 │
 └─────────────────────┘
-1               2  
-3               4  MCU_PB0
-5               6  
-7               8  
-9  MCU_PA13     10 MCU_PA12 
-11 MCU_PA8      12 MCU_PA9
-13 CANL         15 CANH
-15 VIN          16 GND
+
+1 UART_TX/MCU_PB1        2  -
+3  -                     4  UART_RX/MCU_PB0
+5  -                     6  -
+7  -                     8  -
+9  MCU_PA13              10 MCU_PA12
+11 MCU_PA8               12 MCU_PA9
+13 CANL                  15 CANH
+15 VIN                   16 GND

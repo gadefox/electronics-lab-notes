@@ -1,13 +1,15 @@
 IC:
-NV7342-0    NCV7342D10R2G
+NV7342-0    NCV7342D10R2G; CAN transceiver
 
 D:
 M7
-WA          zener
+WA          zener?
 
 LDO:
 (SE)8650    Vout=5.0V
 
+MOSFET:
+R1          P-ch
+
 Q:
 L6          NPN
-R1          PNP
