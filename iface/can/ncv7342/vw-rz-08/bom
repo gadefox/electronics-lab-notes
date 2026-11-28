@@ -3,11 +3,11 @@ NV7342-0    NCV7342D10R2G
 
 D:
 M7
-WA          BZT52B5V6; zener 5.6V
+WA          zener
 
 LDO:
-8650        SE8650; Vout=5.0V
+(SE)8650    Vout=5.0V
 
 Q:
-L6          2SC1623; NPN
-R1          SRC1201U; NPN+R1/R2
+L6          NPN
+R1          PNP
