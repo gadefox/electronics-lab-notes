@@ -1,4 +1,4 @@
-VCC──┤├──GND
+VCC───┤├───GND
 
-AREF──┤├──GND
-     100nF
+AREF───┤├───GND
+      100nF

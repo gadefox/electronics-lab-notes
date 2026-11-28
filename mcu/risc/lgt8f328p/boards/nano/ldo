@@ -1,4 +1,4 @@
 Vout=5V
 
-Vout──┤├──GND
-     10µF
+Vout───┤├───GND
+      10µF

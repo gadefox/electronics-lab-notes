@@ -1,11 +1,11 @@
-VCI──┤├──GND
-     4µF
+VCI───┤├───GND
+      4µF
 
-DTR──┤├──RST
-    100nF
+DTR───┤├───RST
+     100nF
 
-     VCC
-      │
-       10kΩ
-      │   ___
-RST───┴─── ───GND
+      VCC
+       │
+        10kΩ
+       │    ___
+RST────┴──── ────GND

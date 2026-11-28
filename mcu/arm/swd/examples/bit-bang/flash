@@ -1,0 +1,3 @@
+#!/bin/rc
+
+python3 flash.py cafebabe --run

@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="1440" height="880" font-family="Arial, Helvetica, sans-serif" font-size="15" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 292" width="1440" height="880" font-family="Arial, Helvetica, sans-serif" font-size="15" xmlns:c2pa="http://c2pa.org/manifest">
 <rect width="720" height="440" fill="#fff"/>
 <g stroke="#000" stroke-width="2" fill="none" stroke-linecap="square" stroke-linejoin="miter">
 
 <!-- VOUT / boost -->
 <path d="M120 182 V62 H228"/>
 <path d="M250 62 H370"/>
-<polygon points="228,53 228,71 250,62" fill="#000"/>
+<polygon points="228,53 228,71 250,62" fill="none"/>
 <path d="M250 53 V71"/>
 <path d="M370 62 V122"/>
 <polygon points="370,38 363,52 377,52" fill="#000" stroke="none"/>
@@ -24,11 +24,11 @@
 
 <!-- left charge pump (VGH) -->
 <path d="M90 182 H145"/>
-<polygon points="145,173 145,191 167,182" fill="#000"/>
+<polygon points="145,173 145,191 167,182" fill="none"/>
 <path d="M167 173 V191"/>
 <path d="M167 182 H225"/>
-<polygon points="225,173 225,191 247,182" fill="#000"/>
-<path d="M247 173 V191"/>
+<polygon points="247,173 247,191 225,182" fill="none"/>
+<path d="M225 173 V191"/>
 <path d="M247 182 H415 V398"/>
 
 <!-- main C at 10.5V -->
@@ -50,11 +50,11 @@
 
 <!-- right charge pump (VGL) -->
 <path d="M470 185 H490"/>
-<polygon points="490,176 490,194 512,185" fill="#000"/>
+<polygon points="490,176 490,194 512,185" fill="none"/>
 <path d="M512 176 V194"/>
 <path d="M512 185 H535"/>
 <path d="M535 185 H558"/>
-<polygon points="580,176 580,194 558,185" fill="#000"/>
+<polygon points="580,176 580,194 558,185" fill="none"/>
 <path d="M558 176 V194"/>
 <path d="M580 185 H610 V398"/>
 
